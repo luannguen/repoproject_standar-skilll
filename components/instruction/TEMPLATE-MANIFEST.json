@@ -1,0 +1,90 @@
+{
+    "schema_version":  "1.0.0",
+    "template_version":  "1.2.0",
+    "updated_at":  "2026-07-16",
+    "purpose":  "Cross-stack project template with evidence-gated AI workflows and reusable repository governance.",
+    "production_readiness_claim":  "template-layer-only",
+    "active_capabilities":  [
+                                "constitutional instruction authority",
+                                "risk and approval gates",
+                                "workflow and skill routing",
+                                "structured project memory",
+                                "repository governance artifacts",
+                                "cross-platform reusable-layer validation",
+                                "static routing behavior fixtures",
+                                "secret filename and content heuristics",
+                                "GitHub Actions dependency updates",
+                                "two-layer reusable custom skill library",
+                                "evidence-based stack and domain detection",
+                                "manifest-driven scoped custom skill activation"
+                            ],
+    "conditional_capabilities":  [
+                                     {
+                                         "trigger":  "runtime_or_dependency_manifest",
+                                         "requires":  [
+                                                          "stack detection and scoped technology-skill binding",
+                                                          "runtime pinning",
+                                                          "lockfile policy",
+                                                          "build and test commands",
+                                                          "vulnerability and license scanning"
+                                                      ]
+                                     },
+                                     {
+                                         "trigger":  "application_surface",
+                                         "requires":  [
+                                                          "architecture and contract evidence",
+                                                          "behavioral tests",
+                                                          "threat model",
+                                                          "accessibility where applicable"
+                                                      ]
+                                     },
+                                     {
+                                         "trigger":  "persisted_or_sensitive_data",
+                                         "requires":  [
+                                                          "schema and migration policy",
+                                                          "retention and deletion",
+                                                          "backup and restore evidence",
+                                                          "authorization and audit controls"
+                                                      ]
+                                     },
+                                     {
+                                         "trigger":  "deployment_target",
+                                         "requires":  [
+                                                          "environment protection",
+                                                          "artifact provenance",
+                                                          "rollout and recovery",
+                                                          "observability and incident ownership"
+                                                      ]
+                                     },
+                                     {
+                                         "trigger":  "ai_or_agent_behavior",
+                                         "requires":  [
+                                                          "authority boundaries",
+                                                          "tool and data controls",
+                                                          "evaluations",
+                                                          "monitoring and cost controls"
+                                                      ]
+                                     },
+                                     {
+                                         "trigger":  "verified_domain_evidence",
+                                         "requires":  [
+                                                          "domain detection review",
+                                                          "evidence-cited project overlay",
+                                                          "task and path scoped activation",
+                                                          "domain invariant tests"
+                                                      ]
+                                     }
+                                 ],
+    "intentionally_unset":  [
+                                "application stack",
+                                "domain model",
+                                "database or schema",
+                                "cloud or deployment provider",
+                                "application security scanners",
+                                "application test framework",
+                                "license",
+                                "application technology custom-skill bindings",
+                                "project domain custom-skill bindings"
+                            ],
+    "validation_entrypoint":  "components/instruction/scripts/validate.ps1"
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Postgres Supabase DB"
+  short_description: "Guide Postgres and Supabase data work"
+  default_prompt: "Use $postgres-supabase-db with the active project binding and verified repository evidence."
+policy:
+  allow_implicit_invocation: false

@@ -3,7 +3,7 @@ memory_id: MEM-SKILL-SYSTEM-0001
 title: Project Engineering Skill System is active
 memory_type: project_fact
 scope: level-0:project:instruction-system
-summary: The repository has a validated Constitution, Orchestrator, 20-skill registry, 11-workflow registry, approval gates, routing, and executable instruction lint.
+summary: The repository has a validated Constitution, Orchestrator, 21-Standard-Skill registry, 12-workflow registry, separate 27-module Custom Skill library, approval gates, routing fixtures, and executable lint.
 status: verified
 confidence: high
 tags: [instruction-system, skills, workflows, routing, governance, validation]
@@ -11,12 +11,12 @@ trigger_terms: [skill, workflow, orchestrator, constitution, approval, routing, 
 affected_modules: [instruction-system]
 affected_paths: [AGENTS.md, components/instruction]
 related_entities: []
-related_features: [project-engineering-agent]
-source_references: [components/instruction/PROJECT-CONSTITUTION.md, components/instruction/SKILL-REGISTRY.json, components/instruction/WORKFLOW-REGISTRY.json, components/instruction/reports/INSTRUCTION-ARCHITECTURE-AUDIT.md, components/instruction/reports/DEFINITION-OF-DONE.md]
-evidence: [20 registered skills passed skill lint with zero blockers and warnings, 11 workflows passed workflow lint with zero blockers and warnings, routing and link validation passed with 35 anti-patterns]
+related_features: [project-engineering-agent, project-onboarding]
+source_references: [components/instruction/PROJECT-CONSTITUTION.md, components/instruction/SKILL-REGISTRY.json, components/instruction/WORKFLOW-REGISTRY.json, components/instruction/custom-skills/CUSTOM-SKILL-REGISTRY.json, components/instruction/project-custom-skills/ACTIVE-CUSTOM-SKILLS.json, components/instruction/PROJECT-ONBOARDING.md, components/instruction/tests/routing-cases.json, components/instruction/tests/custom-skill-routing-cases.json, components/instruction/reports/CUSTOM-SKILL-SYSTEM-READINESS.md]
+evidence: [21 Standard Skills and 12 workflows pass their linters, 27 reusable Custom Skills pass quick validation and custom lint, stack/domain manifests match repository evidence, 24 Standard and 12 Custom routing fixtures pass]
 decision_or_fact: implementation_fact
 rationale: Future agents need one durable fact describing the available instruction architecture without reading every skill.
-consequences: [Every task starts with Constitution and Orchestrator routing, Concrete domain skills remain evidence-gated, Application production readiness remains unverified]
+consequences: [Every task starts with Constitution and Orchestrator routing, Standard Skills remain separate and higher-authority, Custom Skills require active task/path-scoped bindings, Cloned templates start with project-onboarding, Application production readiness remains unverified]
 risks: [The registry and memory become stale if future instruction changes are not synchronized]
 valid_from: 2026-07-16
 last_verified_at: 2026-07-16
@@ -26,7 +26,7 @@ updated_at: 2026-07-16
 created_by_task: TASK-20260716-project-engineering-skill-system
 supersedes: []
 superseded_by:
-related_memories: [MEM-PROJECT-0001, MEM-CONSTRAINT-0001, MEM-GAP-0001, TASK-20260716-project-engineering-skill-system]
+related_memories: [MEM-PROJECT-0001, MEM-CONSTRAINT-0001, MEM-GAP-0001, MEM-TEMPLATE-STANDARD-0001, MEM-CUSTOM-SKILL-SYSTEM-0001, TASK-20260716-project-engineering-skill-system, TASK-20260716-template-production-standard, TASK-20260716-reusable-custom-skill-system]
 detail_path: components/instruction/project-memory/modules/instruction-system/MEM-SKILL-SYSTEM-0001.md
 ---
 
@@ -34,32 +34,22 @@ detail_path: components/instruction/project-memory/modules/instruction-system/ME
 
 ## Claim
 
-The project-local instruction architecture now has four integrated layers: Constitution, Orchestration, Capability Skills, and Workflows. The registries are the routing sources; Project Orchestrator selects one primary workflow and the minimum skills before implementation.
+The project-local instruction architecture integrates Constitution, Orchestration, 21 Standard Skills, 12 Workflows, a separate 27-module Custom Skill library, Project Memory, and repository onboarding/governance. The Orchestrator selects one primary workflow and minimum Standard Skills, then filters Custom Skills through project bindings by task and package/path scope.
 
 ## Evidence
 
 - `PROJECT-CONSTITUTION.md` defines authority, risk, pre/post gates, exceptions, context, and controlled self-update.
-- `SKILL-REGISTRY.json` contains 20 active skills with paths, dependencies, risk usage, task classes, and workflow use.
-- `WORKFLOW-REGISTRY.json` contains 11 active primary workflows with required/optional skills and approval gates.
-- Skill lint, workflow lint, and route test each passed with zero blockers and warnings on 2026-07-16.
-- Project Memory lint passed after this write-back.
+- `SKILL-REGISTRY.json` contains 21 active skills with paths, dependencies, risk usage, task classes, and workflow use.
+- `WORKFLOW-REGISTRY.json` contains 12 active primary workflows with required/optional Standard Skills and approval gates.
+- `CUSTOM-SKILL-REGISTRY.json` contains 14 technology and 13 domain reusable modules; the project activation manifest currently binds only GitHub CI.
+- Stack/domain detectors and 12 custom fixtures prevent unproven or out-of-scope activation.
+- The unified suite validates repository hygiene, Standard Skills, workflows, Custom Skills, stack/domain synchronization, 24 Standard routing fixtures, 12 Custom routing fixtures, routes/links, anti-patterns, and Project Memory.
+- Project Memory lint passes after this write-back.
 
 ## Boundary
 
-This is evidence of instruction-system readiness only. It is not evidence of an application framework, domain, business rules, schema, auth, integrations, deployment, runtime, or production readiness. No concrete domain skill is justified until application evidence satisfies the Domain Skill Framework.
-
-## Consequences
-
-- Read registries first; do not preload every skill.
-- Produce a Task Execution Brief for MEDIUM+ work.
-- Route gated actions through Approval Gates.
-- Synchronize registries, bootstrap, validation, documentation, changelog, and memory when instructions change.
+This is evidence of instruction and template-layer readiness only. It is not evidence of an application framework, domain, business rules, schema, auth, integrations, deployment, runtime, or production readiness.
 
 ## Re-verification
 
-Run:
-
-- `components/instruction/scripts/skill-lint.ps1`
-- `components/instruction/scripts/workflow-lint.ps1`
-- `components/instruction/scripts/instruction-route-test.ps1`
-- `components/instruction/skills/project-memory/scripts/memory-lint.ps1`
+Run `components/instruction/scripts/validate.ps1`, then run every application command registered in `PROJECT-PROFILE.json` after onboarding.

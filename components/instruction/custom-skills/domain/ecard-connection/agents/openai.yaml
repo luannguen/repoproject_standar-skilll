@@ -1,0 +1,6 @@
+interface:
+  display_name: "Ecard Connection"
+  short_description: "Guard evidence-backed ecard relationships"
+  default_prompt: "Use $ecard-connection only with a verified active project overlay and cited domain evidence."
+policy:
+  allow_implicit_invocation: false

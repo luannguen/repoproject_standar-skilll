@@ -1,0 +1,6 @@
+interface:
+  display_name: "Digital Assets"
+  short_description: "Guard digital asset lifecycle rules"
+  default_prompt: "Use $digital-assets only with a verified active project overlay and cited domain evidence."
+policy:
+  allow_implicit_invocation: false

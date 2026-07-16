@@ -1,0 +1,239 @@
+{
+    "schema_version":  "1.0.0",
+    "repository_profile":  "template/uninstantiated",
+    "generated_at":  "2026-07-16T00:00:00+07:00",
+    "detector":  "components/instruction/scripts/stack-detection.ps1",
+    "summary":  {
+                    "detected":  1,
+                    "active_candidates":  1,
+                    "not_detected":  13
+                },
+    "detections":  [
+                       {
+                           "skill_id":  "react-typescript",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "detected_version":  null,
+                           "evidence":  {
+
+                                        },
+                           "applicable_packages":  {
+
+                                                   },
+                           "applicable_paths":  {
+
+                                                },
+                           "notes":  "No authoritative application dependency, configuration, or source evidence exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "nextjs",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "detected_version":  null,
+                           "evidence":  {
+
+                                        },
+                           "applicable_packages":  {
+
+                                                   },
+                           "applicable_paths":  {
+
+                                                },
+                           "notes":  "No authoritative application dependency, configuration, or source evidence exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "vite-react",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "detected_version":  null,
+                           "evidence":  {
+
+                                        },
+                           "applicable_packages":  {
+
+                                                   },
+                           "applicable_paths":  {
+
+                                                },
+                           "notes":  "No authoritative application dependency, configuration, or source evidence exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "supabase-platform",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "detected_version":  null,
+                           "evidence":  {
+
+                                        },
+                           "applicable_packages":  {
+
+                                                   },
+                           "applicable_paths":  {
+
+                                                },
+                           "notes":  "No authoritative application dependency, configuration, or source evidence exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "postgres-supabase-db",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "detected_version":  null,
+                           "evidence":  {
+
+                                        },
+                           "applicable_packages":  {
+
+                                                   },
+                           "applicable_paths":  {
+
+                                                },
+                           "notes":  "No authoritative application dependency, configuration, or source evidence exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "vercel-platform",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "detected_version":  null,
+                           "evidence":  {
+
+                                        },
+                           "applicable_packages":  {
+
+                                                   },
+                           "applicable_paths":  {
+
+                                                },
+                           "notes":  "No authoritative application dependency, configuration, or source evidence exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "tanstack-query",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "detected_version":  null,
+                           "evidence":  {
+
+                                        },
+                           "applicable_packages":  {
+
+                                                   },
+                           "applicable_paths":  {
+
+                                                },
+                           "notes":  "No authoritative application dependency, configuration, or source evidence exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "react-hook-form-zod",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "detected_version":  null,
+                           "evidence":  {
+
+                                        },
+                           "applicable_packages":  {
+
+                                                   },
+                           "applicable_paths":  {
+
+                                                },
+                           "notes":  "No authoritative application dependency, configuration, or source evidence exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "tailwind-shadcn",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "detected_version":  null,
+                           "evidence":  {
+
+                                        },
+                           "applicable_packages":  {
+
+                                                   },
+                           "applicable_paths":  {
+
+                                                },
+                           "notes":  "No authoritative application dependency, configuration, or source evidence exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "pwa-webview",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "detected_version":  null,
+                           "evidence":  {
+
+                                        },
+                           "applicable_packages":  {
+
+                                                   },
+                           "applicable_paths":  {
+
+                                                },
+                           "notes":  "No authoritative application dependency, configuration, or source evidence exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "base44-platform",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "detected_version":  null,
+                           "evidence":  {
+
+                                        },
+                           "applicable_packages":  {
+
+                                                   },
+                           "applicable_paths":  {
+
+                                                },
+                           "notes":  "No authoritative application dependency, configuration, or source evidence exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "github-ci",
+                           "detected":  true,
+                           "confidence":  "HIGH",
+                           "detected_version":  "platform-managed; workflow action releases are explicit in workflow files",
+                           "evidence":  [
+                                            ".git/config: Git repository metadata exists.",
+                                            ".github/workflows/quality-gates.yml: push and pull_request workflow exists.",
+                                            ".github/workflows/quality-gates.yml: least-privilege contents:read and Windows/Linux matrix."
+                                        ],
+                           "applicable_packages":  "repository-root",
+                           "applicable_paths":  [
+                                                    ".github/**",
+                                                    "components/instruction/**",
+                                                    "scripts/**"
+                                                ],
+                           "notes":  "Technology is active only for GitHub repository automation and CI-affecting tasks."
+                       },
+                       {
+                           "skill_id":  "nodejs-runtime",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "detected_version":  null,
+                           "evidence":  {
+
+                                        },
+                           "applicable_packages":  {
+
+                                                   },
+                           "applicable_paths":  {
+
+                                                },
+                           "notes":  "No authoritative application dependency, configuration, or source evidence exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "ai-llm-integration",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "detected_version":  null,
+                           "evidence":  {
+
+                                        },
+                           "applicable_packages":  {
+
+                                                   },
+                           "applicable_paths":  {
+
+                                                },
+                           "notes":  "No authoritative application dependency, configuration, or source evidence exists in this uninstantiated template."
+                       }
+                   ]
+}

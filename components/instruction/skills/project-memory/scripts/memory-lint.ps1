@@ -1,7 +1,11 @@
 [CmdletBinding()]
 param(
-    [string]$MemoryRoot = (Join-Path $PSScriptRoot '..\..\..\project-memory')
+    [string]$MemoryRoot
 )
+
+if ([string]::IsNullOrWhiteSpace($MemoryRoot)) {
+    $MemoryRoot = Join-Path $PSScriptRoot '../../../project-memory'
+}
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
@@ -38,7 +42,7 @@ try {
     exit 1
 }
 
-$repoRoot = (Resolve-Path -LiteralPath (Join-Path $memoryRootPath '..\..\..')).Path
+$repoRoot = (Resolve-Path -LiteralPath (Join-Path $memoryRootPath '../../..')).Path
 $indexPath = Join-Path $memoryRootPath 'memory-index.json'
 $humanIndexPath = Join-Path $memoryRootPath 'INDEX.md'
 

@@ -1,0 +1,6 @@
+interface:
+  display_name: "AI LLM Integration"
+  short_description: "Guide secure provider-aware AI integrations"
+  default_prompt: "Use $ai-llm-integration with the active project binding and verified repository evidence."
+policy:
+  allow_implicit_invocation: false

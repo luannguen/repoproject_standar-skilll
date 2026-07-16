@@ -1,7 +1,11 @@
 [CmdletBinding()]
 param(
-    [string]$InstructionRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
+    [string]$InstructionRoot
 )
+
+if ([string]::IsNullOrWhiteSpace($InstructionRoot)) {
+    $InstructionRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
+}
 
 $ErrorActionPreference = 'Stop'
 $script:blockers = 0
@@ -110,7 +114,7 @@ foreach ($skill in @($registry.skills)) {
     if ($contractVersion -ne $skill.version) {
         Add-Blocker "Skill '$($skill.id)' registry version '$($skill.version)' differs from contract '$contractVersion'."
     }
-    $agentPath = Join-Path (Split-Path -Parent $skillPath) 'agents\openai.yaml'
+    $agentPath = Join-Path (Split-Path -Parent $skillPath) 'agents/openai.yaml'
     if (-not (Test-Path -LiteralPath $agentPath -PathType Leaf)) {
         Add-Blocker "Skill '$($skill.id)' is missing agents/openai.yaml."
     } else {

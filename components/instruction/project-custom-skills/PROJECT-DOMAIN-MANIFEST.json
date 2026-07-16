@@ -1,0 +1,223 @@
+{
+    "schema_version":  "1.0.0",
+    "repository_profile":  "template/uninstantiated",
+    "generated_at":  "2026-07-16T00:00:00+07:00",
+    "detector":  "components/instruction/scripts/domain-detection.ps1",
+    "policy":  "No domain invariant may be inferred from repository name, menu, route, comment, directory, marketing copy, or technology.",
+    "summary":  {
+                    "detected":  0,
+                    "active_candidates":  0,
+                    "verified_rules":  0,
+                    "not_detected":  13
+                },
+    "detections":  [
+                       {
+                           "skill_id":  "multi-tenant-saas",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "verified_rules_count":  0,
+                           "evidence":  [
+
+                                        ],
+                           "applicable_packages":  [
+
+                                                   ],
+                           "applicable_paths":  [
+
+                                                ],
+                           "notes":  "No qualifying domain source, schema, migration, test, contract, or authoritative specification exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "rbac-scoped-access",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "verified_rules_count":  0,
+                           "evidence":  [
+
+                                        ],
+                           "applicable_packages":  [
+
+                                                   ],
+                           "applicable_paths":  [
+
+                                                ],
+                           "notes":  "No qualifying domain source, schema, migration, test, contract, or authoritative specification exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "commerce-order-inventory",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "verified_rules_count":  0,
+                           "evidence":  [
+
+                                        ],
+                           "applicable_packages":  [
+
+                                                   ],
+                           "applicable_paths":  [
+
+                                                ],
+                           "notes":  "No qualifying domain source, schema, migration, test, contract, or authoritative specification exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "payment-reconciliation",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "verified_rules_count":  0,
+                           "evidence":  [
+
+                                        ],
+                           "applicable_packages":  [
+
+                                                   ],
+                           "applicable_paths":  [
+
+                                                ],
+                           "notes":  "No qualifying domain source, schema, migration, test, contract, or authoritative specification exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "referral-commission",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "verified_rules_count":  0,
+                           "evidence":  [
+
+                                        ],
+                           "applicable_packages":  [
+
+                                                   ],
+                           "applicable_paths":  [
+
+                                                ],
+                           "notes":  "No qualifying domain source, schema, migration, test, contract, or authoritative specification exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "gift-lifecycle",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "verified_rules_count":  0,
+                           "evidence":  [
+
+                                        ],
+                           "applicable_packages":  [
+
+                                                   ],
+                           "applicable_paths":  [
+
+                                                ],
+                           "notes":  "No qualifying domain source, schema, migration, test, contract, or authoritative specification exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "ecard-connection",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "verified_rules_count":  0,
+                           "evidence":  [
+
+                                        ],
+                           "applicable_packages":  [
+
+                                                   ],
+                           "applicable_paths":  [
+
+                                                ],
+                           "notes":  "No qualifying domain source, schema, migration, test, contract, or authoritative specification exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "subscription-billing",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "verified_rules_count":  0,
+                           "evidence":  [
+
+                                        ],
+                           "applicable_packages":  [
+
+                                                   ],
+                           "applicable_paths":  [
+
+                                                ],
+                           "notes":  "No qualifying domain source, schema, migration, test, contract, or authoritative specification exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "community-content",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "verified_rules_count":  0,
+                           "evidence":  [
+
+                                        ],
+                           "applicable_packages":  [
+
+                                                   ],
+                           "applicable_paths":  [
+
+                                                ],
+                           "notes":  "No qualifying domain source, schema, migration, test, contract, or authoritative specification exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "notification-messaging",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "verified_rules_count":  0,
+                           "evidence":  [
+
+                                        ],
+                           "applicable_packages":  [
+
+                                                   ],
+                           "applicable_paths":  [
+
+                                                ],
+                           "notes":  "No qualifying domain source, schema, migration, test, contract, or authoritative specification exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "digital-assets",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "verified_rules_count":  0,
+                           "evidence":  [
+
+                                        ],
+                           "applicable_packages":  [
+
+                                                   ],
+                           "applicable_paths":  [
+
+                                                ],
+                           "notes":  "No qualifying domain source, schema, migration, test, contract, or authoritative specification exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "analytics-events",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "verified_rules_count":  0,
+                           "evidence":  [
+
+                                        ],
+                           "applicable_packages":  [
+
+                                                   ],
+                           "applicable_paths":  [
+
+                                                ],
+                           "notes":  "No qualifying domain source, schema, migration, test, contract, or authoritative specification exists in this uninstantiated template."
+                       },
+                       {
+                           "skill_id":  "ai-agent-domain",
+                           "detected":  false,
+                           "confidence":  "NONE",
+                           "verified_rules_count":  0,
+                           "evidence":  [
+
+                                        ],
+                           "applicable_packages":  [
+
+                                                   ],
+                           "applicable_paths":  [
+
+                                                ],
+                           "notes":  "No qualifying domain source, schema, migration, test, contract, or authoritative specification exists in this uninstantiated template."
+                       }
+                   ]
+}

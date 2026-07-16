@@ -1,0 +1,6 @@
+# Replace or extend after clone with real team ownership.
+* @luannguen
+
+# High-risk governance surfaces retain explicit review until reassigned.
+/.github/ @luannguen
+/components/instruction/ @luannguen

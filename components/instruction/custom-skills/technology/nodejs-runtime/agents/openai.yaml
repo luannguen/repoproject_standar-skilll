@@ -1,0 +1,6 @@
+interface:
+  display_name: "Node.js Runtime"
+  short_description: "Guide supported Node.js runtime changes"
+  default_prompt: "Use $nodejs-runtime with the active project binding and verified repository evidence."
+policy:
+  allow_implicit_invocation: false

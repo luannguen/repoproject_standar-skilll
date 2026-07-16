@@ -1,0 +1,45 @@
+{
+    "schema_version":  "1.0.0",
+    "policy":  "Profiles are routing shortcuts only; they contain no copied rules and never activate without per-skill evidence.",
+    "profiles":  [
+                     {
+                         "id":  "nextjs-supabase-vercel",
+                         "skills":  [
+                                        "react-typescript",
+                                        "nextjs",
+                                        "supabase-platform",
+                                        "postgres-supabase-db",
+                                        "vercel-platform"
+                                    ],
+                         "requires_all":  [
+                                              "nextjs",
+                                              "supabase-platform",
+                                              "vercel-platform"
+                                          ]
+                     },
+                     {
+                         "id":  "vite-supabase-vercel",
+                         "skills":  [
+                                        "react-typescript",
+                                        "vite-react",
+                                        "supabase-platform",
+                                        "postgres-supabase-db",
+                                        "vercel-platform"
+                                    ],
+                         "requires_all":  [
+                                              "vite-react",
+                                              "supabase-platform",
+                                              "vercel-platform"
+                                          ]
+                     },
+                     {
+                         "id":  "base44",
+                         "skills":  [
+                                        "base44-platform"
+                                    ],
+                         "requires_all":  [
+                                              "base44-platform"
+                                          ]
+                     }
+                 ]
+}

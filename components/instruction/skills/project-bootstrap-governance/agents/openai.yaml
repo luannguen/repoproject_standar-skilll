@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Bootstrap & Governance"
+  short_description: "Instantiate and govern cloned projects safely"
+  default_prompt: "Use $project-bootstrap-governance to turn this cloned template into an evidence-backed governed project."

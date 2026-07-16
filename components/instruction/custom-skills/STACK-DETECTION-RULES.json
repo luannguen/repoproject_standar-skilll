@@ -1,0 +1,285 @@
+{
+    "schema_version":  "1.0.0",
+    "confidence_order":  [
+                             "HIGH",
+                             "MEDIUM",
+                             "LOW",
+                             "NONE"
+                         ],
+    "default_activation":  "detected \u0026\u0026 confidence in [HIGH, MEDIUM] \u0026\u0026 task_intersects_scope",
+    "rules":  [
+                  {
+                      "skill_id":  "react-typescript",
+                      "identity_evidence":  [
+                                                "package.json:dependencies.react",
+                                                "package.json:devDependencies.typescript"
+                                            ],
+                      "supporting_evidence":  [
+                                                  "tsconfig.json",
+                                                  "src/**/*.tsx",
+                                                  "app/**/*.tsx"
+                                              ],
+                      "version_sources":  [
+                                              "package.json:dependencies.react",
+                                              "package.json:devDependencies.typescript"
+                                          ],
+                      "high":  "At least one identity signal plus one independent supporting signal, or two independent authoritative identity signals.",
+                      "medium":  "One authoritative identity signal with an extractable dependency/config version.",
+                      "low":  "Only a weak or ambiguous signal; confirmation required.",
+                      "none":  "No evidence."
+                  },
+                  {
+                      "skill_id":  "nextjs",
+                      "identity_evidence":  [
+                                                "package.json:dependencies.next"
+                                            ],
+                      "supporting_evidence":  [
+                                                  "next.config.*",
+                                                  "app/**/page.*",
+                                                  "pages/**/*.*"
+                                              ],
+                      "version_sources":  [
+                                              "package.json:dependencies.next"
+                                          ],
+                      "high":  "At least one identity signal plus one independent supporting signal, or two independent authoritative identity signals.",
+                      "medium":  "One authoritative identity signal with an extractable dependency/config version.",
+                      "low":  "Only a weak or ambiguous signal; confirmation required.",
+                      "none":  "No evidence."
+                  },
+                  {
+                      "skill_id":  "vite-react",
+                      "identity_evidence":  [
+                                                "package.json:devDependencies.vite",
+                                                "package.json:dependencies.react"
+                                            ],
+                      "supporting_evidence":  [
+                                                  "vite.config.*",
+                                                  "src/main.tsx",
+                                                  "src/main.jsx"
+                                              ],
+                      "version_sources":  [
+                                              "package.json:devDependencies.vite"
+                                          ],
+                      "high":  "At least one identity signal plus one independent supporting signal, or two independent authoritative identity signals.",
+                      "medium":  "One authoritative identity signal with an extractable dependency/config version.",
+                      "low":  "Only a weak or ambiguous signal; confirmation required.",
+                      "none":  "No evidence."
+                  },
+                  {
+                      "skill_id":  "supabase-platform",
+                      "identity_evidence":  [
+                                                "package.json:dependencies.@supabase/supabase-js"
+                                            ],
+                      "supporting_evidence":  [
+                                                  "supabase/config.toml",
+                                                  "supabase/functions/**",
+                                                  "**/*supabase*.ts"
+                                              ],
+                      "version_sources":  [
+                                              "package.json:dependencies.@supabase/supabase-js",
+                                              "supabase/config.toml"
+                                          ],
+                      "high":  "At least one identity signal plus one independent supporting signal, or two independent authoritative identity signals.",
+                      "medium":  "One authoritative identity signal with an extractable dependency/config version.",
+                      "low":  "Only a weak or ambiguous signal; confirmation required.",
+                      "none":  "No evidence."
+                  },
+                  {
+                      "skill_id":  "postgres-supabase-db",
+                      "identity_evidence":  [
+                                                "supabase/migrations/**/*.sql"
+                                            ],
+                      "supporting_evidence":  [
+                                                  "supabase/seed.sql",
+                                                  "**/migrations/**/*.sql"
+                                              ],
+                      "version_sources":  [
+                                              "supabase/config.toml",
+                                              "supabase/migrations/**/*.sql"
+                                          ],
+                      "high":  "At least one identity signal plus one independent supporting signal, or two independent authoritative identity signals.",
+                      "medium":  "One authoritative identity signal with an extractable dependency/config version.",
+                      "low":  "Only a weak or ambiguous signal; confirmation required.",
+                      "none":  "No evidence."
+                  },
+                  {
+                      "skill_id":  "vercel-platform",
+                      "identity_evidence":  [
+                                                "vercel.json",
+                                                ".vercel/project.json"
+                                            ],
+                      "supporting_evidence":  [
+                                                  ".github/workflows/*vercel*.*",
+                                                  "package.json:devDependencies.vercel"
+                                              ],
+                      "version_sources":  [
+                                              "vercel.json",
+                                              ".vercel/project.json"
+                                          ],
+                      "high":  "At least one identity signal plus one independent supporting signal, or two independent authoritative identity signals.",
+                      "medium":  "One authoritative identity signal with an extractable dependency/config version.",
+                      "low":  "Only a weak or ambiguous signal; confirmation required.",
+                      "none":  "No evidence."
+                  },
+                  {
+                      "skill_id":  "tanstack-query",
+                      "identity_evidence":  [
+                                                "package.json:dependencies.@tanstack/react-query"
+                                            ],
+                      "supporting_evidence":  [
+                                                  "**/*query-client*.*",
+                                                  "**/*queryClient*.*"
+                                              ],
+                      "version_sources":  [
+                                              "package.json:dependencies.@tanstack/react-query"
+                                          ],
+                      "high":  "At least one identity signal plus one independent supporting signal, or two independent authoritative identity signals.",
+                      "medium":  "One authoritative identity signal with an extractable dependency/config version.",
+                      "low":  "Only a weak or ambiguous signal; confirmation required.",
+                      "none":  "No evidence."
+                  },
+                  {
+                      "skill_id":  "react-hook-form-zod",
+                      "identity_evidence":  [
+                                                "package.json:dependencies.react-hook-form",
+                                                "package.json:dependencies.zod"
+                                            ],
+                      "supporting_evidence":  [
+                                                  "**/*schema*.ts",
+                                                  "**/*form*.tsx"
+                                              ],
+                      "version_sources":  [
+                                              "package.json:dependencies.react-hook-form",
+                                              "package.json:dependencies.zod"
+                                          ],
+                      "high":  "At least one identity signal plus one independent supporting signal, or two independent authoritative identity signals.",
+                      "medium":  "One authoritative identity signal with an extractable dependency/config version.",
+                      "low":  "Only a weak or ambiguous signal; confirmation required.",
+                      "none":  "No evidence."
+                  },
+                  {
+                      "skill_id":  "tailwind-shadcn",
+                      "identity_evidence":  [
+                                                "components.json",
+                                                "package.json:devDependencies.tailwindcss"
+                                            ],
+                      "supporting_evidence":  [
+                                                  "tailwind.config.*",
+                                                  "app/globals.css",
+                                                  "src/index.css"
+                                              ],
+                      "version_sources":  [
+                                              "components.json",
+                                              "package.json:devDependencies.tailwindcss"
+                                          ],
+                      "high":  "At least one identity signal plus one independent supporting signal, or two independent authoritative identity signals.",
+                      "medium":  "One authoritative identity signal with an extractable dependency/config version.",
+                      "low":  "Only a weak or ambiguous signal; confirmation required.",
+                      "none":  "No evidence."
+                  },
+                  {
+                      "skill_id":  "pwa-webview",
+                      "identity_evidence":  [
+                                                "**/manifest.webmanifest",
+                                                "**/manifest.json"
+                                            ],
+                      "supporting_evidence":  [
+                                                  "**/*service-worker*.*",
+                                                  "**/sw.ts",
+                                                  "**/sw.js",
+                                                  "capacitor.config.*"
+                                              ],
+                      "version_sources":  [
+                                              "**/manifest.webmanifest",
+                                              "**/*service-worker*.*"
+                                          ],
+                      "high":  "At least one identity signal plus one independent supporting signal, or two independent authoritative identity signals.",
+                      "medium":  "One authoritative identity signal with an extractable dependency/config version.",
+                      "low":  "Only a weak or ambiguous signal; confirmation required.",
+                      "none":  "No evidence."
+                  },
+                  {
+                      "skill_id":  "base44-platform",
+                      "identity_evidence":  [
+                                                "package.json:dependencies.@base44/sdk",
+                                                "package.json:dependencies.base44"
+                                            ],
+                      "supporting_evidence":  [
+                                                  "base44/**",
+                                                  "**/*base44*.*"
+                                              ],
+                      "version_sources":  [
+                                              "package.json:dependencies.@base44/sdk",
+                                              "package.json:dependencies.base44"
+                                          ],
+                      "high":  "At least one identity signal plus one independent supporting signal, or two independent authoritative identity signals.",
+                      "medium":  "One authoritative identity signal with an extractable dependency/config version.",
+                      "low":  "Only a weak or ambiguous signal; confirmation required.",
+                      "none":  "No evidence."
+                  },
+                  {
+                      "skill_id":  "github-ci",
+                      "identity_evidence":  [
+                                                ".git/config",
+                                                ".github/workflows/*.yml",
+                                                ".github/workflows/*.yaml"
+                                            ],
+                      "supporting_evidence":  [
+                                                  ".github/dependabot.yml",
+                                                  ".github/CODEOWNERS"
+                                              ],
+                      "version_sources":  [
+                                              ".github/workflows/*.yml",
+                                              ".github/workflows/*.yaml"
+                                          ],
+                      "high":  "At least one identity signal plus one independent supporting signal, or two independent authoritative identity signals.",
+                      "medium":  "One authoritative identity signal with an extractable dependency/config version.",
+                      "low":  "Only a weak or ambiguous signal; confirmation required.",
+                      "none":  "No evidence."
+                  },
+                  {
+                      "skill_id":  "nodejs-runtime",
+                      "identity_evidence":  [
+                                                "package.json",
+                                                ".node-version",
+                                                ".nvmrc"
+                                            ],
+                      "supporting_evidence":  [
+                                                  "package.json:engines.node",
+                                                  "Dockerfile",
+                                                  "**/Dockerfile"
+                                              ],
+                      "version_sources":  [
+                                              "package.json:engines.node",
+                                              ".node-version",
+                                              ".nvmrc"
+                                          ],
+                      "high":  "At least one identity signal plus one independent supporting signal, or two independent authoritative identity signals.",
+                      "medium":  "One authoritative identity signal with an extractable dependency/config version.",
+                      "low":  "Only a weak or ambiguous signal; confirmation required.",
+                      "none":  "No evidence."
+                  },
+                  {
+                      "skill_id":  "ai-llm-integration",
+                      "identity_evidence":  [
+                                                "package.json:dependencies.openai",
+                                                "package.json:dependencies.@ai-sdk/*",
+                                                "package.json:dependencies.@anthropic-ai/sdk"
+                                            ],
+                      "supporting_evidence":  [
+                                                  "**/*llm*.*",
+                                                  "**/*embedding*.*",
+                                                  "**/*prompt*.*"
+                                              ],
+                      "version_sources":  [
+                                              "package.json:dependencies.openai",
+                                              "package.json:dependencies.@ai-sdk/*",
+                                              "package.json:dependencies.@anthropic-ai/sdk"
+                                          ],
+                      "high":  "At least one identity signal plus one independent supporting signal, or two independent authoritative identity signals.",
+                      "medium":  "One authoritative identity signal with an extractable dependency/config version.",
+                      "low":  "Only a weak or ambiguous signal; confirmation required.",
+                      "none":  "No evidence."
+                  }
+              ]
+}

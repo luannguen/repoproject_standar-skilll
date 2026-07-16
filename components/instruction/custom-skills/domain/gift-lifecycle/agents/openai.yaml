@@ -1,0 +1,6 @@
+interface:
+  display_name: "Gift Lifecycle"
+  short_description: "Guard evidence-backed gift lifecycle rules"
+  default_prompt: "Use $gift-lifecycle only with a verified active project overlay and cited domain evidence."
+policy:
+  allow_implicit_invocation: false

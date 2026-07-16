@@ -1,0 +1,138 @@
+{
+    "schema_version":  "1.0.0",
+    "case_count":  12,
+    "cases":  [
+                  {
+                      "id":  "github-workflow-ci",
+                      "task_type":  "ci",
+                      "paths":  [
+                                    ".github/workflows/quality-gates.yml"
+                                ],
+                      "expected_custom_skills":  [
+                                                     "github-ci"
+                                                 ],
+                      "reason":  "Active binding matches task type and path."
+                  },
+                  {
+                      "id":  "github-dependabot-governance",
+                      "task_type":  "repository-governance",
+                      "paths":  [
+                                    ".github/dependabot.yml"
+                                ],
+                      "expected_custom_skills":  [
+                                                     "github-ci"
+                                                 ],
+                      "reason":  "Repository governance is in the GitHub binding scope."
+                  },
+                  {
+                      "id":  "unified-validator",
+                      "task_type":  "validation",
+                      "paths":  [
+                                    "components/instruction/scripts/validate.ps1"
+                                ],
+                      "expected_custom_skills":  [
+                                                     "github-ci"
+                                                 ],
+                      "reason":  "The active CI overlay owns unified validation parity."
+                  },
+                  {
+                      "id":  "instruction-registry-validation",
+                      "task_type":  "validation",
+                      "paths":  [
+                                    "components/instruction/SKILL-REGISTRY.json"
+                                ],
+                      "expected_custom_skills":  [
+                                                     "github-ci"
+                                                 ],
+                      "reason":  "Instruction validation is called by the GitHub workflow."
+                  },
+                  {
+                      "id":  "release-workflow",
+                      "task_type":  "release-automation",
+                      "paths":  [
+                                    ".github/workflows/release.yml"
+                                ],
+                      "expected_custom_skills":  [
+                                                     "github-ci"
+                                                 ],
+                      "reason":  "Release automation matches the active binding."
+                  },
+                  {
+                      "id":  "ci-label-outside-scope",
+                      "task_type":  "ci",
+                      "paths":  [
+                                    "src/app.ts"
+                                ],
+                      "expected_custom_skills":  [
+
+                                                 ],
+                      "reason":  "Task type alone cannot bypass binding paths."
+                  },
+                  {
+                      "id":  "github-path-wrong-task",
+                      "task_type":  "application-feature",
+                      "paths":  [
+                                    ".github/workflows/quality-gates.yml"
+                                ],
+                      "expected_custom_skills":  [
+
+                                                 ],
+                      "reason":  "Path alone cannot bypass binding task types."
+                  },
+                  {
+                      "id":  "inactive-nextjs",
+                      "task_type":  "application-feature",
+                      "paths":  [
+                                    "app/page.tsx"
+                                ],
+                      "expected_custom_skills":  [
+
+                                                 ],
+                      "reason":  "Next.js is reusable but inactive without detection."
+                  },
+                  {
+                      "id":  "inactive-supabase",
+                      "task_type":  "database",
+                      "paths":  [
+                                    "supabase/migrations/001.sql"
+                                ],
+                      "expected_custom_skills":  [
+
+                                                 ],
+                      "reason":  "Supabase skills are inactive in the template."
+                  },
+                  {
+                      "id":  "inactive-payment-domain",
+                      "task_type":  "backend",
+                      "paths":  [
+                                    "src/webhooks/payment.ts"
+                                ],
+                      "expected_custom_skills":  [
+
+                                                 ],
+                      "reason":  "Domain names do not create an active binding."
+                  },
+                  {
+                      "id":  "documentation-only",
+                      "task_type":  "documentation",
+                      "paths":  [
+                                    "README.md"
+                                ],
+                      "expected_custom_skills":  [
+
+                                                 ],
+                      "reason":  "No custom binding intersects generic documentation."
+                  },
+                  {
+                      "id":  "profile-is-not-activation",
+                      "task_type":  "application-feature",
+                      "paths":  [
+                                    "profiles/nextjs-supabase-vercel.json"
+                                ],
+                      "expected_custom_skills":  [
+
+                                                 ],
+                      "reason":  "Composite profiles are shortcuts, never activators."
+                  }
+              ]
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Next.js"
+  short_description: "Guide version-aware Next.js application work"
+  default_prompt: "Use $nextjs with the active project binding and verified repository evidence."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Base44 Platform"
+  short_description: "Guide evidence-based Base44 platform work"
+  default_prompt: "Use $base44-platform with the active project binding and verified repository evidence."
+policy:
+  allow_implicit_invocation: false

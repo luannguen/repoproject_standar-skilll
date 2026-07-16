@@ -1,0 +1,275 @@
+{
+    "schema_version":  "1.0.0",
+    "policy":  "Detection identifies candidate domain context, never invents invariants. Verification of each rule remains evidence-specific.",
+    "excluded_evidence":  [
+                              "menu labels",
+                              "route names alone",
+                              "marketing copy",
+                              "comments alone",
+                              "directory names alone",
+                              "technology choice"
+                          ],
+    "default_activation":  "detected \u0026\u0026 confidence in [HIGH, MEDIUM] \u0026\u0026 verified_rules_count \u003e 0 \u0026\u0026 task_intersects_scope",
+    "rules":  [
+                  {
+                      "skill_id":  "multi-tenant-saas",
+                      "concept_terms":  [
+                                            "tenant_id",
+                                            "organization_id",
+                                            "workspace_id",
+                                            "membership"
+                                        ],
+                      "authoritative_categories":  [
+                                                       "database_schema_or_migration",
+                                                       "domain_source_model",
+                                                       "contract_or_specification",
+                                                       "domain_test"
+                                                   ],
+                      "minimum_independent_evidence":  2,
+                      "high":  "At least three independent authoritative artifacts across two categories, including a schema/model or test/contract.",
+                      "medium":  "At least two independent authoritative artifacts across two categories.",
+                      "low":  "One authoritative artifact or multiple non-authoritative mentions; confirmation required.",
+                      "none":  "No qualifying evidence."
+                  },
+                  {
+                      "skill_id":  "rbac-scoped-access",
+                      "concept_terms":  [
+                                            "role",
+                                            "permission",
+                                            "policy",
+                                            "scope"
+                                        ],
+                      "authoritative_categories":  [
+                                                       "database_schema_or_migration",
+                                                       "domain_source_model",
+                                                       "contract_or_specification",
+                                                       "domain_test"
+                                                   ],
+                      "minimum_independent_evidence":  2,
+                      "high":  "At least three independent authoritative artifacts across two categories, including a schema/model or test/contract.",
+                      "medium":  "At least two independent authoritative artifacts across two categories.",
+                      "low":  "One authoritative artifact or multiple non-authoritative mentions; confirmation required.",
+                      "none":  "No qualifying evidence."
+                  },
+                  {
+                      "skill_id":  "commerce-order-inventory",
+                      "concept_terms":  [
+                                            "order",
+                                            "order_item",
+                                            "inventory",
+                                            "stock"
+                                        ],
+                      "authoritative_categories":  [
+                                                       "database_schema_or_migration",
+                                                       "domain_source_model",
+                                                       "contract_or_specification",
+                                                       "domain_test"
+                                                   ],
+                      "minimum_independent_evidence":  2,
+                      "high":  "At least three independent authoritative artifacts across two categories, including a schema/model or test/contract.",
+                      "medium":  "At least two independent authoritative artifacts across two categories.",
+                      "low":  "One authoritative artifact or multiple non-authoritative mentions; confirmation required.",
+                      "none":  "No qualifying evidence."
+                  },
+                  {
+                      "skill_id":  "payment-reconciliation",
+                      "concept_terms":  [
+                                            "payment",
+                                            "transaction",
+                                            "reconciliation",
+                                            "settlement"
+                                        ],
+                      "authoritative_categories":  [
+                                                       "database_schema_or_migration",
+                                                       "domain_source_model",
+                                                       "contract_or_specification",
+                                                       "domain_test"
+                                                   ],
+                      "minimum_independent_evidence":  2,
+                      "high":  "At least three independent authoritative artifacts across two categories, including a schema/model or test/contract.",
+                      "medium":  "At least two independent authoritative artifacts across two categories.",
+                      "low":  "One authoritative artifact or multiple non-authoritative mentions; confirmation required.",
+                      "none":  "No qualifying evidence."
+                  },
+                  {
+                      "skill_id":  "referral-commission",
+                      "concept_terms":  [
+                                            "referral",
+                                            "commission",
+                                            "affiliate",
+                                            "payout"
+                                        ],
+                      "authoritative_categories":  [
+                                                       "database_schema_or_migration",
+                                                       "domain_source_model",
+                                                       "contract_or_specification",
+                                                       "domain_test"
+                                                   ],
+                      "minimum_independent_evidence":  2,
+                      "high":  "At least three independent authoritative artifacts across two categories, including a schema/model or test/contract.",
+                      "medium":  "At least two independent authoritative artifacts across two categories.",
+                      "low":  "One authoritative artifact or multiple non-authoritative mentions; confirmation required.",
+                      "none":  "No qualifying evidence."
+                  },
+                  {
+                      "skill_id":  "gift-lifecycle",
+                      "concept_terms":  [
+                                            "gift",
+                                            "redeem",
+                                            "recipient",
+                                            "claim"
+                                        ],
+                      "authoritative_categories":  [
+                                                       "database_schema_or_migration",
+                                                       "domain_source_model",
+                                                       "contract_or_specification",
+                                                       "domain_test"
+                                                   ],
+                      "minimum_independent_evidence":  2,
+                      "high":  "At least three independent authoritative artifacts across two categories, including a schema/model or test/contract.",
+                      "medium":  "At least two independent authoritative artifacts across two categories.",
+                      "low":  "One authoritative artifact or multiple non-authoritative mentions; confirmation required.",
+                      "none":  "No qualifying evidence."
+                  },
+                  {
+                      "skill_id":  "ecard-connection",
+                      "concept_terms":  [
+                                            "ecard",
+                                            "connection",
+                                            "contact_card",
+                                            "card_link"
+                                        ],
+                      "authoritative_categories":  [
+                                                       "database_schema_or_migration",
+                                                       "domain_source_model",
+                                                       "contract_or_specification",
+                                                       "domain_test"
+                                                   ],
+                      "minimum_independent_evidence":  2,
+                      "high":  "At least three independent authoritative artifacts across two categories, including a schema/model or test/contract.",
+                      "medium":  "At least two independent authoritative artifacts across two categories.",
+                      "low":  "One authoritative artifact or multiple non-authoritative mentions; confirmation required.",
+                      "none":  "No qualifying evidence."
+                  },
+                  {
+                      "skill_id":  "subscription-billing",
+                      "concept_terms":  [
+                                            "subscription",
+                                            "invoice",
+                                            "billing_period",
+                                            "plan"
+                                        ],
+                      "authoritative_categories":  [
+                                                       "database_schema_or_migration",
+                                                       "domain_source_model",
+                                                       "contract_or_specification",
+                                                       "domain_test"
+                                                   ],
+                      "minimum_independent_evidence":  2,
+                      "high":  "At least three independent authoritative artifacts across two categories, including a schema/model or test/contract.",
+                      "medium":  "At least two independent authoritative artifacts across two categories.",
+                      "low":  "One authoritative artifact or multiple non-authoritative mentions; confirmation required.",
+                      "none":  "No qualifying evidence."
+                  },
+                  {
+                      "skill_id":  "community-content",
+                      "concept_terms":  [
+                                            "post",
+                                            "comment",
+                                            "moderation",
+                                            "community"
+                                        ],
+                      "authoritative_categories":  [
+                                                       "database_schema_or_migration",
+                                                       "domain_source_model",
+                                                       "contract_or_specification",
+                                                       "domain_test"
+                                                   ],
+                      "minimum_independent_evidence":  2,
+                      "high":  "At least three independent authoritative artifacts across two categories, including a schema/model or test/contract.",
+                      "medium":  "At least two independent authoritative artifacts across two categories.",
+                      "low":  "One authoritative artifact or multiple non-authoritative mentions; confirmation required.",
+                      "none":  "No qualifying evidence."
+                  },
+                  {
+                      "skill_id":  "notification-messaging",
+                      "concept_terms":  [
+                                            "notification",
+                                            "message",
+                                            "delivery",
+                                            "outbox"
+                                        ],
+                      "authoritative_categories":  [
+                                                       "database_schema_or_migration",
+                                                       "domain_source_model",
+                                                       "contract_or_specification",
+                                                       "domain_test"
+                                                   ],
+                      "minimum_independent_evidence":  2,
+                      "high":  "At least three independent authoritative artifacts across two categories, including a schema/model or test/contract.",
+                      "medium":  "At least two independent authoritative artifacts across two categories.",
+                      "low":  "One authoritative artifact or multiple non-authoritative mentions; confirmation required.",
+                      "none":  "No qualifying evidence."
+                  },
+                  {
+                      "skill_id":  "digital-assets",
+                      "concept_terms":  [
+                                            "asset",
+                                            "media",
+                                            "storage_key",
+                                            "upload"
+                                        ],
+                      "authoritative_categories":  [
+                                                       "database_schema_or_migration",
+                                                       "domain_source_model",
+                                                       "contract_or_specification",
+                                                       "domain_test"
+                                                   ],
+                      "minimum_independent_evidence":  2,
+                      "high":  "At least three independent authoritative artifacts across two categories, including a schema/model or test/contract.",
+                      "medium":  "At least two independent authoritative artifacts across two categories.",
+                      "low":  "One authoritative artifact or multiple non-authoritative mentions; confirmation required.",
+                      "none":  "No qualifying evidence."
+                  },
+                  {
+                      "skill_id":  "analytics-events",
+                      "concept_terms":  [
+                                            "event_name",
+                                            "event_version",
+                                            "analytics",
+                                            "tracking"
+                                        ],
+                      "authoritative_categories":  [
+                                                       "database_schema_or_migration",
+                                                       "domain_source_model",
+                                                       "contract_or_specification",
+                                                       "domain_test"
+                                                   ],
+                      "minimum_independent_evidence":  2,
+                      "high":  "At least three independent authoritative artifacts across two categories, including a schema/model or test/contract.",
+                      "medium":  "At least two independent authoritative artifacts across two categories.",
+                      "low":  "One authoritative artifact or multiple non-authoritative mentions; confirmation required.",
+                      "none":  "No qualifying evidence."
+                  },
+                  {
+                      "skill_id":  "ai-agent-domain",
+                      "concept_terms":  [
+                                            "agent_run",
+                                            "tool_call",
+                                            "approval",
+                                            "delegation"
+                                        ],
+                      "authoritative_categories":  [
+                                                       "database_schema_or_migration",
+                                                       "domain_source_model",
+                                                       "contract_or_specification",
+                                                       "domain_test"
+                                                   ],
+                      "minimum_independent_evidence":  2,
+                      "high":  "At least three independent authoritative artifacts across two categories, including a schema/model or test/contract.",
+                      "medium":  "At least two independent authoritative artifacts across two categories.",
+                      "low":  "One authoritative artifact or multiple non-authoritative mentions; confirmation required.",
+                      "none":  "No qualifying evidence."
+                  }
+              ]
+}

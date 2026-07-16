@@ -14,7 +14,7 @@ Read this file first, then filter memory-index.json. Open detail files only when
 
 | ID | Type | Scope | Status | Summary | Detail |
 | --- | --- | --- | --- | --- | --- |
-| MEM-PROJECT-0001 | project_fact | level-0:project | verified | A validated 20-skill/11-workflow instruction system exists; application source and Git metadata do not. | PROJECT-SNAPSHOT.md |
+| MEM-PROJECT-0001 | project_fact | level-0:project | verified | A validated 21-Standard-Skill/12-workflow plus 27-Custom-Skill template baseline exists; application source does not. | PROJECT-SNAPSHOT.md |
 | MEM-CONSTRAINT-0001 | technical_constraint | level-0:project | verified | Every task uses selective, evidence-backed memory with no secrets or private reasoning. | CONSTRAINTS.md |
 | MEM-GAP-0001 | documentation_gap | level-0:project | supported | Both specialist skills are routed; application/business/Base44/schema/test/deployment sources remain unavailable. | audits/MEMORY-GAP-REPORT.md |
 | MEM-QUESTION-0001 | open_question | level-0:project | provisional | Product, domain, stack, Base44 capabilities, contracts, and deployment remain unknown. | OPEN-QUESTIONS.md |
@@ -22,8 +22,12 @@ Read this file first, then filter memory-index.json. Open detail files only when
 | MEM-UI-0001 | project_fact | level-0:project:ui-ux | verified | UI/UX Production is routed; application UI architecture remains absent. | audits/UI-UX-AUDIT.md |
 | MEM-BACKEND-0001 | project_fact | level-0:project:backend | verified | Backend Production Engineering is routed; application/Base44 backend evidence remains absent. | audits/BACKEND-AUDIT.md |
 | DEC-0001 | architecture_decision | level-0:project | verified | Use a deterministic JSON index and Markdown detail; do not add a vector database. | decisions/DEC-0001-deterministic-memory-index.md |
-| MEM-SKILL-SYSTEM-0001 | project_fact | level-0:project:instruction-system | verified | Constitution, Orchestrator, registries, approval gates, 20 skills, 11 workflows, and executable lint are active. | modules/instruction-system/MEM-SKILL-SYSTEM-0001.md |
+| MEM-SKILL-SYSTEM-0001 | project_fact | level-0:project:instruction-system | verified | Constitution, Orchestrator, separate Standard/Custom registries, 12 workflows, routing fixtures, and executable lint are active. | modules/instruction-system/MEM-SKILL-SYSTEM-0001.md |
+| MEM-CUSTOM-SKILL-SYSTEM-0001 | project_fact | level-0:project:instruction-system:custom-skills | verified | 27 reusable Custom Skills use evidence detection and scoped project bindings; only GitHub CI is active. | modules/instruction-system/MEM-CUSTOM-SKILL-SYSTEM-0001.md |
+| MEM-TEMPLATE-STANDARD-0001 | project_fact | level-0:project:template-governance | verified | Evidence-gated onboarding, repository governance, and cross-platform reusable validation are active. | modules/instruction-system/MEM-TEMPLATE-STANDARD-0001.md |
 | TASK-20260716-project-engineering-skill-system | task_summary | level-4:task | verified | Full Project Engineering Skill System created, integrated, reported, and validated. | tasks/completed/TASK-20260716-project-engineering-skill-system.md |
+| TASK-20260716-template-production-standard | task_summary | level-4:task | verified | Reusable onboarding, governance, security/release, routing-fixture, and CI baseline added and validated. | tasks/completed/TASK-20260716-template-production-standard.md |
+| TASK-20260716-reusable-custom-skill-system | task_summary | level-4:task:reusable-custom-skill-system | verified | Two-layer Custom Skills, detection, activation, overlays, routing, validation, and reports added without app assumptions. | tasks/completed/TASK-20260716-reusable-custom-skill-system.md |
 | PAT-0001 | design_pattern | level-0:project | supported | Retrieve index -> summary -> detail -> source verification. | patterns/PAT-0001-progressive-retrieval.md |
 | TASK-20260716-project-memory-bootstrap | task_summary | level-4:task | verified | Project Memory OS bootstrap phase created and validated. | tasks/completed/TASK-20260716-project-memory-bootstrap.md |
 | TASK-20260716-ui-ux-production-skill | task_summary | level-4:task | verified | UI/UX Production skill created, routed, audited, and validated. | tasks/completed/TASK-20260716-ui-ux-production-skill.md |

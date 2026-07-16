@@ -4,6 +4,7 @@ Machine-readable source: [WORKFLOW-REGISTRY.json](WORKFLOW-REGISTRY.json). Selec
 
 | ID | Version | Status | Default risk | Required skills | Path |
 |---|---:|---|---|---:|---|
+| project-onboarding | 1.0.0 | active | MEDIUM | 7 | [WORKFLOW.md](workflows/project-onboarding/WORKFLOW.md) |
 | feature-development | 1.0.0 | active | MEDIUM | 5 | [WORKFLOW.md](workflows/feature-development/WORKFLOW.md) |
 | bug-fix | 1.0.0 | active | MEDIUM | 5 | [WORKFLOW.md](workflows/bug-fix/WORKFLOW.md) |
 | refactoring | 1.0.0 | active | MEDIUM | 5 | [WORKFLOW.md](workflows/refactoring/WORKFLOW.md) |
@@ -18,11 +19,12 @@ Machine-readable source: [WORKFLOW-REGISTRY.json](WORKFLOW-REGISTRY.json). Selec
 
 ## Selection precedence
 
-1. Active production impact selects `incident-response`.
-2. Production promotion selects `release`; a migration inside a release is a nested phase, not a second primary workflow.
-3. A compatibility transition selects `migration`; dependency-only evolution selects `dependency-upgrade`.
-4. AI behavior selects `ai-feature`; a security-only assessment selects `security-review`.
-5. Measured optimization selects `performance-optimization`; behavior-preserving structural work selects `refactoring`.
-6. A defect selects `bug-fix`; new behavior selects `feature-development`; documentation-only work selects `documentation`.
+1. An uninstantiated clone or repository-baseline task selects project-onboarding before application work.
+2. Active production impact selects `incident-response`.
+3. Production promotion selects `release`; a migration inside a release is a nested phase, not a second primary workflow.
+4. A compatibility transition selects `migration`; dependency-only evolution selects `dependency-upgrade`.
+5. AI behavior selects `ai-feature`; a security-only assessment selects `security-review`.
+6. Measured optimization selects `performance-optimization`; behavior-preserving structural work selects `refactoring`.
+7. A defect selects `bug-fix`; new behavior selects `feature-development`; documentation-only work selects `documentation`.
 
 When several apply, choose the workflow with the highest risk and dominant outcome, then include other concerns through optional skills and phases.

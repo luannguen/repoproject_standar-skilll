@@ -1,0 +1,6 @@
+interface:
+  display_name: "PWA WebView"
+  short_description: "Guide PWA and embedded WebView behavior"
+  default_prompt: "Use $pwa-webview with the active project binding and verified repository evidence."
+policy:
+  allow_implicit_invocation: false

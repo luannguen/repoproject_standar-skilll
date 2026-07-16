@@ -8,7 +8,7 @@
                         "title":  "Initial repository baseline",
                         "memory_type":  "project_fact",
                         "scope":  "level-0:project",
-                        "summary":  "Repository contains a validated Constitution-Orchestrator-Memory-Capability-Workflow system with 20 skills and 11 workflows, but no application source or Git metadata.",
+                        "summary":  "Repository contains a validated 21-Standard-Skill/12-workflow system, 27 reusable Custom Skills, scoped activation, onboarding, governance, and validation; no application source exists.",
                         "status":  "verified",
                         "confidence":  "high",
                         "tags":  [
@@ -41,24 +41,30 @@
                                                   "components/instruction/project-memory/audits/UI-UX-AUDIT.md",
                                                   "components/instruction/skills/ui-ux-production/SKILL.md",
                                                   "components/instruction/project-memory/audits/BACKEND-AUDIT.md",
-                                                  "components/instruction/skills/backend-production-engineering/SKILL.md"
+                                                  "components/instruction/skills/backend-production-engineering/SKILL.md",
+                                                  "README.md",
+                                                  "components/instruction/TEMPLATE-MANIFEST.json",
+                                                  "components/instruction/PROJECT-PROFILE.json",
+                                                  "components/instruction/reports/TEMPLATE-PRODUCTION-READINESS.md"
                                               ],
                         "evidence":  [
                                          "Recursive inventory before initialization returned COUNT=0; file discovery returned no paths; git status reported no repository.",
                                          "The UI/UX audit verified the installed skill/routing and continued absence of application UI sources.",
-                                         "The backend audit verified the installed backend skill/routing and continued absence of application/Base44 sources."
+                                         "The backend audit verified the installed backend skill/routing and continued absence of application/Base44 sources.",
+                                         "Git repository and reusable governance artifacts now exist; unified local validation covers 21 skills, 12 workflows, 24 routing fixtures, 35 anti-patterns, repository hygiene, links, and memory.",
+                                         "Custom validation covers 27 reusable modules, 14 technology detections, 13 domain detections, 12 custom route cases, and one HIGH-confidence GitHub CI binding."
                                      ],
                         "decision_or_fact":  "implementation_fact",
                         "rationale":  "Prevents later agents from inventing an application architecture from an instruction-only workspace.",
                         "consequences":  [
-                                             "Re-run onboarding plus UI/backend audits when application sources arrive."
+                                             "Use project-onboarding immediately after cloning; re-run application discovery and specialist audits when real sources arrive."
                                          ],
                         "risks":  [
-                                      "This baseline becomes stale as soon as application files are added."
+                                      "This baseline becomes stale when a clone is not instantiated or application evidence is added without updating the profile."
                                   ],
                         "valid_from":  "2026-07-16",
                         "last_verified_at":  "2026-07-16",
-                        "review_after":  "2026-07-30",
+                        "review_after":  "2026-10-16",
                         "created_at":  "2026-07-16",
                         "updated_at":  "2026-07-16",
                         "created_by_task":  "TASK-20260716-project-memory-bootstrap",
@@ -70,7 +76,11 @@
                                                  "MEM-GAP-0001",
                                                  "MEM-QUESTION-0001",
                                                  "MEM-UI-0001",
-                                                 "MEM-BACKEND-0001"
+                                                 "MEM-BACKEND-0001",
+                                                 "MEM-TEMPLATE-STANDARD-0001",
+                                                 "TASK-20260716-template-production-standard",
+                                                 "MEM-CUSTOM-SKILL-SYSTEM-0001",
+                                                 "TASK-20260716-reusable-custom-skill-system"
                                              ],
                         "detail_path":  "components/instruction/project-memory/PROJECT-SNAPSHOT.md"
                     },
@@ -980,155 +990,509 @@
                         "detail_path":  "components/instruction/project-memory/tasks/completed/TASK-20260716-backend-production-engineering-skill.md"
                     },
                     {
-                        "memory_id": "MEM-SKILL-SYSTEM-0001",
-                        "title": "Project Engineering Skill System is active",
-                        "memory_type": "project_fact",
-                        "scope": "level-0:project:instruction-system",
-                        "summary": "Validated Constitution, Orchestrator, 20-skill registry, 11-workflow registry, approval gates, routing, and executable instruction lint are active.",
-                        "status": "verified",
-                        "confidence": "high",
-                        "affected_modules": [
-                            "instruction-system"
-                        ],
-                        "affected_paths": [
-                            "AGENTS.md",
-                            "components/instruction"
-                        ],
-                        "related_entities": [],
-                        "related_features": [
-                            "project-engineering-agent"
-                        ],
-                        "valid_from": "2026-07-16",
-                        "last_verified_at": "2026-07-16",
-                        "review_after": "2026-10-16",
-                        "created_at": "2026-07-16",
-                        "updated_at": "2026-07-16",
-                        "created_by_task": "TASK-20260716-project-engineering-skill-system",
-                        "supersedes": [],
-                        "superseded_by": null,
-                        "tags": [
-                            "instruction-system",
-                            "skills",
-                            "workflows",
-                            "routing",
-                            "governance",
-                            "validation"
-                        ],
-                        "trigger_terms": [
-                            "skill",
-                            "workflow",
-                            "orchestrator",
-                            "constitution",
-                            "approval",
-                            "routing",
-                            "bootstrap",
-                            "validation"
-                        ],
-                        "source_references": [
-                            "components/instruction/PROJECT-CONSTITUTION.md",
-                            "components/instruction/SKILL-REGISTRY.json",
-                            "components/instruction/WORKFLOW-REGISTRY.json",
-                            "components/instruction/reports/INSTRUCTION-ARCHITECTURE-AUDIT.md",
-                            "components/instruction/reports/DEFINITION-OF-DONE.md"
-                        ],
-                        "evidence": [
-                            "Skill lint passed for 20 skills with zero blockers and warnings.",
-                            "Workflow lint passed for 11 workflows with zero blockers and warnings.",
-                            "Route/link validation passed with 35 anti-patterns and zero blockers and warnings."
-                        ],
-                        "decision_or_fact": "implementation_fact",
-                        "rationale": "Future agents need one durable fact describing the instruction architecture without reading every skill.",
-                        "consequences": [
-                            "Every task starts with Constitution and Orchestrator routing.",
-                            "Concrete domain skills remain evidence-gated.",
-                            "Application production readiness remains unverified."
-                        ],
-                        "risks": [
-                            "Registries and memory become stale if future instruction changes are not synchronized."
-                        ],
-                        "related_memories": [
-                            "MEM-PROJECT-0001",
-                            "MEM-CONSTRAINT-0001",
-                            "MEM-GAP-0001",
-                            "TASK-20260716-project-engineering-skill-system"
-                        ],
-                        "detail_path": "components/instruction/project-memory/modules/instruction-system/MEM-SKILL-SYSTEM-0001.md"
+                        "memory_id":  "MEM-SKILL-SYSTEM-0001",
+                        "title":  "Project Engineering Skill System is active",
+                        "memory_type":  "project_fact",
+                        "scope":  "level-0:project:instruction-system",
+                        "summary":  "Validated Constitution, Orchestrator, 21-Standard-Skill registry, 12-workflow registry, separate 27-module Custom Skill library, approval gates, routing fixtures, and executable lint are active.",
+                        "status":  "verified",
+                        "confidence":  "high",
+                        "affected_modules":  [
+                                                 "instruction-system"
+                                             ],
+                        "affected_paths":  [
+                                               "AGENTS.md",
+                                               "components/instruction"
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+                                                 "project-engineering-agent"
+                                             ],
+                        "valid_from":  "2026-07-16",
+                        "last_verified_at":  "2026-07-16",
+                        "review_after":  "2026-10-16",
+                        "created_at":  "2026-07-16",
+                        "updated_at":  "2026-07-16",
+                        "created_by_task":  "TASK-20260716-project-engineering-skill-system",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "tags":  [
+                                     "instruction-system",
+                                     "skills",
+                                     "workflows",
+                                     "routing",
+                                     "governance",
+                                     "validation"
+                                 ],
+                        "trigger_terms":  [
+                                              "skill",
+                                              "workflow",
+                                              "orchestrator",
+                                              "constitution",
+                                              "approval",
+                                              "routing",
+                                              "bootstrap",
+                                              "validation"
+                                          ],
+                        "source_references":  [
+                                                  "components/instruction/PROJECT-CONSTITUTION.md",
+                                                  "components/instruction/SKILL-REGISTRY.json",
+                                                  "components/instruction/WORKFLOW-REGISTRY.json",
+                                                  "components/instruction/reports/INSTRUCTION-ARCHITECTURE-AUDIT.md",
+                                                  "components/instruction/reports/DEFINITION-OF-DONE.md",
+                                                  "components/instruction/PROJECT-ONBOARDING.md",
+                                                  "components/instruction/tests/routing-cases.json",
+                                                  "components/instruction/reports/TEMPLATE-PRODUCTION-READINESS.md",
+                                                  "components/instruction/custom-skills/CUSTOM-SKILL-REGISTRY.json",
+                                                  "components/instruction/project-custom-skills/ACTIVE-CUSTOM-SKILLS.json",
+                                                  "components/instruction/reports/CUSTOM-SKILL-SYSTEM-READINESS.md"
+                                              ],
+                        "evidence":  [
+                                         "Skill lint passed for 21 skills with zero blockers and warnings.",
+                                         "Workflow lint passed for 12 workflows with zero blockers and warnings.",
+                                         "Route/link validation passed with 35 anti-patterns; 24 static routing fixtures cover all workflows and four risk levels.",
+                                         "Custom lint validates 27 reusable modules; detector synchronization and 12 custom route fixtures pass."
+                                     ],
+                        "decision_or_fact":  "implementation_fact",
+                        "rationale":  "Future agents need one durable fact describing the instruction architecture without reading every skill.",
+                        "consequences":  [
+                                             "Every task starts with Constitution and Orchestrator routing.",
+                                             "Concrete domain skills remain evidence-gated.",
+                                             "Application production readiness remains unverified.",
+                                             "Custom Skills activate only through evidence-backed task/path-scoped project bindings."
+                                         ],
+                        "risks":  [
+                                      "Registries and memory become stale if future instruction changes are not synchronized."
+                                  ],
+                        "related_memories":  [
+                                                 "MEM-PROJECT-0001",
+                                                 "MEM-CONSTRAINT-0001",
+                                                 "MEM-GAP-0001",
+                                                 "TASK-20260716-project-engineering-skill-system",
+                                                 "MEM-TEMPLATE-STANDARD-0001",
+                                                 "TASK-20260716-template-production-standard",
+                                                 "MEM-CUSTOM-SKILL-SYSTEM-0001",
+                                                 "TASK-20260716-reusable-custom-skill-system"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/modules/instruction-system/MEM-SKILL-SYSTEM-0001.md"
                     },
                     {
-                        "memory_id": "TASK-20260716-project-engineering-skill-system",
-                        "title": "Build Project Engineering Skill System",
-                        "memory_type": "task_summary",
-                        "scope": "level-4:task:project-engineering-skill-system",
-                        "summary": "Audited and transformed the instruction-only repository into a validated Constitution-Orchestrator-Memory-Capability-Workflow system with 20 skills and 11 workflows.",
-                        "status": "verified",
-                        "confidence": "high",
-                        "affected_modules": [
-                            "instruction-system",
-                            "project-memory"
-                        ],
-                        "affected_paths": [
-                            "AGENTS.md",
-                            "components/instruction"
-                        ],
-                        "related_entities": [],
-                        "related_features": [
-                            "project-engineering-agent"
-                        ],
-                        "valid_from": "2026-07-16",
-                        "last_verified_at": "2026-07-16",
-                        "review_after": "2026-10-16",
-                        "created_at": "2026-07-16",
-                        "updated_at": "2026-07-16",
-                        "created_by_task": "TASK-20260716-project-engineering-skill-system",
-                        "supersedes": [],
-                        "superseded_by": null,
-                        "tags": [
-                            "task-summary",
-                            "instruction-system",
-                            "skills",
-                            "workflows",
-                            "orchestrator",
-                            "validation"
-                        ],
-                        "trigger_terms": [
-                            "project-engineering-skill-system",
-                            "skill-system",
-                            "orchestrator",
-                            "registry",
-                            "workflow",
-                            "continue"
-                        ],
-                        "source_references": [
-                            "components/instruction/reports/TASK-EXECUTION-BRIEF.md",
-                            "components/instruction/reports/EXISTING-SKILL-AUDIT.md",
-                            "components/instruction/reports/INSTRUCTION-ARCHITECTURE-AUDIT.md",
-                            "components/instruction/reports/DEFINITION-OF-DONE.md",
-                            "components/instruction/reports/VALIDATION-REPORT.md"
-                        ],
-                        "evidence": [
-                            "20 registered skills and 11 workflows exist.",
-                            "All three system validators passed with zero blockers and warnings.",
-                            "Project Memory lint passed after indexed write-back."
-                        ],
-                        "decision_or_fact": "task_outcome",
-                        "rationale": "Preserve the completed architecture, validation boundary, and application-evidence gap outside chat history.",
-                        "consequences": [
-                            "Future tasks use Orchestrator and one primary workflow.",
-                            "Capability and workflow changes require registry and validation synchronization."
-                        ],
-                        "risks": [
-                            "No application evidence exists, so application-specific production and domain claims remain unavailable."
-                        ],
-                        "related_memories": [
-                            "MEM-SKILL-SYSTEM-0001",
-                            "MEM-PROJECT-0001",
-                            "MEM-CONSTRAINT-0001",
-                            "MEM-GAP-0001",
-                            "MEM-UI-0001",
-                            "MEM-BACKEND-0001",
-                            "TASK-20260716-project-memory-onboarding"
-                        ],
-                        "detail_path": "components/instruction/project-memory/tasks/completed/TASK-20260716-project-engineering-skill-system.md"
+                        "memory_id":  "TASK-20260716-project-engineering-skill-system",
+                        "title":  "Build Project Engineering Skill System",
+                        "memory_type":  "task_summary",
+                        "scope":  "level-4:task:project-engineering-skill-system",
+                        "summary":  "Audited and transformed the instruction-only repository into a validated Constitution-Orchestrator-Memory-Capability-Workflow system with 20 skills and 11 workflows.",
+                        "status":  "verified",
+                        "confidence":  "high",
+                        "affected_modules":  [
+                                                 "instruction-system",
+                                                 "project-memory"
+                                             ],
+                        "affected_paths":  [
+                                               "AGENTS.md",
+                                               "components/instruction"
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+                                                 "project-engineering-agent"
+                                             ],
+                        "valid_from":  "2026-07-16",
+                        "last_verified_at":  "2026-07-16",
+                        "review_after":  "2026-10-16",
+                        "created_at":  "2026-07-16",
+                        "updated_at":  "2026-07-16",
+                        "created_by_task":  "TASK-20260716-project-engineering-skill-system",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "tags":  [
+                                     "task-summary",
+                                     "instruction-system",
+                                     "skills",
+                                     "workflows",
+                                     "orchestrator",
+                                     "validation"
+                                 ],
+                        "trigger_terms":  [
+                                              "project-engineering-skill-system",
+                                              "skill-system",
+                                              "orchestrator",
+                                              "registry",
+                                              "workflow",
+                                              "continue"
+                                          ],
+                        "source_references":  [
+                                                  "components/instruction/reports/TASK-EXECUTION-BRIEF.md",
+                                                  "components/instruction/reports/EXISTING-SKILL-AUDIT.md",
+                                                  "components/instruction/reports/INSTRUCTION-ARCHITECTURE-AUDIT.md",
+                                                  "components/instruction/reports/DEFINITION-OF-DONE.md",
+                                                  "components/instruction/reports/VALIDATION-REPORT.md"
+                                              ],
+                        "evidence":  [
+                                         "20 registered skills and 11 workflows exist.",
+                                         "All three system validators passed with zero blockers and warnings.",
+                                         "Project Memory lint passed after indexed write-back."
+                                     ],
+                        "decision_or_fact":  "task_outcome",
+                        "rationale":  "Preserve the completed architecture, validation boundary, and application-evidence gap outside chat history.",
+                        "consequences":  [
+                                             "Future tasks use Orchestrator and one primary workflow.",
+                                             "Capability and workflow changes require registry and validation synchronization."
+                                         ],
+                        "risks":  [
+                                      "No application evidence exists, so application-specific production and domain claims remain unavailable."
+                                  ],
+                        "related_memories":  [
+                                                 "MEM-SKILL-SYSTEM-0001",
+                                                 "MEM-PROJECT-0001",
+                                                 "MEM-CONSTRAINT-0001",
+                                                 "MEM-GAP-0001",
+                                                 "MEM-UI-0001",
+                                                 "MEM-BACKEND-0001",
+                                                 "TASK-20260716-project-memory-onboarding"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/tasks/completed/TASK-20260716-project-engineering-skill-system.md"
+                    },
+                    {
+                        "memory_id":  "MEM-TEMPLATE-STANDARD-0001",
+                        "title":  "Reusable production project template baseline is active",
+                        "memory_type":  "project_fact",
+                        "scope":  "level-0:project:template-governance",
+                        "summary":  "The repository has an evidence-gated onboarding, governance, and cross-platform validation baseline while application-specific controls remain conditional.",
+                        "status":  "verified",
+                        "confidence":  "high",
+                        "tags":  [
+                                     "template",
+                                     "onboarding",
+                                     "governance",
+                                     "ci",
+                                     "validation",
+                                     "security"
+                                 ],
+                        "trigger_terms":  [
+                                              "clone",
+                                              "template",
+                                              "onboarding",
+                                              "governance",
+                                              "production-standard",
+                                              "ci",
+                                              "quality-gate"
+                                          ],
+                        "affected_modules":  [
+                                                 "instruction-system",
+                                                 "repository-governance"
+                                             ],
+                        "affected_paths":  [
+                                               "README.md",
+                                               ".github",
+                                               "docs",
+                                               "scripts",
+                                               "components/instruction"
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+                                                 "project-template",
+                                                 "project-onboarding"
+                                             ],
+                        "source_references":  [
+                                                  "README.md",
+                                                  "components/instruction/TEMPLATE-MANIFEST.json",
+                                                  "components/instruction/PROJECT-PROFILE.json",
+                                                  "components/instruction/PROJECT-ONBOARDING.md",
+                                                  "components/instruction/reports/TEMPLATE-PRODUCTION-READINESS.md"
+                                              ],
+                        "evidence":  [
+                                         "Unified local validation covers repository, skills, workflows, routing fixtures, routes/links, and memory.",
+                                         "Static fixtures cover 12 workflows and four risk levels.",
+                                         "CI definition targets Windows and Linux without assuming an application stack."
+                                     ],
+                        "decision_or_fact":  "implementation_fact",
+                        "rationale":  "Future clones need a durable boundary between reusable template readiness and application production readiness.",
+                        "consequences":  [
+                                             "Clones route first-run work through project-onboarding.",
+                                             "Application controls activate only from verified triggers.",
+                                             "External repository settings remain owner-verified."
+                                         ],
+                        "risks":  [
+                                      "Hosted CI and repository protections are unverified until pushed and configured.",
+                                      "A clone can become stale if the project profile is not instantiated."
+                                  ],
+                        "valid_from":  "2026-07-16",
+                        "last_verified_at":  "2026-07-16",
+                        "review_after":  "2026-10-16",
+                        "created_at":  "2026-07-16",
+                        "updated_at":  "2026-07-16",
+                        "created_by_task":  "TASK-20260716-template-production-standard",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "related_memories":  [
+                                                 "MEM-PROJECT-0001",
+                                                 "MEM-SKILL-SYSTEM-0001",
+                                                 "MEM-GAP-0001",
+                                                 "TASK-20260716-template-production-standard"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/modules/instruction-system/MEM-TEMPLATE-STANDARD-0001.md"
+                    },
+                    {
+                        "memory_id":  "TASK-20260716-template-production-standard",
+                        "title":  "Add reusable production template governance and quality baseline",
+                        "memory_type":  "task_summary",
+                        "scope":  "level-4:task:template-production-standard",
+                        "summary":  "Added evidence-gated project onboarding, repository governance, security/release baselines, static routing fixtures, and cross-platform reusable-layer validation without fabricating application controls.",
+                        "status":  "verified",
+                        "confidence":  "high",
+                        "tags":  [
+                                     "task-summary",
+                                     "template",
+                                     "onboarding",
+                                     "governance",
+                                     "validation",
+                                     "ci"
+                                 ],
+                        "trigger_terms":  [
+                                              "template-production-standard",
+                                              "clone",
+                                              "onboarding",
+                                              "repository-standard",
+                                              "continue"
+                                          ],
+                        "affected_modules":  [
+                                                 "instruction-system",
+                                                 "repository-governance",
+                                                 "project-memory"
+                                             ],
+                        "affected_paths":  [
+                                               "README.md",
+                                               ".github",
+                                               "docs",
+                                               "scripts",
+                                               "components/instruction"
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+                                                 "project-template",
+                                                 "project-onboarding"
+                                             ],
+                        "source_references":  [
+                                                  "components/instruction/reports/TEMPLATE-PRODUCTION-READINESS.md",
+                                                  "components/instruction/reports/VALIDATION-REPORT.md",
+                                                  "components/instruction/TEMPLATE-MANIFEST.json",
+                                                  "components/instruction/PROJECT-PROFILE.json"
+                                              ],
+                        "evidence":  [
+                                         "21 skills and 12 workflows are registered.",
+                                         "24 route fixtures cover every workflow and risk level.",
+                                         "Unified local validation passes the reusable layer."
+                                     ],
+                        "decision_or_fact":  "task_outcome",
+                        "rationale":  "Preserve the completed reusable baseline and its evidence boundary outside chat history.",
+                        "consequences":  [
+                                             "Future clones begin with project-onboarding.",
+                                             "Stack-specific production controls remain conditional.",
+                                             "Repository-host settings require owner verification."
+                                         ],
+                        "risks":  [
+                                      "GitHub-hosted checks remain unverified until push and workflow completion.",
+                                      "Application production readiness cannot be inferred from template validation."
+                                  ],
+                        "valid_from":  "2026-07-16",
+                        "last_verified_at":  "2026-07-16",
+                        "review_after":  "2026-10-16",
+                        "created_at":  "2026-07-16",
+                        "updated_at":  "2026-07-16",
+                        "created_by_task":  "TASK-20260716-template-production-standard",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "related_memories":  [
+                                                 "MEM-TEMPLATE-STANDARD-0001",
+                                                 "MEM-SKILL-SYSTEM-0001",
+                                                 "MEM-PROJECT-0001",
+                                                 "MEM-GAP-0001"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/tasks/completed/TASK-20260716-template-production-standard.md"
+                    },
+                    {
+                        "memory_id":  "MEM-CUSTOM-SKILL-SYSTEM-0001",
+                        "title":  "Two-layer reusable Custom Skill system is active",
+                        "memory_type":  "project_fact",
+                        "scope":  "level-0:project:instruction-system:custom-skills",
+                        "summary":  "The repository has 27 reusable Custom Skills, evidence-based stack/domain detection, and manifest-driven project overlays while only GitHub CI is active in template mode.",
+                        "status":  "verified",
+                        "confidence":  "high",
+                        "tags":  [
+                                     "custom-skills",
+                                     "technology",
+                                     "domain",
+                                     "detection",
+                                     "activation",
+                                     "overlay",
+                                     "validation"
+                                 ],
+                        "trigger_terms":  [
+                                              "custom-skill",
+                                              "stack-detection",
+                                              "domain-detection",
+                                              "activation",
+                                              "overlay",
+                                              "technology",
+                                              "framework",
+                                              "clone"
+                                          ],
+                        "affected_modules":  [
+                                                 "instruction-system",
+                                                 "repository-governance"
+                                             ],
+                        "affected_paths":  [
+                                               "components/instruction/custom-skills",
+                                               "components/instruction/project-custom-skills",
+                                               "components/instruction/scripts",
+                                               "AGENTS.md"
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+                                                 "custom-skill-library",
+                                                 "project-onboarding"
+                                             ],
+                        "source_references":  [
+                                                  "components/instruction/custom-skills/CUSTOM-SKILL-REGISTRY.json",
+                                                  "components/instruction/project-custom-skills/PROJECT-STACK-MANIFEST.json",
+                                                  "components/instruction/project-custom-skills/PROJECT-DOMAIN-MANIFEST.json",
+                                                  "components/instruction/project-custom-skills/ACTIVE-CUSTOM-SKILLS.json",
+                                                  "components/instruction/reports/CUSTOM-SKILL-SYSTEM-READINESS.md",
+                                                  "components/instruction/reports/VALIDATION-REPORT.md"
+                                              ],
+                        "evidence":  [
+                                         "27 reusable modules pass Skill Creator quick validation and custom lint.",
+                                         "Stack detection finds only GitHub CI at HIGH confidence.",
+                                         "Domain detection finds zero qualifying artifacts and zero verified rules.",
+                                         "Twelve custom route fixtures enforce task and path scope."
+                                     ],
+                        "decision_or_fact":  "implementation_fact",
+                        "rationale":  "Future clones need reusable technology/domain expertise without copying project facts or loading irrelevant skills.",
+                        "consequences":  [
+                                             "Standard Skills retain higher authority.",
+                                             "Reusable modules remain inactive until project bindings exist.",
+                                             "Clone onboarding must re-run detection and create scoped overlays."
+                                         ],
+                        "risks":  [
+                                      "A clone will block validation if application evidence changes without manifest synchronization.",
+                                      "Hosted CI remains unverified until pushed."
+                                  ],
+                        "valid_from":  "2026-07-16",
+                        "last_verified_at":  "2026-07-16",
+                        "review_after":  "2026-10-16",
+                        "created_at":  "2026-07-16",
+                        "updated_at":  "2026-07-16",
+                        "created_by_task":  "TASK-20260716-reusable-custom-skill-system",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "related_memories":  [
+                                                 "MEM-PROJECT-0001",
+                                                 "MEM-SKILL-SYSTEM-0001",
+                                                 "MEM-TEMPLATE-STANDARD-0001",
+                                                 "TASK-20260716-reusable-custom-skill-system"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/modules/instruction-system/MEM-CUSTOM-SKILL-SYSTEM-0001.md"
+                    },
+                    {
+                        "memory_id":  "TASK-20260716-reusable-custom-skill-system",
+                        "title":  "Add reusable two-layer Custom Skill system",
+                        "memory_type":  "task_summary",
+                        "scope":  "level-4:task:reusable-custom-skill-system",
+                        "summary":  "Added 27 reusable technology/domain skills, evidence detectors, project bindings/overlays, routing integration, validation, reports, and memory without creating application-specific rules.",
+                        "status":  "verified",
+                        "confidence":  "high",
+                        "tags":  [
+                                     "task-summary",
+                                     "custom-skills",
+                                     "detection",
+                                     "activation",
+                                     "overlay",
+                                     "validation"
+                                 ],
+                        "trigger_terms":  [
+                                              "reusable-custom-skill-system",
+                                              "custom-skill",
+                                              "stack",
+                                              "domain",
+                                              "overlay",
+                                              "continue"
+                                          ],
+                        "affected_modules":  [
+                                                 "instruction-system",
+                                                 "repository-governance",
+                                                 "project-memory"
+                                             ],
+                        "affected_paths":  [
+                                               "AGENTS.md",
+                                               "README.md",
+                                               "components/instruction"
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+                                                 "custom-skill-library",
+                                                 "project-onboarding"
+                                             ],
+                        "source_references":  [
+                                                  "components/instruction/reports/CUSTOM-SKILL-SYSTEM-READINESS.md",
+                                                  "components/instruction/reports/CUSTOM-SKILL-STACK-DETECTION-REPORT.md",
+                                                  "components/instruction/reports/CUSTOM-SKILL-DOMAIN-DETECTION-REPORT.md",
+                                                  "components/instruction/reports/CUSTOM-SKILL-ACTIVATION-REPORT.md",
+                                                  "components/instruction/reports/VALIDATION-REPORT.md"
+                                              ],
+                        "evidence":  [
+                                         "Fourteen technology and thirteen domain reusable skill contracts exist.",
+                                         "Twenty-seven skills pass Skill Creator quick validation.",
+                                         "Unified validation composes all four custom validators.",
+                                         "Only the evidence-backed GitHub CI binding is active."
+                                     ],
+                        "decision_or_fact":  "task_outcome",
+                        "rationale":  "Preserve the implementation boundary and validated outcome outside chat history.",
+                        "consequences":  [
+                                             "Future projects can reuse bases and add only evidence-backed overlays.",
+                                             "Application-specific work remains deferred until real sources exist."
+                                         ],
+                        "risks":  [
+                                      "Detection and activation manifests must be regenerated after a clone adds application evidence.",
+                                      "External GitHub enforcement is still owner-verified."
+                                  ],
+                        "valid_from":  "2026-07-16",
+                        "last_verified_at":  "2026-07-16",
+                        "review_after":  "2026-10-16",
+                        "created_at":  "2026-07-16",
+                        "updated_at":  "2026-07-16",
+                        "created_by_task":  "TASK-20260716-reusable-custom-skill-system",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "related_memories":  [
+                                                 "MEM-CUSTOM-SKILL-SYSTEM-0001",
+                                                 "MEM-SKILL-SYSTEM-0001",
+                                                 "MEM-TEMPLATE-STANDARD-0001"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/tasks/completed/TASK-20260716-reusable-custom-skill-system.md"
                     }
                 ]
 }

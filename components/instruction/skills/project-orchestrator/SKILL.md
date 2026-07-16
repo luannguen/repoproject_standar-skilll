@@ -9,7 +9,7 @@ description: Classify every engineering request, assign risk, select the smalles
 
 - id: project-orchestrator
 - name: Project Orchestrator
-- version: 1.0.0
+- version: 1.1.0
 - description: Classify every engineering request, assign risk, select the smallest valid workflow and capability-skill set, enforce approvals, and coordinate pre-task, validation, documentation, and memory gates. Use before any repository analysis or change.
 - purpose: make task routing deterministic, risk-aware, context-efficient, and auditable.
 - scope: all engineering analysis, architecture, implementation, review, debugging, migration, release, incident, security, performance, documentation, and AI-feature tasks.
@@ -18,10 +18,11 @@ description: Classify every engineering request, assign risk, select the smalles
 - required_inputs:
   - current user request and accepted scope
   - SKILL-REGISTRY.json and WORKFLOW-REGISTRY.json
+  - CUSTOM-SKILL-REGISTRY.json plus project stack, domain, and active-binding manifests
   - current repository evidence and relevant Project Memory index entries
 - expected_outputs:
   - task classification and risk level
-  - selected workflow, skills, evidence plan, and approval gates
+  - selected workflow, Standard Skills, active task-scoped Custom Skills, evidence plan, and approval gates
   - Task Execution Brief for MEDIUM, HIGH, and CRITICAL work
   - post-task validation and memory-routing decision
 - required_files:
@@ -30,6 +31,10 @@ description: Classify every engineering request, assign risk, select the smalles
   - SKILL-REGISTRY.json
   - WORKFLOW-REGISTRY.json
   - skills/project-orchestrator/references/TASK-EXECUTION-BRIEF.md
+  - custom-skills/CUSTOM-SKILL-REGISTRY.json
+  - project-custom-skills/PROJECT-STACK-MANIFEST.json
+  - project-custom-skills/PROJECT-DOMAIN-MANIFEST.json
+  - project-custom-skills/ACTIVE-CUSTOM-SKILLS.json
 - related_skills:
   - project-memory
   - requirement-analysis
@@ -42,7 +47,7 @@ description: Classify every engineering request, assign risk, select the smalles
   - testing-quality
   - documentation-sync
   - project-memory
-- constraints: select by registry metadata; load only selected skills; use the highest applicable risk; preserve user authority and current scope.
+- constraints: select Standard Skills by Standard registry metadata and Custom Skills only through active project bindings; filter by task and package/path scope; load only selected skills; use the highest applicable risk; preserve user authority and current scope.
 - blockers: missing intent that materially changes the result; unresolved rule conflict; required approval not granted; registry corruption; CRITICAL action without a safe stop and recovery path.
 - approval_requirements: evaluate every gate in APPROVAL-GATES.md; local read-only discovery and reversible in-scope workspace changes need no extra approval.
 - execution_workflow: follow the Mandatory workflow in order and preserve its evidence.
@@ -66,7 +71,7 @@ description: Classify every engineering request, assign risk, select the smalles
 
 1. Parse the request into goal, deliverables, acceptance criteria, scope, exclusions, constraints, and unknowns.
 2. Inspect the registries and current evidence; classify task type and combine all risk dimensions using the highest result.
-3. Select one primary workflow and the minimum capability skills whose triggers cover every material surface; reject redundant skills explicitly for MEDIUM+ work.
+3. Select one primary workflow and the minimum Standard Skills whose triggers cover every material surface; then read project custom-skill manifests and select only active/provisional bindings intersecting the task type and package/path scope. Reject redundant or inactive skills explicitly for MEDIUM+ work.
 4. Retrieve relevant Project Memory, reconcile it with current evidence, and update unknowns or blockers.
 5. Create a Task Execution Brief for MEDIUM+ work and evaluate approval gates before affected actions.
 6. Coordinate the selected workflow, enforcing each specialist pre-task and completion gate without replacing specialist judgment.
@@ -76,7 +81,8 @@ description: Classify every engineering request, assign risk, select the smalles
 
 - BLOCKER: do not implement before task class, risk, workflow, skills, evidence needs, and approval gates are known.
 - BLOCKER: do not claim LOW risk when data, security, public contracts, infrastructure, external effects, or irreversibility are unknown.
-- MUST: choose one primary workflow; capability skills may be composed, but duplicate responsibilities must have one named owner.
+- MUST: choose one primary workflow; Standard and activated Custom Skills may be composed, but duplicate responsibilities must have one named owner.
+- BLOCKER: never route a reusable Custom Skill that lacks an active project binding, qualifying detection confidence, scope intersection, or required evidence-backed overlay.
 - MUST: stop at any unsatisfied approval gate while continuing safe analysis or local preparation where possible.
 
 ## Completion report

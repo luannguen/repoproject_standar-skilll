@@ -1,0 +1,6 @@
+interface:
+  display_name: "Community Content"
+  short_description: "Guard community content lifecycle rules"
+  default_prompt: "Use $community-content only with a verified active project overlay and cited domain evidence."
+policy:
+  allow_implicit_invocation: false

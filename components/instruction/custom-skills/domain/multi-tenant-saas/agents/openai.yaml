@@ -1,0 +1,6 @@
+interface:
+  display_name: "Multi Tenant SaaS"
+  short_description: "Guard evidence-backed tenant isolation rules"
+  default_prompt: "Use $multi-tenant-saas only with a verified active project overlay and cited domain evidence."
+policy:
+  allow_implicit_invocation: false

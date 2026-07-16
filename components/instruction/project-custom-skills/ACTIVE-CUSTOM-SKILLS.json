@@ -1,0 +1,47 @@
+{
+    "schema_version":  "1.0.0",
+    "generated_at":  "2026-07-16T00:00:00+07:00",
+    "policy":  "Bindings are manifest-driven and task/scope filtered. Absence means inactive.",
+    "bindings":  [
+                     {
+                         "skill_id":  "github-ci",
+                         "base_skill_path":  "../custom-skills/technology/github-ci/SKILL.md",
+                         "overlay_path":  "technology/github-ci/OVERLAY.md",
+                         "detected_version":  "platform-managed; actions/checkout@v6 declared",
+                         "activation_status":  "active",
+                         "activation_reason":  "Git metadata and an executable GitHub Actions workflow provide independent authoritative evidence at HIGH confidence.",
+                         "evidence":  [
+                                          ".git/config",
+                                          ".github/workflows/quality-gates.yml"
+                                      ],
+                         "applicable_packages":  [
+                                                     "repository-root"
+                                                 ],
+                         "applicable_paths":  [
+                                                  ".github/**",
+                                                  "components/instruction/**",
+                                                  "scripts/**"
+                                              ],
+                         "applicable_task_types":  [
+                                                       "ci",
+                                                       "repository-governance",
+                                                       "release-automation",
+                                                       "validation"
+                                                   ],
+                         "incompatible_scopes":  [
+                                                     "Application runtime behavior unless another technology binding is active."
+                                                 ],
+                         "required_standard_skills":  [
+                                                          "devops-release",
+                                                          "security-threat-modeling",
+                                                          "testing-quality",
+                                                          "documentation-sync"
+                                                      ],
+                         "memory_scope":  [
+                                              "instruction-system",
+                                              "template-governance"
+                                          ],
+                         "last_verified_at":  "2026-07-16T00:00:00+07:00"
+                     }
+                 ]
+}

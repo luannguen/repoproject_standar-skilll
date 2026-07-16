@@ -1,7 +1,11 @@
 [CmdletBinding()]
 param(
-    [string]$InstructionRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
+    [string]$InstructionRoot
 )
+
+if ([string]::IsNullOrWhiteSpace($InstructionRoot)) {
+    $InstructionRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
+}
 
 $ErrorActionPreference = 'Stop'
 $script:blockers = 0

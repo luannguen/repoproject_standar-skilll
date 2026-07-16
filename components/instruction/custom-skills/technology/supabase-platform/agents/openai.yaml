@@ -1,0 +1,6 @@
+interface:
+  display_name: "Supabase Platform"
+  short_description: "Guide secure Supabase platform changes"
+  default_prompt: "Use $supabase-platform with the active project binding and verified repository evidence."
+policy:
+  allow_implicit_invocation: false

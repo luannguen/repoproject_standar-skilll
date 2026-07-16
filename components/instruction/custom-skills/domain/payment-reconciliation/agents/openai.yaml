@@ -1,0 +1,6 @@
+interface:
+  display_name: "Payment Reconciliation"
+  short_description: "Guard payment reconciliation invariants"
+  default_prompt: "Use $payment-reconciliation only with a verified active project overlay and cited domain evidence."
+policy:
+  allow_implicit_invocation: false
