@@ -39,8 +39,12 @@ See [Custom Skill architecture](components/instruction/custom-skills/README.md),
 
 ## Evidence boundary
 
-Do not infer a runtime, framework, domain model, schema, provider, license, or production environment from this template. `components/instruction/PROJECT-PROFILE.json` is the machine-readable source for onboarding state and registered commands. Unknown or conditional controls must remain visible until verified. A reusable Custom Skill being present does not make it active; only `components/instruction/project-custom-skills/ACTIVE-CUSTOM-SKILLS.json` can bind it to an evidence-backed task and scope.
+Do not infer a runtime, framework, domain model, schema, provider, application distribution license, or production environment from this template. `components/instruction/PROJECT-PROFILE.json` is the machine-readable source for onboarding state and registered commands. Unknown or conditional controls must remain visible until verified. A reusable Custom Skill being present does not make it active; only `components/instruction/project-custom-skills/ACTIVE-CUSTOM-SKILLS.json` can bind it to an evidence-backed task and scope.
 
 ## Contributing
 
 Follow [CONTRIBUTING.md](CONTRIBUTING.md). Security reports must follow [.github/SECURITY.md](.github/SECURITY.md).
+
+## License
+
+Licensed under the [Apache License 2.0](LICENSE).

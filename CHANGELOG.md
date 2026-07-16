@@ -12,6 +12,7 @@ All notable changes to this template are documented here. The format follows Kee
 
 ### Added
 
+- Apache License 2.0 for clear global reuse rights.
 - Two-layer Custom Skill architecture with 14 technology and 13 domain reusable modules.
 - Stack/domain detection, project activation bindings, evidence-backed overlay policy, compatibility matrix, and lightweight stack profiles.
 - Official upstream ledgers for every technology skill and 30 Custom Skill anti-patterns.
@@ -19,6 +20,7 @@ All notable changes to this template are documented here. The format follows Kee
 
 ### Changed
 
+- GitHub Actions dependencies are pinned to immutable full commit SHAs.
 - Constitution, Bootstrap, Orchestrator, AGENTS, and onboarding now keep Standard Skills separate from task/scope-filtered Custom Skills.
 - Template version advanced to 1.2.0; only HIGH-confidence `github-ci` is active in the uninstantiated repository.
 ## [1.1.0] - 2026-07-16

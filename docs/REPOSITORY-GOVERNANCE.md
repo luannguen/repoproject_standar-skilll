@@ -27,7 +27,7 @@ Every material pull request states scope, exclusions, risk, approval gates, vali
 
 ## License decision
 
-The template intentionally has no license because choosing one changes legal rights. The project owner must select an approved license or explicitly keep the repository proprietary after clone, then update the project profile and distribution documentation.
+The reusable template layer is licensed under Apache-2.0. A project created from the template must still select and document the distribution terms for its application code; that project decision may differ while preserving the Apache-2.0 notices and obligations for reused template material.
 
 ## Exceptions
 

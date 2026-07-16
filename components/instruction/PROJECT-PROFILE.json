@@ -58,7 +58,7 @@
                      "release":  null
                  },
     "governance":  {
-                       "license_status":  "undecided",
+                       "license_status":  "apache-2.0",
                        "codeowners_status":  "template-default",
                        "branch_protection_status":  "external-unverified",
                        "private_vulnerability_reporting":  "policy-present-host-setting-unverified",
@@ -69,7 +69,6 @@
                        "last_completed_at":  null,
                        "completed_by":  null,
                        "open_decisions":  [
-                                              "select license or proprietary status",
                                               "replace template identity and ownership after clone",
                                               "verify repository-host protections",
                                               "register application commands when evidence exists",

@@ -19,7 +19,7 @@ This result does not certify a cloned application as production-ready. Productio
 - Windows/Linux CI definition with read-only contents permission;
 - CODEOWNERS, pull-request template, structured issue forms, security reporting, and GitHub Actions dependency updates;
 - generic ignore, line-ending, secret-hygiene, contribution, and release baselines;
-- license and external repository settings kept explicit instead of assumed.
+- Apache-2.0 licensing for the reusable template layer, while application distribution terms remain an explicit onboarding decision;
 
 ## Conditional after clone
 
@@ -31,10 +31,10 @@ This result does not certify a cloned application as production-ready. Productio
 
 ## Deliberately skipped
 
-No framework, package manager, database, schema, cloud, deployment target, application scanner, test framework, license, branch-protection mutation, secret-scanning host setting, application technology binding, or project domain overlay was selected without project evidence or external authorization. Reusable domain modules remain inactive guardrails rather than project facts.
+No framework, package manager, database, schema, cloud, deployment target, application scanner, test framework, application distribution license, branch-protection mutation, secret-scanning host setting, application technology binding, or project domain overlay was selected without project evidence or external authorization. Reusable domain modules remain inactive guardrails rather than project facts.
 
 ## Remaining owner actions
 
-After cloning, run the onboarding helper and workflow, choose the license or proprietary status, replace ownership and security-report URLs, verify branch protections and required checks on the repository host, register authoritative application commands, re-run stack/domain detection, and activate only evidence-backed Custom Skill bindings and conditional controls.
+After cloning, run the onboarding helper and workflow, choose the application license or proprietary status, replace ownership and security-report URLs, verify branch protections and required checks on the repository host, register authoritative application commands, re-run stack/domain detection, and activate only evidence-backed Custom Skill bindings and conditional controls.
 
 The GitHub workflow is structurally and locally validated; execution on hosted Windows and Linux runners becomes verifiable only after the changes are pushed and Actions completes.
