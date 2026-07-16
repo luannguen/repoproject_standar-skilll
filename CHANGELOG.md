@@ -20,7 +20,7 @@ All notable changes to this template are documented here. The format follows Kee
 
 ### Changed
 
-- GitHub Actions dependencies are pinned to immutable full commit SHAs.
+- GitHub Actions dependencies are pinned to immutable full commit SHAs, with actions/checkout upgraded to v7.
 - Constitution, Bootstrap, Orchestrator, AGENTS, and onboarding now keep Standard Skills separate from task/scope-filtered Custom Skills.
 - Template version advanced to 1.2.0; only HIGH-confidence `github-ci` is active in the uninstantiated repository.
 ## [1.1.0] - 2026-07-16

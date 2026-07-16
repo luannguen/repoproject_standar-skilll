@@ -178,8 +178,8 @@ if (Test-Path -LiteralPath $workflowPath) {
             Add-Blocker "Quality workflow is missing '$token'."
         }
     }
-    if ($workflow -notmatch 'actions/checkout@[0-9a-f]{40}\s+#\s+v6\b') {
-        Add-Blocker 'Quality workflow must pin actions/checkout v6 to a full commit SHA.'
+    if ($workflow -notmatch 'actions/checkout@[0-9a-f]{40}\s+#\s+v[0-9]+\b') {
+        Add-Blocker 'Quality workflow must pin actions/checkout to a full commit SHA and record its major version.'
     }
 }
 
