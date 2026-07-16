@@ -173,10 +173,13 @@ if (Test-Path -LiteralPath $gitIgnorePath) {
 $workflowPath = Join-Path $RepositoryRoot '.github/workflows/quality-gates.yml'
 if (Test-Path -LiteralPath $workflowPath) {
     $workflow = Get-Content -Raw -LiteralPath $workflowPath
-    foreach ($token in @('permissions:','contents: read','actions/checkout@v6','ubuntu-latest','windows-latest','validate.ps1')) {
+    foreach ($token in @('permissions:','contents: read','ubuntu-latest','windows-latest','validate.ps1')) {
         if ($workflow -notmatch [regex]::Escape($token)) {
             Add-Blocker "Quality workflow is missing '$token'."
         }
+    }
+    if ($workflow -notmatch 'actions/checkout@[0-9a-f]{40}\s+#\s+v6\b') {
+        Add-Blocker 'Quality workflow must pin actions/checkout v6 to a full commit SHA.'
     }
 }
 
@@ -242,7 +245,7 @@ foreach ($relative in $tracked) {
 
     $extension = [IO.Path]::GetExtension($absolute).ToLowerInvariant()
     $name = [IO.Path]::GetFileName($absolute)
-    $isText = $extension -in $textExtensions -or $name -in @('VERSION','CODEOWNERS','.editorconfig','.gitattributes','.gitignore')
+    $isText = $extension -in $textExtensions -or $name -in @('VERSION','LICENSE','CODEOWNERS','.editorconfig','.gitattributes','.gitignore')
     if (-not $isText) {
         continue
     }
@@ -276,8 +279,8 @@ if ($jsonObjects.ContainsKey($profileKey)) {
     if ($licenseStatus -eq 'undecided' -and (Test-Path -LiteralPath $licensePath)) {
         Add-Blocker 'LICENSE exists while the project profile says the license is undecided.'
     }
-    if ($licenseStatus -eq 'selected' -and -not (Test-Path -LiteralPath $licensePath -PathType Leaf)) {
-        Add-Blocker 'License status is selected but LICENSE is missing.'
+    if ($licenseStatus -notin @('undecided','proprietary') -and -not (Test-Path -LiteralPath $licensePath -PathType Leaf)) {
+        Add-Blocker "License status '$licenseStatus' requires a LICENSE file."
     }
 }
 

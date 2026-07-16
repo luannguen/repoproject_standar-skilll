@@ -46,12 +46,16 @@ $profile.governance.license_status = $LicenseStatus
 $profile.onboarding.primary_workflow = 'project-onboarding'
 $profile.onboarding.last_completed_at = $null
 $profile.onboarding.completed_by = $null
-$profile.onboarding.open_decisions = @(
+$openDecisions = @(
     'verify application evidence and classifications',
     'register authoritative project commands',
     'verify repository-host protections',
     'activate triggered production controls'
 )
+if ($LicenseStatus -eq 'undecided') {
+    $openDecisions = @('select application license or proprietary status') + $openDecisions
+}
+$profile.onboarding.open_decisions = $openDecisions
 
 $json = $profile | ConvertTo-Json -Depth 20
 if ($PSCmdlet.ShouldProcess($profilePath, 'Initialize cloned project profile')) {
