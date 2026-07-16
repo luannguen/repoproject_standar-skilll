@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Orchestrator"
+  short_description: "Classify risk and route project work"
+  default_prompt: "Use $project-orchestrator to classify this task, select its workflow and skills, and enforce approval and completion gates."

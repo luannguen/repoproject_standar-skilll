@@ -1,0 +1,4 @@
+interface:
+  display_name: "Requirement Analysis"
+  short_description: "Turn requests into testable scope"
+  default_prompt: "Use $requirement-analysis to make this request bounded, explicit, and traceable to validation."

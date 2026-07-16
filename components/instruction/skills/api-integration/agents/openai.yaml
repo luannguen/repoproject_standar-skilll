@@ -1,0 +1,4 @@
+interface:
+  display_name: "API & Integration"
+  short_description: "Secure compatible integration contracts"
+  default_prompt: "Use $api-integration to design or review this API or integration for compatibility, resilience, and safe replay."

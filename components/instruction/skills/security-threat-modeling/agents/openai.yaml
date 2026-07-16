@@ -1,0 +1,4 @@
+interface:
+  display_name: "Security Threat Modeling"
+  short_description: "Model threats and validate controls"
+  default_prompt: "Use $security-threat-modeling to analyze trust boundaries, abuse cases, controls, and security validation."

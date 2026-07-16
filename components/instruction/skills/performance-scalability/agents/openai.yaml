@@ -1,0 +1,4 @@
+interface:
+  display_name: "Performance & Scalability"
+  short_description: "Measure and improve system performance"
+  default_prompt: "Use $performance-scalability to baseline, diagnose, optimize, and capacity-plan this workload."

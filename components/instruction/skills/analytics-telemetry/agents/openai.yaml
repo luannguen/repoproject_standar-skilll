@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analytics & Telemetry"
+  short_description: "Create governed measurement contracts"
+  default_prompt: "Use $analytics-telemetry to design trustworthy, privacy-aware analytics or telemetry for a named decision."

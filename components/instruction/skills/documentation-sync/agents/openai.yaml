@@ -1,0 +1,4 @@
+interface:
+  display_name: "Documentation Sync"
+  short_description: "Keep documentation aligned with reality"
+  default_prompt: "Use $documentation-sync to audit and synchronize affected documentation, registries, runbooks, and memory."

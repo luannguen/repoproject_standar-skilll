@@ -1,0 +1,4 @@
+interface:
+  display_name: "Testing & Quality"
+  short_description: "Create risk-based quality evidence"
+  default_prompt: "Use $testing-quality to map this change's risks to maintainable tests and trustworthy validation evidence."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Migration & Compatibility"
+  short_description: "Run safe compatible transitions"
+  default_prompt: "Use $migration-compatibility to plan and validate this staged migration, cutover, reconciliation, and recovery."

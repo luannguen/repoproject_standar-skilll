@@ -1,0 +1,4 @@
+interface:
+  display_name: "Domain Skill Framework"
+  short_description: "Create domain skills from evidence"
+  default_prompt: "Use $domain-skill-framework to decide whether project evidence justifies a domain skill and govern its lifecycle."

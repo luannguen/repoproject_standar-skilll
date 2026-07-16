@@ -1,0 +1,4 @@
+interface:
+  display_name: "Data Lifecycle"
+  short_description: "Protect data from creation to deletion"
+  default_prompt: "Use $data-lifecycle to design or review ownership, integrity, privacy, migration, backup, and recovery."

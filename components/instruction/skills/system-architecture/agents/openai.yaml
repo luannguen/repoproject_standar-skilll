@@ -1,0 +1,4 @@
+interface:
+  display_name: "System Architecture"
+  short_description: "Design boundaries and evolution safely"
+  default_prompt: "Use $system-architecture to design or review evidence-backed system boundaries, contracts, trade-offs, and evolution."

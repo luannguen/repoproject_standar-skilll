@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI & Agent Safety"
+  short_description: "Bound AI tools, data, and authority"
+  default_prompt: "Use $ai-agent-safety to design or review this AI system's authority, evaluation, privacy, cost, fallback, and controls."

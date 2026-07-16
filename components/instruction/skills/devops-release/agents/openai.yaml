@@ -1,0 +1,4 @@
+interface:
+  display_name: "DevOps & Release"
+  short_description: "Build and release recoverably"
+  default_prompt: "Use $devops-release to design or review reproducible build, CI/CD, rollout, and recovery."

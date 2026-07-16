@@ -1,0 +1,4 @@
+interface:
+  display_name: "Backend Production Engineering"
+  short_description: "Production backend, data, security, reliability"
+  default_prompt: "Use $backend-production-engineering to design, implement, debug, or review this backend change for production."

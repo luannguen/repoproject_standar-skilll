@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code Review & Refactoring"
+  short_description: "Find defects and improve structure"
+  default_prompt: "Use $code-review-refactoring to review or refactor this code while preserving verified behavior."

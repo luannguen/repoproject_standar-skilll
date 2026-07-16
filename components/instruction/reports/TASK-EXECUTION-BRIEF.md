@@ -1,0 +1,21 @@
+# Task Execution Brief ? Project Engineering Skill System
+
+- Task: build and integrate a complete project-local engineering skill and workflow system.
+- Goal and acceptance criteria: satisfy the attached 50-point Definition of Done with executable routing and validation, while preserving the three existing skills and avoiding invented application/domain facts.
+- Task class: instruction architecture, feature development, documentation, and validation.
+- Risk level and rationale: HIGH because this changes global project-local instructions, routing, completion gates, and future agent behavior across every task; it does not mutate an application or production environment.
+- Scope: audit, Constitution, Orchestrator, registries, approval gates, common contracts, 16 missing capabilities, workflows, routing, validation, reports, and Project Memory.
+- Explicit exclusions: application implementation; concrete domain skills without application evidence; production/external changes; dependency installation.
+- Verified evidence: repository contained AGENTS.md, AI-BOOTSTRAP.md, Project Memory, UI/UX Production, and Backend Production Engineering only; no application source, manifest, schema, auth, tests, deploy, or runtime artifacts existed.
+- Unknowns and assumptions: application framework, domain, platform configuration, actors, business rules, data, permissions, operations, and deployment remain unknown.
+- Selected workflow: feature-development.
+- Selected skills and why: project-orchestrator for routing; project-memory for continuity; requirement-analysis and system-architecture for contract/structure; documentation-sync for instruction consistency; testing-quality for executable lint; domain-skill-framework to enforce the no-evidence rule.
+- Relevant memory IDs: current project constraints, snapshot, UI/UX skill task, backend skill task, memory bootstrap task, and onboarding checkpoint.
+- Invariants and affected contracts: preserve higher-authority instructions, existing specialist depth, evidence-first behavior, source authority, memory integrity, no secret handling, deterministic routing, and no circular dependencies.
+- Approval gates: user explicitly requested this in-scope reversible workspace implementation. No destructive, production, external, paid, sensitive-data, contract-breaking, or constitutional-weakening action was taken.
+- Implementation sequence: audit ? foundation ? capability skills ? workflows ? bootstrap/routing ? lint ? reports ? memory.
+- Validation plan: skill contract/registry/dependency lint, workflow/usage lint, route/link/anti-pattern tests, Skill Creator validation, Project Memory lint, placeholder scan, and final inventory.
+- Rollback or recovery: all changes are repository-local files; revert the created/modified instruction artifacts as one coherent set. No production/data rollback is applicable.
+- Documentation and memory plan: create audit/gap/conflict/backlog/DoD/validation reports; add a completed task summary and system fact; synchronize indexes and snapshot.
+- Blockers and stop conditions: concrete domain skills remain prohibited until application evidence exists; any lint blocker prevents completion.
+- Expected deliverables: 20 registered skills total, 11 workflows, four governance/routing foundations, three validation scripts, reports, synchronized bootstrap/routes, and clean validation.

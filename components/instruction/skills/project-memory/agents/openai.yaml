@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Memory"
+  short_description: "Evidence-based project continuity memory"
+  default_prompt: "Use $project-memory to retrieve, verify, and update project knowledge for this task."

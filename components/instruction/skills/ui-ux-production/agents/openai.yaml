@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI/UX Production"
+  short_description: "Production UI/UX and frontend quality"
+  default_prompt: "Use $ui-ux-production to design, implement, or review this interface for production."

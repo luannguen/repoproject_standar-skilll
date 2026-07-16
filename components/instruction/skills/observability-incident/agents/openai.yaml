@@ -1,0 +1,4 @@
+interface:
+  display_name: "Observability & Incident"
+  short_description: "Diagnose, recover, and learn"
+  default_prompt: "Use $observability-incident to instrument behavior or manage this incident from impact through recovery and review."

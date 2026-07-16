@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dependency Evolution"
+  short_description: "Evolve dependencies with evidence"
+  default_prompt: "Use $dependency-evolution to add, upgrade, replace, or remove this dependency with compatibility and rollback evidence."

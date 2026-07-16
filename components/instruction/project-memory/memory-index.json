@@ -1,0 +1,1134 @@
+{
+    "schema_version":  "1.0.0",
+    "generated_at":  "2026-07-16",
+    "repository_root":  ".",
+    "entries":  [
+                    {
+                        "memory_id":  "MEM-PROJECT-0001",
+                        "title":  "Initial repository baseline",
+                        "memory_type":  "project_fact",
+                        "scope":  "level-0:project",
+                        "summary":  "Repository contains a validated Constitution-Orchestrator-Memory-Capability-Workflow system with 20 skills and 11 workflows, but no application source or Git metadata.",
+                        "status":  "verified",
+                        "confidence":  "high",
+                        "tags":  [
+                                     "repository",
+                                     "baseline",
+                                     "onboarding"
+                                 ],
+                        "trigger_terms":  [
+                                              "repository",
+                                              "codebase",
+                                              "module",
+                                              "architecture",
+                                              "onboarding",
+                                              "continue"
+                                          ],
+                        "affected_modules":  [
+
+                                             ],
+                        "affected_paths":  [
+                                               "."
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+
+                                             ],
+                        "source_references":  [
+                                                  "components/instruction/project-memory/audits/EXISTING-KNOWLEDGE-AUDIT.md",
+                                                  "components/instruction/project-memory/audits/UI-UX-AUDIT.md",
+                                                  "components/instruction/skills/ui-ux-production/SKILL.md",
+                                                  "components/instruction/project-memory/audits/BACKEND-AUDIT.md",
+                                                  "components/instruction/skills/backend-production-engineering/SKILL.md"
+                                              ],
+                        "evidence":  [
+                                         "Recursive inventory before initialization returned COUNT=0; file discovery returned no paths; git status reported no repository.",
+                                         "The UI/UX audit verified the installed skill/routing and continued absence of application UI sources.",
+                                         "The backend audit verified the installed backend skill/routing and continued absence of application/Base44 sources."
+                                     ],
+                        "decision_or_fact":  "implementation_fact",
+                        "rationale":  "Prevents later agents from inventing an application architecture from an instruction-only workspace.",
+                        "consequences":  [
+                                             "Re-run onboarding plus UI/backend audits when application sources arrive."
+                                         ],
+                        "risks":  [
+                                      "This baseline becomes stale as soon as application files are added."
+                                  ],
+                        "valid_from":  "2026-07-16",
+                        "last_verified_at":  "2026-07-16",
+                        "review_after":  "2026-07-30",
+                        "created_at":  "2026-07-16",
+                        "updated_at":  "2026-07-16",
+                        "created_by_task":  "TASK-20260716-project-memory-bootstrap",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "related_memories":  [
+                                                 "MEM-GAP-0001",
+                                                 "MEM-QUESTION-0001",
+                                                 "MEM-UI-0001",
+                                                 "MEM-BACKEND-0001"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/PROJECT-SNAPSHOT.md"
+                    },
+                    {
+                        "memory_id":  "MEM-CONSTRAINT-0001",
+                        "title":  "Evidence-backed project memory is mandatory",
+                        "memory_type":  "technical_constraint",
+                        "scope":  "level-0:project",
+                        "summary":  "Every task retrieves and verifies scoped memory, reports conflicts, writes material deltas, and stores no secrets or private reasoning.",
+                        "status":  "verified",
+                        "confidence":  "high",
+                        "tags":  [
+                                     "memory",
+                                     "instruction",
+                                     "security",
+                                     "continuity"
+                                 ],
+                        "trigger_terms":  [
+                                              "all-tasks",
+                                              "memory",
+                                              "implementation",
+                                              "documentation",
+                                              "continuation",
+                                              "secret",
+                                              "conflict"
+                                          ],
+                        "affected_modules":  [
+
+                                             ],
+                        "affected_paths":  [
+                                               "AGENTS.md",
+                                               "components/instruction"
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+
+                                             ],
+                        "source_references":  [
+                                                  "AGENTS.md",
+                                                  "components/instruction/AI-BOOTSTRAP.md",
+                                                  "components/instruction/skills/project-memory/references/MEMORY-POLICY.md"
+                                              ],
+                        "evidence":  [
+                                         "Repository instructions and bootstrap explicitly gate work on memory retrieval/verification and prohibit secrets and chain-of-thought."
+                                     ],
+                        "decision_or_fact":  "approved_constraint",
+                        "rationale":  "Continuity must survive chat boundaries without weakening authoritative sources or safety.",
+                        "consequences":  [
+                                             "Medium/complex implementation is blocked until the Memory Context Summary is complete."
+                                         ],
+                        "risks":  [
+                                      "Skipping routing can reintroduce stale assumptions."
+                                  ],
+                        "valid_from":  "2026-07-16",
+                        "last_verified_at":  "2026-07-16",
+                        "review_after":  "2026-10-16",
+                        "created_at":  "2026-07-16",
+                        "updated_at":  "2026-07-16",
+                        "created_by_task":  "TASK-20260716-project-memory-bootstrap",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "related_memories":  [
+                                                 "DEC-0001",
+                                                 "PAT-0001"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/CONSTRAINTS.md"
+                    },
+                    {
+                        "memory_id":  "MEM-GAP-0001",
+                        "title":  "Application and specialist instruction baseline is missing",
+                        "memory_type":  "documentation_gap",
+                        "scope":  "level-0:project",
+                        "summary":  "Application code, business/Base44/schema/auth/test/deployment sources remain unavailable; the UI and backend procedural skill gaps are closed.",
+                        "status":  "supported",
+                        "confidence":  "high",
+                        "tags":  [
+                                     "gap",
+                                     "onboarding",
+                                     "frontend",
+                                     "backend",
+                                     "documentation"
+                                 ],
+                        "trigger_terms":  [
+                                              "gap",
+                                              "missing",
+                                              "onboarding",
+                                              "frontend",
+                                              "backend",
+                                              "rules",
+                                              "codebase",
+                                              "git"
+                                          ],
+                        "affected_modules":  [
+
+                                             ],
+                        "affected_paths":  [
+                                               ".",
+                                               "components/instruction/skills/backend-production-engineering"
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+
+                                             ],
+                        "source_references":  [
+                                                  "components/instruction/project-memory/audits/EXISTING-KNOWLEDGE-AUDIT.md",
+                                                  "components/instruction/project-memory/PROJECT-SNAPSHOT.md",
+                                                  "components/instruction/project-memory/audits/UI-UX-AUDIT.md",
+                                                  "components/instruction/skills/ui-ux-production/SKILL.md",
+                                                  "components/instruction/project-memory/audits/BACKEND-AUDIT.md",
+                                                  "components/instruction/skills/backend-production-engineering/SKILL.md"
+                                              ],
+                        "evidence":  [
+                                         "The initial empty-workspace audit found none of the expected application sources.",
+                                         "UI/UX Production now exists and is routed; application-specific UI and the remaining backend/business/schema/test/deployment sources are still absent.",
+                                         "Backend Production Engineering now exists and is routed; application-specific backend/Base44 sources remain absent."
+                                     ],
+                        "decision_or_fact":  "documentation_gap",
+                        "rationale":  "The missing-source boundary must remain explicit so agents do not fabricate project knowledge.",
+                        "consequences":  [
+                                             "Specialist procedures are available, but application semantics and production readiness remain unverified until source onboarding."
+                                         ],
+                        "risks":  [
+                                      "Implementation without source ingestion may violate unknown requirements."
+                                  ],
+                        "valid_from":  "2026-07-16",
+                        "last_verified_at":  "2026-07-16",
+                        "review_after":  "2026-08-16",
+                        "created_at":  "2026-07-16",
+                        "updated_at":  "2026-07-16",
+                        "created_by_task":  "TASK-20260716-project-memory-bootstrap",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "related_memories":  [
+                                                 "MEM-PROJECT-0001",
+                                                 "MEM-QUESTION-0001",
+                                                 "MEM-DEBT-0001",
+                                                 "MEM-UI-0001",
+                                                 "MEM-BACKEND-0001"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/audits/MEMORY-GAP-REPORT.md"
+                    },
+                    {
+                        "memory_id":  "MEM-QUESTION-0001",
+                        "title":  "Application context is unknown",
+                        "memory_type":  "open_question",
+                        "scope":  "level-0:project",
+                        "summary":  "Product, application stack/modules/contracts/auth/Base44 capabilities/deployment/tests and application UI/backend architecture remain unknown; both production procedures now exist.",
+                        "status":  "provisional",
+                        "confidence":  "low",
+                        "tags":  [
+                                     "open-question",
+                                     "onboarding",
+                                     "architecture"
+                                 ],
+                        "trigger_terms":  [
+                                              "onboarding",
+                                              "product",
+                                              "domain",
+                                              "stack",
+                                              "architecture",
+                                              "authentication",
+                                              "deployment",
+                                              "testing"
+                                          ],
+                        "affected_modules":  [
+
+                                             ],
+                        "affected_paths":  [
+                                               "."
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+
+                                             ],
+                        "source_references":  [
+                                                  "components/instruction/project-memory/PROJECT-SNAPSHOT.md",
+                                                  "components/instruction/project-memory/audits/MEMORY-GAP-REPORT.md",
+                                                  "components/instruction/project-memory/audits/UI-UX-AUDIT.md",
+                                                  "components/instruction/project-memory/audits/BACKEND-AUDIT.md"
+                                              ],
+                        "evidence":  [
+                                         "No application or approved project sources were present during audit; the UI procedural skill does not establish application-specific design facts.",
+                                         "No application or approved Base44/backend sources were present during audit; the backend procedural skill does not establish application-specific capabilities or facts."
+                                     ],
+                        "decision_or_fact":  "unknown",
+                        "rationale":  "Explicit unknowns are safer than inferred business or technical facts.",
+                        "consequences":  [
+                                             "Source onboarding is required before project-specific implementation decisions."
+                                         ],
+                        "risks":  [
+                                      "The question list may need splitting by domain after sources arrive."
+                                  ],
+                        "valid_from":  "2026-07-16",
+                        "last_verified_at":  "2026-07-16",
+                        "review_after":  "2026-08-16",
+                        "created_at":  "2026-07-16",
+                        "updated_at":  "2026-07-16",
+                        "created_by_task":  "TASK-20260716-project-memory-bootstrap",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "related_memories":  [
+                                                 "MEM-PROJECT-0001",
+                                                 "MEM-GAP-0001",
+                                                 "MEM-DEBT-0001",
+                                                 "MEM-UI-0001",
+                                                 "MEM-BACKEND-0001"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/OPEN-QUESTIONS.md"
+                    },
+                    {
+                        "memory_id":  "MEM-DEBT-0001",
+                        "title":  "Project semantic and episodic memory is unpopulated",
+                        "memory_type":  "technical_debt",
+                        "scope":  "level-0:project",
+                        "summary":  "Project semantic/episodic and application-specific UI/backend memory remain unpopulated despite Project Memory and both procedural specialist skills being available.",
+                        "status":  "supported",
+                        "confidence":  "high",
+                        "tags":  [
+                                     "debt",
+                                     "onboarding",
+                                     "memory"
+                                 ],
+                        "trigger_terms":  [
+                                              "debt",
+                                              "onboarding",
+                                              "documentation",
+                                              "module-map",
+                                              "incident",
+                                              "architecture",
+                                              "specialist-skill"
+                                          ],
+                        "affected_modules":  [
+
+                                             ],
+                        "affected_paths":  [
+                                               "components/instruction/project-memory"
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+
+                                             ],
+                        "source_references":  [
+                                                  "components/instruction/project-memory/audits/MEMORY-GAP-REPORT.md",
+                                                  "components/instruction/project-memory/audits/MEMORY-REMEDIATION-BACKLOG.md",
+                                                  "components/instruction/project-memory/audits/UI-UX-REMEDIATION-BACKLOG.md",
+                                                  "components/instruction/project-memory/audits/BACKEND-REMEDIATION-BACKLOG.md",
+                                                  "components/instruction/project-memory/audits/BACKEND-PRODUCTION-RISK-REPORT.md"
+                                              ],
+                        "evidence":  [
+                                         "The general and UI gap audits list missing application sources and source-backed closure criteria.",
+                                         "The backend audit/risk/backlog record missing application/Base44/domain/schema/auth/runtime sources and source-backed closure criteria."
+                                     ],
+                        "decision_or_fact":  "technical_debt",
+                        "rationale":  "Recording the debt makes the next onboarding task actionable and prevents false completion.",
+                        "consequences":  [
+                                             "First source-bearing task must pay the onboarding/verification cost."
+                                         ],
+                        "risks":  [
+                                      "If ignored, the store remains procedural but not project-semantic."
+                                  ],
+                        "valid_from":  "2026-07-16",
+                        "last_verified_at":  "2026-07-16",
+                        "review_after":  "2026-08-16",
+                        "created_at":  "2026-07-16",
+                        "updated_at":  "2026-07-16",
+                        "created_by_task":  "TASK-20260716-project-memory-bootstrap",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "related_memories":  [
+                                                 "MEM-GAP-0001",
+                                                 "MEM-QUESTION-0001",
+                                                 "MEM-UI-0001",
+                                                 "MEM-BACKEND-0001"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/DEBT.md"
+                    },
+                    {
+                        "memory_id":  "DEC-0001",
+                        "title":  "Use deterministic JSON memory index",
+                        "memory_type":  "architecture_decision",
+                        "scope":  "level-0:project",
+                        "summary":  "Use Markdown detail plus a deterministic JSON index; do not add vector infrastructure without measured need and approval.",
+                        "status":  "verified",
+                        "confidence":  "high",
+                        "tags":  [
+                                     "architecture",
+                                     "memory-index",
+                                     "dependency"
+                                 ],
+                        "trigger_terms":  [
+                                              "memory-index",
+                                              "retrieval",
+                                              "semantic-search",
+                                              "vector-database",
+                                              "dependency",
+                                              "architecture"
+                                          ],
+                        "affected_modules":  [
+
+                                             ],
+                        "affected_paths":  [
+                                               "components/instruction/project-memory/memory-index.json",
+                                               "components/instruction/skills/project-memory/scripts/memory-lint.ps1"
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+
+                                             ],
+                        "source_references":  [
+                                                  "components/instruction/AI-BOOTSTRAP.md",
+                                                  "components/instruction/skills/project-memory/references/RETRIEVAL.md",
+                                                  "components/instruction/skills/project-memory/references/MEMORY-POLICY.md"
+                                              ],
+                        "evidence":  [
+                                         "The approved task constraints require deterministic indexing first and prohibit unapproved vector database or major dependency additions."
+                                     ],
+                        "decision_or_fact":  "architecture_decision",
+                        "rationale":  "The current small local store needs deterministic, dependency-free retrieval and validation.",
+                        "consequences":  [
+                                             "Detail and index updates are atomic; future search must preserve deterministic fallback."
+                                         ],
+                        "risks":  [
+                                      "Metadata quality determines retrieval quality."
+                                  ],
+                        "valid_from":  "2026-07-16",
+                        "last_verified_at":  "2026-07-16",
+                        "review_after":  "2026-10-16",
+                        "created_at":  "2026-07-16",
+                        "updated_at":  "2026-07-16",
+                        "created_by_task":  "TASK-20260716-project-memory-bootstrap",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "related_memories":  [
+                                                 "MEM-CONSTRAINT-0001",
+                                                 "PAT-0001"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/decisions/DEC-0001-deterministic-memory-index.md"
+                    },
+                    {
+                        "memory_id":  "PAT-0001",
+                        "title":  "Progressive memory retrieval",
+                        "memory_type":  "design_pattern",
+                        "scope":  "level-0:project",
+                        "summary":  "Retrieve index metadata, then summary, then detail, then verify authoritative sources.",
+                        "status":  "supported",
+                        "confidence":  "high",
+                        "tags":  [
+                                     "pattern",
+                                     "retrieval",
+                                     "context-efficiency"
+                                 ],
+                        "trigger_terms":  [
+                                              "retrieval",
+                                              "context",
+                                              "token",
+                                              "memory-query",
+                                              "index",
+                                              "verification"
+                                          ],
+                        "affected_modules":  [
+
+                                             ],
+                        "affected_paths":  [
+                                               "components/instruction/project-memory",
+                                               "components/instruction/skills/project-memory"
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+
+                                             ],
+                        "source_references":  [
+                                                  "components/instruction/skills/project-memory/SKILL.md",
+                                                  "components/instruction/skills/project-memory/references/RETRIEVAL.md",
+                                                  "components/instruction/project-memory/INDEX.md"
+                                              ],
+                        "evidence":  [
+                                         "The skill, retrieval policy, and two-layer index implement the same progressive route."
+                                     ],
+                        "decision_or_fact":  "provisional_reusable_pattern",
+                        "rationale":  "Selective expansion reduces context while preserving source verification.",
+                        "consequences":  [
+                                             "Agents should not load unrelated memory details."
+                                         ],
+                        "risks":  [
+                                      "Poor triggers or stale index metadata can hide relevant entries."
+                                  ],
+                        "valid_from":  "2026-07-16",
+                        "last_verified_at":  "2026-07-16",
+                        "review_after":  "2026-09-16",
+                        "created_at":  "2026-07-16",
+                        "updated_at":  "2026-07-16",
+                        "created_by_task":  "TASK-20260716-project-memory-bootstrap",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "related_memories":  [
+                                                 "DEC-0001",
+                                                 "MEM-CONSTRAINT-0001"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/patterns/PAT-0001-progressive-retrieval.md"
+                    },
+                    {
+                        "memory_id":  "TASK-20260716-project-memory-bootstrap",
+                        "title":  "Bootstrap Project Memory operating system",
+                        "memory_type":  "task_summary",
+                        "scope":  "level-4:task:project-memory-bootstrap",
+                        "summary":  "Created and validated the project-local memory routing, policies, contracts, templates, deterministic index, baseline audits, and lint workflow.",
+                        "status":  "verified",
+                        "confidence":  "high",
+                        "tags":  [
+                                     "task-summary",
+                                     "project-memory",
+                                     "bootstrap"
+                                 ],
+                        "trigger_terms":  [
+                                              "project-memory",
+                                              "memory-bootstrap",
+                                              "instruction",
+                                              "audit",
+                                              "lint"
+                                          ],
+                        "affected_modules":  [
+
+                                             ],
+                        "affected_paths":  [
+                                               "AGENTS.md",
+                                               "components/instruction"
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+
+                                             ],
+                        "source_references":  [
+                                                  "AGENTS.md",
+                                                  "components/instruction/AI-BOOTSTRAP.md",
+                                                  "components/instruction/skills/project-memory/SKILL.md",
+                                                  "components/instruction/project-memory/audits/EXISTING-KNOWLEDGE-AUDIT.md",
+                                                  "components/instruction/skills/project-memory/scripts/memory-lint.ps1"
+                                              ],
+                        "evidence":  [
+                                         "Memory lint passed with 0 blockers and 0 warnings; an invalid fixture missing trigger_terms was rejected; skill-creator quick validation logic reported Skill is valid."
+                                     ],
+                        "decision_or_fact":  "task_outcome",
+                        "rationale":  "A compact completed summary preserves the implementation and verification boundary without retaining conversational working state.",
+                        "consequences":  [
+                                             "Future tasks are routed through evidence-based memory before specialist work."
+                                         ],
+                        "risks":  [
+                                      "Application-specific memory remains unavailable until code and approved project sources arrive."
+                                  ],
+                        "valid_from":  "2026-07-16",
+                        "last_verified_at":  "2026-07-16",
+                        "review_after":  "2026-10-16",
+                        "created_at":  "2026-07-16",
+                        "updated_at":  "2026-07-16",
+                        "created_by_task":  "TASK-20260716-project-memory-bootstrap",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "related_memories":  [
+                                                 "MEM-PROJECT-0001",
+                                                 "MEM-CONSTRAINT-0001",
+                                                 "MEM-GAP-0001",
+                                                 "MEM-QUESTION-0001",
+                                                 "MEM-DEBT-0001",
+                                                 "DEC-0001",
+                                                 "PAT-0001",
+                                                 "TASK-20260716-project-memory-onboarding"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/tasks/completed/TASK-20260716-project-memory-bootstrap.md"
+                    },
+                    {
+                        "memory_id":  "TASK-20260716-project-memory-onboarding",
+                        "title":  "Onboard application sources and specialist instructions",
+                        "memory_type":  "task_checkpoint",
+                        "scope":  "level-4:task:project-onboarding",
+                        "summary":  "Blocked until authoritative application, Base44, business, schema/auth, test, runtime, and deployment sources are available; both specialist production skills are installed and routed.",
+                        "status":  "provisional",
+                        "confidence":  "high",
+                        "tags":  [
+                                     "task",
+                                     "checkpoint",
+                                     "blocked",
+                                     "onboarding"
+                                 ],
+                        "trigger_terms":  [
+                                              "onboarding",
+                                              "continue",
+                                              "resume",
+                                              "application-source",
+                                              "backend-skill",
+                                              "ui-audit"
+                                          ],
+                        "affected_modules":  [
+
+                                             ],
+                        "affected_paths":  [
+                                               ".",
+                                               "components/instruction/skills/backend-production-engineering"
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+
+                                             ],
+                        "source_references":  [
+                                                  "components/instruction/project-memory/PROJECT-SNAPSHOT.md",
+                                                  "components/instruction/project-memory/audits/MEMORY-GAP-REPORT.md",
+                                                  "components/instruction/project-memory/audits/MEMORY-REMEDIATION-BACKLOG.md",
+                                                  "components/instruction/project-memory/audits/UI-UX-AUDIT.md",
+                                                  "components/instruction/skills/ui-ux-production/SKILL.md",
+                                                  "components/instruction/project-memory/audits/BACKEND-AUDIT.md",
+                                                  "components/instruction/project-memory/audits/BACKEND-REMEDIATION-BACKLOG.md",
+                                                  "components/instruction/skills/backend-production-engineering/SKILL.md"
+                                              ],
+                        "evidence":  [
+                                         "The initial recursive inventory was empty.",
+                                         "UI/UX Production was created and routed; application and Backend sources remain absent.",
+                                         "Backend Production Engineering was created and routed; repository discovery still found no application/Base44 sources."
+                                     ],
+                        "decision_or_fact":  "working_state",
+                        "rationale":  "The task specification requires source-backed codebase and FE/BE audits; those steps cannot be completed by fabrication.",
+                        "consequences":  [
+                                             "Resume application onboarding immediately when authoritative sources are added."
+                                         ],
+                        "risks":  [
+                                      "Implementing application behavior before onboarding may violate unknown business, security, data, platform, or production rules."
+                                  ],
+                        "valid_from":  "2026-07-16",
+                        "last_verified_at":  "2026-07-16",
+                        "review_after":  "2026-08-16",
+                        "created_at":  "2026-07-16",
+                        "updated_at":  "2026-07-16",
+                        "created_by_task":  "TASK-20260716-project-memory-bootstrap",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "related_memories":  [
+                                                 "TASK-20260716-project-memory-bootstrap",
+                                                 "MEM-PROJECT-0001",
+                                                 "MEM-GAP-0001",
+                                                 "MEM-QUESTION-0001",
+                                                 "MEM-DEBT-0001",
+                                                 "MEM-UI-0001",
+                                                 "TASK-20260716-ui-ux-production-skill",
+                                                 "MEM-BACKEND-0001",
+                                                 "TASK-20260716-backend-production-engineering-skill"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/tasks/blocked/TASK-20260716-project-memory-onboarding.md"
+                    },
+                    {
+                        "memory_id":  "MEM-UI-0001",
+                        "title":  "UI/UX Production installed; application UI baseline absent",
+                        "memory_type":  "project_fact",
+                        "scope":  "level-0:project:ui-ux",
+                        "summary":  "UI/UX Production is mandatory and routed; no application framework, tokens, components, product flows, or UI tests exist to tailor it yet.",
+                        "status":  "verified",
+                        "confidence":  "high",
+                        "tags":  [
+                                     "ui",
+                                     "ux",
+                                     "frontend",
+                                     "instruction",
+                                     "audit"
+                                 ],
+                        "trigger_terms":  [
+                                              "ui",
+                                              "ux",
+                                              "frontend",
+                                              "component",
+                                              "page",
+                                              "form",
+                                              "table",
+                                              "responsive",
+                                              "accessibility",
+                                              "design-system"
+                                          ],
+                        "affected_modules":  [
+
+                                             ],
+                        "affected_paths":  [
+                                               "AGENTS.md",
+                                               "components/instruction/AI-BOOTSTRAP.md",
+                                               "components/instruction/skills/ui-ux-production"
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+
+                                             ],
+                        "source_references":  [
+                                                  "components/instruction/project-memory/PROJECT-SNAPSHOT.md",
+                                                  "components/instruction/project-memory/audits/UI-UX-AUDIT.md",
+                                                  "components/instruction/skills/ui-ux-production/SKILL.md",
+                                                  "components/instruction/AI-BOOTSTRAP.md",
+                                                  "components/instruction/project-memory/audits/BACKEND-AUDIT.md",
+                                                  "components/instruction/skills/backend-production-engineering/SKILL.md"
+                                              ],
+                        "evidence":  [
+                                         "Repository discovery found no application UI source or pre-existing UI skill.",
+                                         "The new skill exists at the routed path and AGENTS/AI-BOOTSTRAP enforce it before UI code."
+                                     ],
+                        "decision_or_fact":  "implementation_fact",
+                        "rationale":  "Agents need enforceable production UI procedure while keeping absent application design facts explicit.",
+                        "consequences":  [
+                                             "All UI/UX-related work must use the skill, perform reuse discovery, and create a UX Decision Summary before code.",
+                                             "Re-run the UI audit and populate source-backed design/component memory when application sources arrive."
+                                         ],
+                        "risks":  [
+                                      "The procedural skill must not be mistaken for evidence of an application design system or component library."
+                                  ],
+                        "valid_from":  "2026-07-16",
+                        "last_verified_at":  "2026-07-16",
+                        "review_after":  "2026-07-30",
+                        "created_at":  "2026-07-16",
+                        "updated_at":  "2026-07-16",
+                        "created_by_task":  "TASK-20260716-ui-ux-production-skill",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "related_memories":  [
+                                                 "MEM-PROJECT-0001",
+                                                 "MEM-GAP-0001",
+                                                 "MEM-DEBT-0001",
+                                                 "TASK-20260716-project-memory-onboarding",
+                                                 "TASK-20260716-ui-ux-production-skill",
+                                                 "MEM-BACKEND-0001",
+                                                 "TASK-20260716-backend-production-engineering-skill"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/audits/UI-UX-AUDIT.md"
+                    },
+                    {
+                        "memory_id":  "TASK-20260716-ui-ux-production-skill",
+                        "title":  "Create UI/UX Production skill",
+                        "memory_type":  "task_summary",
+                        "scope":  "level-4:task:ui-ux-production-skill",
+                        "summary":  "Created, routed, audited, and validated the mandatory project-local UI/UX Production skill with progressive references and Project Memory write-back.",
+                        "status":  "verified",
+                        "confidence":  "high",
+                        "tags":  [
+                                     "task-summary",
+                                     "ui",
+                                     "ux",
+                                     "frontend-skill",
+                                     "instruction"
+                                 ],
+                        "trigger_terms":  [
+                                              "ui-ux-production",
+                                              "frontend-skill",
+                                              "accessibility",
+                                              "responsive",
+                                              "design-system",
+                                              "routing"
+                                          ],
+                        "affected_modules":  [
+
+                                             ],
+                        "affected_paths":  [
+                                               "AGENTS.md",
+                                               "components/instruction/AI-BOOTSTRAP.md",
+                                               "components/instruction/skills/ui-ux-production",
+                                               "components/instruction/project-memory"
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+
+                                             ],
+                        "source_references":  [
+                                                  "AGENTS.md",
+                                                  "components/instruction/AI-BOOTSTRAP.md",
+                                                  "components/instruction/skills/ui-ux-production/SKILL.md",
+                                                  "components/instruction/project-memory/audits/UI-UX-AUDIT.md",
+                                                  "components/instruction/project-memory/audits/UI-UX-REMEDIATION-BACKLOG.md"
+                                              ],
+                        "evidence":  [
+                                         "Skill validation passed; all required files and 15 contract fields exist; all 16 rule groups and 40 requested anti-patterns were found; routing and Markdown links passed; memory lint had zero blockers/warnings before task-summary insertion."
+                                     ],
+                        "decision_or_fact":  "task_outcome",
+                        "rationale":  "A completed summary preserves the new mandatory UI procedure, validation boundary, and remaining application-source gap without chat dependence.",
+                        "consequences":  [
+                                             "All UI/UX work is now gated by Project Memory, the UI skill, reuse discovery, and a UX Decision Summary."
+                                         ],
+                        "risks":  [
+                                      "No application source exists, so framework/token/component-specific guidance and runtime UI validation remain pending."
+                                  ],
+                        "valid_from":  "2026-07-16",
+                        "last_verified_at":  "2026-07-16",
+                        "review_after":  "2026-10-16",
+                        "created_at":  "2026-07-16",
+                        "updated_at":  "2026-07-16",
+                        "created_by_task":  "TASK-20260716-ui-ux-production-skill",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "related_memories":  [
+                                                 "MEM-UI-0001",
+                                                 "MEM-CONSTRAINT-0001",
+                                                 "MEM-GAP-0001",
+                                                 "MEM-DEBT-0001",
+                                                 "TASK-20260716-project-memory-onboarding"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/tasks/completed/TASK-20260716-ui-ux-production-skill.md"
+                    },
+                    {
+                        "memory_id":  "MEM-BACKEND-0001",
+                        "title":  "Backend Production installed; application backend baseline absent",
+                        "memory_type":  "project_fact",
+                        "scope":  "level-0:project:backend",
+                        "summary":  "Backend Production Engineering is mandatory and routed; no application or Base44/backend sources exist to tailor or validate it yet.",
+                        "status":  "verified",
+                        "confidence":  "high",
+                        "tags":  [
+                                     "backend",
+                                     "base44",
+                                     "data",
+                                     "security",
+                                     "reliability",
+                                     "instruction",
+                                     "audit"
+                                 ],
+                        "trigger_terms":  [
+                                              "backend",
+                                              "base44",
+                                              "api",
+                                              "database",
+                                              "entity",
+                                              "schema",
+                                              "service",
+                                              "function",
+                                              "authentication",
+                                              "authorization",
+                                              "tenant",
+                                              "transaction",
+                                              "webhook",
+                                              "migration",
+                                              "observability"
+                                          ],
+                        "affected_modules":  [
+
+                                             ],
+                        "affected_paths":  [
+                                               "AGENTS.md",
+                                               "components/instruction/AI-BOOTSTRAP.md",
+                                               "components/instruction/skills/backend-production-engineering",
+                                               "components/instruction/project-memory/audits/BACKEND-AUDIT.md"
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+
+                                             ],
+                        "source_references":  [
+                                                  "components/instruction/project-memory/PROJECT-SNAPSHOT.md",
+                                                  "components/instruction/project-memory/audits/BACKEND-AUDIT.md",
+                                                  "components/instruction/project-memory/audits/BACKEND-PRODUCTION-RISK-REPORT.md",
+                                                  "components/instruction/skills/backend-production-engineering/SKILL.md",
+                                                  "components/instruction/AI-BOOTSTRAP.md"
+                                              ],
+                        "evidence":  [
+                                         "Repository discovery found no application/Base44 backend source or pre-existing backend skill.",
+                                         "The new skill exists at the routed path; AGENTS and AI-BOOTSTRAP enforce it before backend code.",
+                                         "Skill validation passed with 19 contract fields, 14 required references, 70 anti-patterns, valid routing, and valid links."
+                                     ],
+                        "decision_or_fact":  "implementation_fact",
+                        "rationale":  "Agents need enforceable production backend procedure while absent application/platform guarantees remain explicit.",
+                        "consequences":  [
+                                             "All backend/full-stack work must use Project Memory, this skill, capability/reuse discovery, Backend Decision Summary, and pre/post gates.",
+                                             "Re-run the backend audit and populate source-backed capability/domain/data/security/operations memory when application sources arrive."
+                                         ],
+                        "risks":  [
+                                      "The procedural skill must not be mistaken for evidence of application architecture, Base44 capabilities, transaction guarantees, permissions, tests, or production readiness."
+                                  ],
+                        "valid_from":  "2026-07-16",
+                        "last_verified_at":  "2026-07-16",
+                        "review_after":  "2026-07-30",
+                        "created_at":  "2026-07-16",
+                        "updated_at":  "2026-07-16",
+                        "created_by_task":  "TASK-20260716-backend-production-engineering-skill",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "related_memories":  [
+                                                 "MEM-PROJECT-0001",
+                                                 "MEM-GAP-0001",
+                                                 "MEM-DEBT-0001",
+                                                 "MEM-UI-0001",
+                                                 "TASK-20260716-project-memory-onboarding",
+                                                 "TASK-20260716-backend-production-engineering-skill"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/audits/BACKEND-AUDIT.md"
+                    },
+                    {
+                        "memory_id":  "TASK-20260716-backend-production-engineering-skill",
+                        "title":  "Create Backend Production Engineering skill",
+                        "memory_type":  "task_summary",
+                        "scope":  "level-4:task:backend-production-engineering-skill",
+                        "summary":  "Created, routed, audited, and validated the mandatory project-local Backend Production Engineering operating system with progressive references and Project Memory write-back.",
+                        "status":  "verified",
+                        "confidence":  "high",
+                        "tags":  [
+                                     "task-summary",
+                                     "backend",
+                                     "base44",
+                                     "backend-skill",
+                                     "instruction",
+                                     "security",
+                                     "reliability"
+                                 ],
+                        "trigger_terms":  [
+                                              "backend-production-engineering",
+                                              "backend-skill",
+                                              "base44",
+                                              "data-integrity",
+                                              "authorization",
+                                              "transaction",
+                                              "observability",
+                                              "routing"
+                                          ],
+                        "affected_modules":  [
+
+                                             ],
+                        "affected_paths":  [
+                                               "AGENTS.md",
+                                               "components/instruction/AI-BOOTSTRAP.md",
+                                               "components/instruction/skills/backend-production-engineering",
+                                               "components/instruction/project-memory"
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+
+                                             ],
+                        "source_references":  [
+                                                  "AGENTS.md",
+                                                  "components/instruction/AI-BOOTSTRAP.md",
+                                                  "components/instruction/skills/backend-production-engineering/SKILL.md",
+                                                  "components/instruction/project-memory/audits/BACKEND-AUDIT.md",
+                                                  "components/instruction/project-memory/audits/BACKEND-PRODUCTION-RISK-REPORT.md",
+                                                  "components/instruction/project-memory/audits/BACKEND-REMEDIATION-BACKLOG.md"
+                                              ],
+                        "evidence":  [
+                                         "Skill-creator validation logic passed; 19 contract fields, all required references, 70 anti-patterns, routing/gate, Markdown links, metadata, encoding, and unfinished-marker checks passed.",
+                                         "The audit/risk/backlog and Project Memory details were updated without creating application code or fabricated Base44/business/schema facts."
+                                     ],
+                        "decision_or_fact":  "task_outcome",
+                        "rationale":  "A completed summary preserves the mandatory backend procedure, validation boundary, and remaining application-source gap without chat dependence.",
+                        "consequences":  [
+                                             "All backend/full-stack work is now gated by Project Memory, the backend skill, capability/reuse discovery, Backend Decision Summary, and production validation."
+                                         ],
+                        "risks":  [
+                                      "No application source exists, so project-specific architecture/capabilities/contracts and runtime production validation remain pending."
+                                  ],
+                        "valid_from":  "2026-07-16",
+                        "last_verified_at":  "2026-07-16",
+                        "review_after":  "2026-10-16",
+                        "created_at":  "2026-07-16",
+                        "updated_at":  "2026-07-16",
+                        "created_by_task":  "TASK-20260716-backend-production-engineering-skill",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "related_memories":  [
+                                                 "MEM-BACKEND-0001",
+                                                 "MEM-CONSTRAINT-0001",
+                                                 "MEM-GAP-0001",
+                                                 "MEM-DEBT-0001",
+                                                 "MEM-UI-0001",
+                                                 "TASK-20260716-project-memory-onboarding"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/tasks/completed/TASK-20260716-backend-production-engineering-skill.md"
+                    },
+                    {
+                        "memory_id": "MEM-SKILL-SYSTEM-0001",
+                        "title": "Project Engineering Skill System is active",
+                        "memory_type": "project_fact",
+                        "scope": "level-0:project:instruction-system",
+                        "summary": "Validated Constitution, Orchestrator, 20-skill registry, 11-workflow registry, approval gates, routing, and executable instruction lint are active.",
+                        "status": "verified",
+                        "confidence": "high",
+                        "affected_modules": [
+                            "instruction-system"
+                        ],
+                        "affected_paths": [
+                            "AGENTS.md",
+                            "components/instruction"
+                        ],
+                        "related_entities": [],
+                        "related_features": [
+                            "project-engineering-agent"
+                        ],
+                        "valid_from": "2026-07-16",
+                        "last_verified_at": "2026-07-16",
+                        "review_after": "2026-10-16",
+                        "created_at": "2026-07-16",
+                        "updated_at": "2026-07-16",
+                        "created_by_task": "TASK-20260716-project-engineering-skill-system",
+                        "supersedes": [],
+                        "superseded_by": null,
+                        "tags": [
+                            "instruction-system",
+                            "skills",
+                            "workflows",
+                            "routing",
+                            "governance",
+                            "validation"
+                        ],
+                        "trigger_terms": [
+                            "skill",
+                            "workflow",
+                            "orchestrator",
+                            "constitution",
+                            "approval",
+                            "routing",
+                            "bootstrap",
+                            "validation"
+                        ],
+                        "source_references": [
+                            "components/instruction/PROJECT-CONSTITUTION.md",
+                            "components/instruction/SKILL-REGISTRY.json",
+                            "components/instruction/WORKFLOW-REGISTRY.json",
+                            "components/instruction/reports/INSTRUCTION-ARCHITECTURE-AUDIT.md",
+                            "components/instruction/reports/DEFINITION-OF-DONE.md"
+                        ],
+                        "evidence": [
+                            "Skill lint passed for 20 skills with zero blockers and warnings.",
+                            "Workflow lint passed for 11 workflows with zero blockers and warnings.",
+                            "Route/link validation passed with 35 anti-patterns and zero blockers and warnings."
+                        ],
+                        "decision_or_fact": "implementation_fact",
+                        "rationale": "Future agents need one durable fact describing the instruction architecture without reading every skill.",
+                        "consequences": [
+                            "Every task starts with Constitution and Orchestrator routing.",
+                            "Concrete domain skills remain evidence-gated.",
+                            "Application production readiness remains unverified."
+                        ],
+                        "risks": [
+                            "Registries and memory become stale if future instruction changes are not synchronized."
+                        ],
+                        "related_memories": [
+                            "MEM-PROJECT-0001",
+                            "MEM-CONSTRAINT-0001",
+                            "MEM-GAP-0001",
+                            "TASK-20260716-project-engineering-skill-system"
+                        ],
+                        "detail_path": "components/instruction/project-memory/modules/instruction-system/MEM-SKILL-SYSTEM-0001.md"
+                    },
+                    {
+                        "memory_id": "TASK-20260716-project-engineering-skill-system",
+                        "title": "Build Project Engineering Skill System",
+                        "memory_type": "task_summary",
+                        "scope": "level-4:task:project-engineering-skill-system",
+                        "summary": "Audited and transformed the instruction-only repository into a validated Constitution-Orchestrator-Memory-Capability-Workflow system with 20 skills and 11 workflows.",
+                        "status": "verified",
+                        "confidence": "high",
+                        "affected_modules": [
+                            "instruction-system",
+                            "project-memory"
+                        ],
+                        "affected_paths": [
+                            "AGENTS.md",
+                            "components/instruction"
+                        ],
+                        "related_entities": [],
+                        "related_features": [
+                            "project-engineering-agent"
+                        ],
+                        "valid_from": "2026-07-16",
+                        "last_verified_at": "2026-07-16",
+                        "review_after": "2026-10-16",
+                        "created_at": "2026-07-16",
+                        "updated_at": "2026-07-16",
+                        "created_by_task": "TASK-20260716-project-engineering-skill-system",
+                        "supersedes": [],
+                        "superseded_by": null,
+                        "tags": [
+                            "task-summary",
+                            "instruction-system",
+                            "skills",
+                            "workflows",
+                            "orchestrator",
+                            "validation"
+                        ],
+                        "trigger_terms": [
+                            "project-engineering-skill-system",
+                            "skill-system",
+                            "orchestrator",
+                            "registry",
+                            "workflow",
+                            "continue"
+                        ],
+                        "source_references": [
+                            "components/instruction/reports/TASK-EXECUTION-BRIEF.md",
+                            "components/instruction/reports/EXISTING-SKILL-AUDIT.md",
+                            "components/instruction/reports/INSTRUCTION-ARCHITECTURE-AUDIT.md",
+                            "components/instruction/reports/DEFINITION-OF-DONE.md",
+                            "components/instruction/reports/VALIDATION-REPORT.md"
+                        ],
+                        "evidence": [
+                            "20 registered skills and 11 workflows exist.",
+                            "All three system validators passed with zero blockers and warnings.",
+                            "Project Memory lint passed after indexed write-back."
+                        ],
+                        "decision_or_fact": "task_outcome",
+                        "rationale": "Preserve the completed architecture, validation boundary, and application-evidence gap outside chat history.",
+                        "consequences": [
+                            "Future tasks use Orchestrator and one primary workflow.",
+                            "Capability and workflow changes require registry and validation synchronization."
+                        ],
+                        "risks": [
+                            "No application evidence exists, so application-specific production and domain claims remain unavailable."
+                        ],
+                        "related_memories": [
+                            "MEM-SKILL-SYSTEM-0001",
+                            "MEM-PROJECT-0001",
+                            "MEM-CONSTRAINT-0001",
+                            "MEM-GAP-0001",
+                            "MEM-UI-0001",
+                            "MEM-BACKEND-0001",
+                            "TASK-20260716-project-memory-onboarding"
+                        ],
+                        "detail_path": "components/instruction/project-memory/tasks/completed/TASK-20260716-project-engineering-skill-system.md"
+                    }
+                ]
+}
