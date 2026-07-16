@@ -230,7 +230,7 @@ foreach ($relative in $tracked) {
     if (-not (Test-Path -LiteralPath $absolute -PathType Leaf)) {
         continue
     }
-    $item = Get-Item -LiteralPath $absolute
+    $item = Get-Item -LiteralPath $absolute -Force
     if ($item.Length -gt 10MB) {
         Add-Blocker "Repository file exceeds 10 MB: '$normalized'."
         continue
