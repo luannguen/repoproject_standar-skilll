@@ -1,0 +1,30 @@
+name: Feature request
+description: Propose a bounded capability or reusable template improvement
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and user outcome
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: State observable, testable outcomes.
+    validations:
+      required: true
+  - type: textarea
+    id: exclusions
+    attributes:
+      label: Scope and exclusions
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Current evidence
+      description: Identify existing code, repeated need, constraints, and unknowns. Do not invent a stack or domain.

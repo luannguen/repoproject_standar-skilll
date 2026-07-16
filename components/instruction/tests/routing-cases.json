@@ -1,0 +1,491 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-07-16",
+  "description": "Static routing behavior oracle. It validates declared workflow, risk, skill, and gate expectations against registries; it does not execute an LLM classifier.",
+  "case_count": 24,
+  "cases": [
+    {
+      "id": "onboard-clone",
+      "prompt": "Kh?i t?o repo v?a clone, x?c nh?n t?n d? ?n, owner v? quality gate nh?ng ch?a c? application code.",
+      "expected_workflow": "project-onboarding",
+      "expected_risk": "MEDIUM",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "project-bootstrap-governance",
+        "requirement-analysis",
+        "testing-quality",
+        "security-threat-modeling",
+        "documentation-sync"
+      ],
+      "expected_gates": [
+        "AG-01"
+      ],
+      "reason": "Clone onboarding is the dominant outcome and application-specific controls remain conditional."
+    },
+    {
+      "id": "onboard-host-controls",
+      "prompt": "Chu?n h?a repo template v? c?u h?nh checklist branch protection, CODEOWNERS, security reporting.",
+      "expected_workflow": "project-onboarding",
+      "expected_risk": "HIGH",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "project-bootstrap-governance",
+        "requirement-analysis",
+        "testing-quality",
+        "security-threat-modeling",
+        "documentation-sync"
+      ],
+      "expected_gates": [
+        "AG-05",
+        "AG-11"
+      ],
+      "reason": "Repository governance and external host settings require onboarding plus approvals."
+    },
+    {
+      "id": "feature-local",
+      "prompt": "Th?m h?nh vi m?i ?? c? acceptance criteria, kh?ng ch?m d? li?u nh?y c?m.",
+      "expected_workflow": "feature-development",
+      "expected_risk": "MEDIUM",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "requirement-analysis",
+        "testing-quality",
+        "documentation-sync"
+      ],
+      "expected_gates": [],
+      "reason": "New behavior routes to feature development."
+    },
+    {
+      "id": "feature-auth",
+      "prompt": "Th?m t?nh n?ng ??i quy?n ng??i d?ng qua API.",
+      "expected_workflow": "feature-development",
+      "expected_risk": "HIGH",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "requirement-analysis",
+        "testing-quality",
+        "documentation-sync",
+        "backend-production-engineering",
+        "api-integration",
+        "security-threat-modeling"
+      ],
+      "expected_gates": [
+        "AG-05",
+        "AG-09"
+      ],
+      "reason": "New behavior crosses identity, API, and trust boundaries."
+    },
+    {
+      "id": "bug-ui",
+      "prompt": "S?a l?i form hi?n th? sai validation v? th?m regression test.",
+      "expected_workflow": "bug-fix",
+      "expected_risk": "MEDIUM",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "requirement-analysis",
+        "testing-quality",
+        "documentation-sync",
+        "ui-ux-production"
+      ],
+      "expected_gates": [],
+      "reason": "A reproducible UI regression routes to bug fix."
+    },
+    {
+      "id": "bug-data",
+      "prompt": "S?a l?i c?p nh?t tr?ng l?m sai d? li?u ?? l?u.",
+      "expected_workflow": "bug-fix",
+      "expected_risk": "HIGH",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "requirement-analysis",
+        "testing-quality",
+        "documentation-sync",
+        "backend-production-engineering",
+        "data-lifecycle"
+      ],
+      "expected_gates": [
+        "AG-02",
+        "AG-05"
+      ],
+      "reason": "Persisted-data corruption raises bug risk."
+    },
+    {
+      "id": "refactor-module",
+      "prompt": "T?ch module l?n th?nh c?c ph?n nh? nh?ng gi? nguy?n behavior.",
+      "expected_workflow": "refactoring",
+      "expected_risk": "MEDIUM",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "code-review-refactoring",
+        "testing-quality",
+        "documentation-sync",
+        "system-architecture"
+      ],
+      "expected_gates": [],
+      "reason": "Behavior-preserving structural work routes to refactoring."
+    },
+    {
+      "id": "refactor-api",
+      "prompt": "Refactor service d?ng public API, kh?ng ??i contract v? c? characterization tests.",
+      "expected_workflow": "refactoring",
+      "expected_risk": "HIGH",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "code-review-refactoring",
+        "testing-quality",
+        "documentation-sync",
+        "backend-production-engineering",
+        "system-architecture"
+      ],
+      "expected_gates": [
+        "AG-05"
+      ],
+      "reason": "Public contract exposure raises refactoring risk."
+    },
+    {
+      "id": "migration-schema",
+      "prompt": "Chuy?n schema theo expand-contract, backfill v? rollback ???c.",
+      "expected_workflow": "migration",
+      "expected_risk": "HIGH",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "migration-compatibility",
+        "data-lifecycle",
+        "testing-quality",
+        "devops-release",
+        "observability-incident",
+        "documentation-sync",
+        "backend-production-engineering"
+      ],
+      "expected_gates": [
+        "AG-02",
+        "AG-03",
+        "AG-04"
+      ],
+      "reason": "Schema transition requires staged migration controls."
+    },
+    {
+      "id": "migration-cutover",
+      "prompt": "Cutover d? li?u production nhi?u tenant, c? kh? n?ng m?t d? li?u n?u sai.",
+      "expected_workflow": "migration",
+      "expected_risk": "CRITICAL",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "migration-compatibility",
+        "data-lifecycle",
+        "testing-quality",
+        "devops-release",
+        "observability-incident",
+        "documentation-sync",
+        "security-threat-modeling"
+      ],
+      "expected_gates": [
+        "AG-02",
+        "AG-03",
+        "AG-04",
+        "AG-10"
+      ],
+      "reason": "Production multi-tenant data cutover has critical blast radius."
+    },
+    {
+      "id": "dependency-library",
+      "prompt": "N?ng th? vi?n c? breaking changes v? c?p nh?t lockfile.",
+      "expected_workflow": "dependency-upgrade",
+      "expected_risk": "HIGH",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "dependency-evolution",
+        "testing-quality",
+        "security-threat-modeling",
+        "devops-release",
+        "documentation-sync"
+      ],
+      "expected_gates": [
+        "AG-03",
+        "AG-08"
+      ],
+      "reason": "Breaking dependency evolution routes to controlled upgrade."
+    },
+    {
+      "id": "dependency-advisory",
+      "prompt": "N?ng runtime do security advisory v? ki?m tra compatibility.",
+      "expected_workflow": "dependency-upgrade",
+      "expected_risk": "HIGH",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "dependency-evolution",
+        "testing-quality",
+        "security-threat-modeling",
+        "devops-release",
+        "documentation-sync",
+        "migration-compatibility"
+      ],
+      "expected_gates": [
+        "AG-05",
+        "AG-08"
+      ],
+      "reason": "Security and runtime lifecycle evidence require upgrade workflow."
+    },
+    {
+      "id": "release-staging",
+      "prompt": "Ph?t h?nh artifact ?? ki?m ??nh l?n staging v?i rollback.",
+      "expected_workflow": "release",
+      "expected_risk": "HIGH",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "testing-quality",
+        "devops-release",
+        "observability-incident",
+        "documentation-sync"
+      ],
+      "expected_gates": [
+        "AG-03",
+        "AG-04"
+      ],
+      "reason": "Artifact promotion routes to release."
+    },
+    {
+      "id": "release-production",
+      "prompt": "Deploy production c? migration v? public traffic.",
+      "expected_workflow": "release",
+      "expected_risk": "CRITICAL",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "testing-quality",
+        "devops-release",
+        "observability-incident",
+        "documentation-sync",
+        "data-lifecycle",
+        "migration-compatibility",
+        "security-threat-modeling"
+      ],
+      "expected_gates": [
+        "AG-03",
+        "AG-04",
+        "AG-05",
+        "AG-08"
+      ],
+      "reason": "Production rollout with migration is critical."
+    },
+    {
+      "id": "incident-outage",
+      "prompt": "API production ?ang outage, c?n contain v? recover.",
+      "expected_workflow": "incident-response",
+      "expected_risk": "CRITICAL",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "observability-incident",
+        "security-threat-modeling",
+        "testing-quality",
+        "documentation-sync",
+        "backend-production-engineering",
+        "devops-release"
+      ],
+      "expected_gates": [
+        "AG-03",
+        "AG-05",
+        "AG-12"
+      ],
+      "reason": "Active outage routes to incident response."
+    },
+    {
+      "id": "incident-secret",
+      "prompt": "Ph?t hi?n credential production b? l? trong log.",
+      "expected_workflow": "incident-response",
+      "expected_risk": "CRITICAL",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "observability-incident",
+        "security-threat-modeling",
+        "testing-quality",
+        "documentation-sync",
+        "data-lifecycle"
+      ],
+      "expected_gates": [
+        "AG-02",
+        "AG-07",
+        "AG-09",
+        "AG-12"
+      ],
+      "reason": "Active secret exposure is a critical security incident."
+    },
+    {
+      "id": "docs-local",
+      "prompt": "C?p nh?t h??ng d?n local validation sau khi l?nh ??i.",
+      "expected_workflow": "documentation",
+      "expected_risk": "LOW",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "documentation-sync"
+      ],
+      "expected_gates": [],
+      "reason": "Documentation synchronization is the only outcome."
+    },
+    {
+      "id": "docs-public",
+      "prompt": "C?ng b? security guide m?i ra t?i li?u public.",
+      "expected_workflow": "documentation",
+      "expected_risk": "HIGH",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "documentation-sync",
+        "security-threat-modeling"
+      ],
+      "expected_gates": [
+        "AG-07",
+        "AG-09"
+      ],
+      "reason": "External publication and sensitive claims raise documentation risk."
+    },
+    {
+      "id": "perf-query",
+      "prompt": "?o v? t?i ?u query ch?m v?i baseline v? load test.",
+      "expected_workflow": "performance-optimization",
+      "expected_risk": "MEDIUM",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "performance-scalability",
+        "testing-quality",
+        "observability-incident",
+        "documentation-sync",
+        "backend-production-engineering",
+        "data-lifecycle"
+      ],
+      "expected_gates": [],
+      "reason": "Measured latency work routes to performance optimization."
+    },
+    {
+      "id": "perf-capacity",
+      "prompt": "Thay cache strategy ?nh h??ng chi ph? v? production capacity.",
+      "expected_workflow": "performance-optimization",
+      "expected_risk": "HIGH",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "performance-scalability",
+        "testing-quality",
+        "observability-incident",
+        "documentation-sync",
+        "system-architecture",
+        "backend-production-engineering"
+      ],
+      "expected_gates": [
+        "AG-03",
+        "AG-08",
+        "AG-10"
+      ],
+      "reason": "Cost and capacity effects raise performance risk."
+    },
+    {
+      "id": "security-authz",
+      "prompt": "Review authorization v? tenant isolation cho API.",
+      "expected_workflow": "security-review",
+      "expected_risk": "HIGH",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "security-threat-modeling",
+        "testing-quality",
+        "documentation-sync",
+        "backend-production-engineering",
+        "api-integration",
+        "data-lifecycle"
+      ],
+      "expected_gates": [
+        "AG-02",
+        "AG-05",
+        "AG-09"
+      ],
+      "reason": "Bounded trust and access assessment routes to security review."
+    },
+    {
+      "id": "security-active-exploit",
+      "prompt": "??nh gi? l? h?ng ?ang b? khai th?c v? c?n immediate containment.",
+      "expected_workflow": "security-review",
+      "expected_risk": "CRITICAL",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "security-threat-modeling",
+        "testing-quality",
+        "documentation-sync",
+        "observability-incident",
+        "code-review-refactoring"
+      ],
+      "expected_gates": [
+        "AG-02",
+        "AG-05",
+        "AG-09"
+      ],
+      "reason": "Active exploit potential makes the security review critical."
+    },
+    {
+      "id": "ai-rag",
+      "prompt": "Th?m RAG c? eval, citation v? gi?i h?n d? li?u.",
+      "expected_workflow": "ai-feature",
+      "expected_risk": "HIGH",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "requirement-analysis",
+        "ai-agent-safety",
+        "security-threat-modeling",
+        "testing-quality",
+        "observability-incident",
+        "documentation-sync",
+        "api-integration",
+        "data-lifecycle"
+      ],
+      "expected_gates": [
+        "AG-05",
+        "AG-09"
+      ],
+      "reason": "RAG behavior requires AI safety and security controls."
+    },
+    {
+      "id": "ai-agent-tools",
+      "prompt": "Agent ???c g?i tool thay ??i production data v? ph?t sinh chi ph?.",
+      "expected_workflow": "ai-feature",
+      "expected_risk": "CRITICAL",
+      "expected_skills": [
+        "project-orchestrator",
+        "project-memory",
+        "requirement-analysis",
+        "ai-agent-safety",
+        "security-threat-modeling",
+        "testing-quality",
+        "observability-incident",
+        "documentation-sync",
+        "backend-production-engineering",
+        "data-lifecycle"
+      ],
+      "expected_gates": [
+        "AG-03",
+        "AG-05",
+        "AG-08",
+        "AG-09",
+        "AG-10"
+      ],
+      "reason": "Tool authority over production data and cost is critical."
+    }
+  ]
+}

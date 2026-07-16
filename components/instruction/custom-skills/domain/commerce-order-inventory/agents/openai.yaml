@@ -1,0 +1,6 @@
+interface:
+  display_name: "Commerce Order Inventory"
+  short_description: "Guard order and inventory lifecycle rules"
+  default_prompt: "Use $commerce-order-inventory only with a verified active project overlay and cited domain evidence."
+policy:
+  allow_implicit_invocation: false

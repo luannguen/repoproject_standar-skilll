@@ -1,0 +1,6 @@
+interface:
+  display_name: "Referral Commission"
+  short_description: "Guard referral and commission invariants"
+  default_prompt: "Use $referral-commission only with a verified active project overlay and cited domain evidence."
+policy:
+  allow_implicit_invocation: false

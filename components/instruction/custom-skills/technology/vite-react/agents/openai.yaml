@@ -1,0 +1,6 @@
+interface:
+  display_name: "Vite React"
+  short_description: "Guide Vite-powered React application work"
+  default_prompt: "Use $vite-react with the active project binding and verified repository evidence."
+policy:
+  allow_implicit_invocation: false

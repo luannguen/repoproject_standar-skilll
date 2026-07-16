@@ -1,0 +1,106 @@
+{
+    "id":  "pwa-webview",
+    "name":  "PWA WebView",
+    "type":  "technology",
+    "version":  "1.0.0",
+    "status":  "available",
+    "description":  "Version-aware PWA WebView production guidance. Use only when project detection and an active binding prove this technology is in the task scope; trigger on editing web app manifests, service workers, offline caching, install prompts, update flows, deep links, WebView bridges, or embedded-browser behavior.",
+    "purpose":  "Keep installability, offline/cache lifecycle, updates, deep links, storage, and host-bridge behavior explicit across browser and WebView targets.",
+    "upstream_technology":  "Web Platform PWA and embedded WebView capabilities",
+    "supported_versions":  [
+                               "Detected project versions supported by the selected upstream release line; no version is assumed by the base skill."
+                           ],
+    "detected_project_version":  null,
+    "activation_mode":  "confirmation_required",
+    "activation_conditions":  [
+                                  "Project stack manifest marks detection true.",
+                                  "Confidence is HIGH or MEDIUM; LOW requires confirmation.",
+                                  "Task intersects an applicable package, path, and task type in the active binding."
+                              ],
+    "deactivation_conditions":  [
+                                    "Technology evidence is removed or becomes contradictory.",
+                                    "Binding scope no longer intersects the task.",
+                                    "Detected release is unsupported or compatibility is unresolved."
+                                ],
+    "detection_rules":  [
+                            "See ../../../STACK-DETECTION-RULES.json#skill_id=pwa-webview"
+                        ],
+    "confidence_requirement":  "HIGH or MEDIUM for normal routing; LOW requires explicit confirmation; NONE is inactive.",
+    "task_triggers":  [
+                          "editing web app manifests, service workers, offline caching, install prompts, update flows, deep links, WebView bridges, or embedded-browser behavior",
+                          "reviewing PWA or WebView compatibility and security"
+                      ],
+    "affected_layers":  [
+                            "frontend",
+                            "service-worker",
+                            "native-bridge",
+                            "storage",
+                            "deployment",
+                            "tests"
+                        ],
+    "standard_skill_dependencies":  [
+                                        "ui-ux-production",
+                                        "security-threat-modeling",
+                                        "performance-scalability",
+                                        "testing-quality"
+                                    ],
+    "compatible_skills":  [
+                              "nextjs",
+                              "vite-react",
+                              "react-typescript"
+                          ],
+    "incompatible_skills":  [
+
+                            ],
+    "prerequisite_skills":  [
+
+                            ],
+    "required_inputs":  [
+                            "Active custom-skill binding.",
+                            "Repository evidence and applicable scope.",
+                            "Detected installed/platform version for version-sensitive work.",
+                            "Task acceptance criteria and relevant Standard Skill context."
+                        ],
+    "expected_outputs":  [
+                             "Change or review aligned to the detected release and repository conventions.",
+                             "Validation evidence scoped to affected paths.",
+                             "Manifest, overlay, and memory updates only when durable facts changed."
+                         ],
+    "rules":  [
+                  "Define cache ownership, versioning, update, and invalidation explicitly.",
+                  "Treat host bridges and deep links as untrusted input boundaries.",
+                  "Test target browser/WebView capabilities instead of assuming parity."
+              ],
+    "blockers":  [
+                     "No active binding or no task/scope intersection.",
+                     "Only comment, filename, or model-memory evidence exists.",
+                     "A requested rule conflicts with the Constitution or required Standard Skills.",
+                     "Target browser, operating system, WebView host, or offline contract is unknown."
+                 ],
+    "patterns":  [
+                     "Network strategy selected per resource class.",
+                     "Explicit update notification and recovery path."
+                 ],
+    "anti_patterns":  [
+                          "Assume the newest upstream release is installed.",
+                          "Apply the skill across unrelated monorepo packages.",
+                          "Copy upstream documentation or upgrade dependencies without task authority.",
+                          "Cache authenticated API responses indiscriminately.",
+                          "Assume service-worker support or installability inside every WebView."
+                      ],
+    "validation":  [
+                       "Run manifest checks, offline/update tests, target browser tests, bridge security tests, and cache recovery tests."
+                   ],
+    "completion_criteria":  [
+                                "Relevant tests/lints/checks pass or an evidence-backed exception is recorded.",
+                                "Detection and activation manifests remain synchronized.",
+                                "No project fact or secret leaked into Layer A."
+                            ],
+    "official_source_policy":  "Use only official upstream documentation for version-sensitive claims; record checked date and distinguish verified, deprecated, migration, and unverified guidance in UPSTREAM.md.",
+    "memory_read_policy":  "Read project memory only for the affected module and decisions; never treat stale memory as stronger than repository evidence.",
+    "memory_write_policy":  "Write only durable verified decisions, constraints, failures, or patterns; never write secrets or speculative versions.",
+    "project_overlay_policy":  "Project-specific paths, versions, conventions, and narrowing rules belong in Layer B; overlays cannot weaken base, security, compatibility, or production rules.",
+    "update_policy":  "Re-verify official sources after detected major upgrades, deprecations, platform changes, or conflicting repository evidence; do not force dependency upgrades.",
+    "deprecation_policy":  "Mark deprecated before disabling, name the replacement or migration path, keep compatibility warnings, and deactivate bindings when evidence disappears.",
+    "scope_policy":  "Apply only to packages and paths declared in an active binding; repository-wide scope requires evidence that every included package uses the technology."
+}

@@ -1,0 +1,131 @@
+{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "$id":  "active-custom-skills.schema.json",
+    "title":  "Active Project Custom Skills",
+    "type":  "object",
+    "additionalProperties":  false,
+    "required":  [
+                     "schema_version",
+                     "generated_at",
+                     "bindings"
+                 ],
+    "properties":  {
+                       "schema_version":  {
+                                              "type":  "string"
+                                          },
+                       "generated_at":  {
+                                            "type":  "string"
+                                        },
+                       "bindings":  {
+                                        "items":  {
+                                                      "additionalProperties":  false,
+                                                      "properties":  {
+                                                                         "skill_id":  {
+                                                                                          "type":  [
+                                                                                                       "string",
+                                                                                                       "null"
+                                                                                                   ]
+                                                                                      },
+                                                                         "base_skill_path":  {
+                                                                                                 "type":  [
+                                                                                                              "string",
+                                                                                                              "null"
+                                                                                                          ]
+                                                                                             },
+                                                                         "overlay_path":  {
+                                                                                              "type":  [
+                                                                                                           "string",
+                                                                                                           "null"
+                                                                                                       ]
+                                                                                          },
+                                                                         "detected_version":  {
+                                                                                                  "type":  [
+                                                                                                               "string",
+                                                                                                               "null"
+                                                                                                           ]
+                                                                                              },
+                                                                         "activation_status":  {
+                                                                                                   "enum":  [
+                                                                                                                "active",
+                                                                                                                "provisional",
+                                                                                                                "deprecated",
+                                                                                                                "disabled"
+                                                                                                            ]
+                                                                                               },
+                                                                         "activation_reason":  {
+                                                                                                   "type":  [
+                                                                                                                "string",
+                                                                                                                "null"
+                                                                                                            ]
+                                                                                               },
+                                                                         "evidence":  {
+                                                                                          "items":  {
+                                                                                                        "type":  "string"
+                                                                                                    },
+                                                                                          "type":  "array"
+                                                                                      },
+                                                                         "applicable_packages":  {
+                                                                                                     "items":  {
+                                                                                                                   "type":  "string"
+                                                                                                               },
+                                                                                                     "type":  "array"
+                                                                                                 },
+                                                                         "applicable_paths":  {
+                                                                                                  "items":  {
+                                                                                                                "type":  "string"
+                                                                                                            },
+                                                                                                  "type":  "array"
+                                                                                              },
+                                                                         "applicable_task_types":  {
+                                                                                                       "items":  {
+                                                                                                                     "type":  "string"
+                                                                                                                 },
+                                                                                                       "type":  "array"
+                                                                                                   },
+                                                                         "incompatible_scopes":  {
+                                                                                                     "items":  {
+                                                                                                                   "type":  "string"
+                                                                                                               },
+                                                                                                     "type":  "array"
+                                                                                                 },
+                                                                         "required_standard_skills":  {
+                                                                                                          "items":  {
+                                                                                                                        "type":  "string"
+                                                                                                                    },
+                                                                                                          "type":  "array"
+                                                                                                      },
+                                                                         "memory_scope":  {
+                                                                                              "items":  {
+                                                                                                            "type":  "string"
+                                                                                                        },
+                                                                                              "type":  "array"
+                                                                                          },
+                                                                         "last_verified_at":  {
+                                                                                                  "type":  [
+                                                                                                               "string",
+                                                                                                               "null"
+                                                                                                           ]
+                                                                                              }
+                                                                     },
+                                                      "type":  "object",
+                                                      "required":  [
+                                                                       "skill_id",
+                                                                       "base_skill_path",
+                                                                       "overlay_path",
+                                                                       "detected_version",
+                                                                       "activation_status",
+                                                                       "activation_reason",
+                                                                       "evidence",
+                                                                       "applicable_packages",
+                                                                       "applicable_paths",
+                                                                       "applicable_task_types",
+                                                                       "incompatible_scopes",
+                                                                       "required_standard_skills",
+                                                                       "memory_scope",
+                                                                       "last_verified_at"
+                                                                   ]
+                                                  },
+                                        "type":  "array"
+                                    }
+                   }
+}

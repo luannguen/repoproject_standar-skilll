@@ -2,27 +2,28 @@
 
 Date: 2026-07-16
 
-## Completed now
+## Completed
 
-- P0: audit three original skills and instruction routes.
-- P0: Constitution, Orchestrator, Skill Registry, Workflow Registry, Approval Gates.
-- P0: 16 missing capability/framework skills and common 26-field contracts.
-- P0: 11 primary workflows including documentation and AI feature workflows.
-- P0: Bootstrap/AGENTS integration, UI/backend/memory composition, context strategy, self-update rules.
-- P0: skill, workflow, route, link, anti-pattern, duplicate, usage, and dependency-cycle validation.
-- P0: audit, gap, conflict, DoD, validation, and memory reports.
+- P0: Constitution, Orchestrator, Approval Gates, Project Memory, common skill contracts, and deterministic registries.
+- P0: 21 active skills including Project Bootstrap and Governance.
+- P0: 12 primary workflows including Project Onboarding.
+- P0: template manifest, machine-readable project profile, onboarding helper, and evidence-state model.
+- P0: repository governance, contribution, security, release, ownership, pull-request, issue, and dependency-update baselines.
+- P0: unified validation covering repository hygiene, 21 skills, 12 workflows, 24 routing fixtures, routes/links, 35 anti-patterns, and 17 memory entries.
+- P0: Windows/Linux GitHub Actions quality-gate definition.
+- P0: audit, readiness, DoD, validation, and Project Memory write-back.
 
-## Conditional backlog when application source arrives
+## Conditional backlog after a real project is cloned
 
-1. P0 ? Re-run repository/application discovery: framework, manifests, source boundaries, domain, data, auth, integrations, tests, deployment, and runtime.
-2. P0 ? Re-run UI/UX and backend production audits against actual code and platform configuration.
-3. P1 ? Populate application-specific architecture decisions, module/domain memory, invariants, contracts, and operational ownership.
-4. P1 ? Evaluate concrete domain-skill candidates using the Domain Skill Framework evidence threshold.
-5. P1 ? Add project-language test/build/lint/security commands to workflow validation once the toolchain exists.
-6. P1 ? Add representative end-to-end routing fixtures based on real task history.
-7. P2 ? Integrate the three instruction validators into the project's future CI pipeline.
-8. P2 ? Review actual task telemetry for false-positive skill activation, unused optional skills, and workflow selection quality.
+1. P0 ? Instantiate identity, owner, purpose, repository URL, license/proprietary state, classifications, and authoritative commands through `project-onboarding`.
+2. P0 ? Discover actual framework, manifests, source boundaries, domain, data, auth, integrations, tests, deployment, and runtime.
+3. P0 ? Add stack-specific build, lint, type, unit/integration/end-to-end, vulnerability, license, and supply-chain checks.
+4. P0 ? Verify repository-host branch protection, reviews, required checks, private vulnerability reporting, secret scanning, and push protection.
+5. P1 ? Add architecture, invariants, contracts, data ownership, threat model, migration/recovery, release, observability, incident, capacity, and cost evidence.
+6. P1 ? Re-run UI/UX and backend audits against actual code and platform configuration.
+7. P1 ? Evaluate concrete domain-skill candidates only after repeated stable evidence.
+8. P2 ? Extend routing fixtures from real task history and monitor false-positive activation.
 
 ## Current blockers
 
-No blocker prevents completion of the instruction system. Application-specific production or domain validation remains unavailable and is explicitly out of scope until evidence exists.
+No blocker prevents use of the repository as a reusable template. Application production readiness, hosted CI success, external repository enforcement, and project-specific controls remain unverified until their evidence and owner actions exist.

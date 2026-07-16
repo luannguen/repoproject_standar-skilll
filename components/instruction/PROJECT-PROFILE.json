@@ -1,0 +1,79 @@
+{
+    "schema_version":  "1.0.0",
+    "template_version":  "1.2.0",
+    "updated_at":  "2026-07-16",
+    "mode":  "template",
+    "status":  "uninstantiated",
+    "identity":  {
+                     "project_name":  "repoproject_standar-skilll",
+                     "repository_url":  "https://github.com/luannguen/repoproject_standar-skilll.git",
+                     "owner":  "@luannguen",
+                     "purpose":  "Reusable production-oriented project standard and AI instruction template."
+                 },
+    "evidence":  {
+                     "application_code_present":  false,
+                     "runtime_manifests":  [
+
+                                           ],
+                     "lockfiles":  [
+
+                                   ],
+                     "schemas":  [
+
+                                 ],
+                     "deployment_targets":  [
+
+                                            ],
+                     "source_references":  [
+                                               "README.md",
+                                               "components/instruction/TEMPLATE-MANIFEST.json"
+                                           ]
+                 },
+    "classification":  {
+                           "stack":  [
+
+                                     ],
+                           "domain":  "unknown",
+                           "data_sensitivity":  "unknown",
+                           "deployment":  "unknown",
+                           "external_users":  "unknown",
+                           "custom_skill_activation":  {
+                                                           "technology_active":  [
+                                                                                     "github-ci"
+                                                                                 ],
+                                                           "domain_active":  [
+
+                                                                             ],
+                                                           "source":  "project-custom-skills/ACTIVE-CUSTOM-SKILLS.json"
+                                                       }
+                       },
+    "commands":  {
+                     "template_validation":  "./components/instruction/scripts/validate.ps1",
+                     "build":  null,
+                     "lint":  null,
+                     "unit_test":  null,
+                     "integration_test":  null,
+                     "security":  null,
+                     "migration":  null,
+                     "release":  null
+                 },
+    "governance":  {
+                       "license_status":  "undecided",
+                       "codeowners_status":  "template-default",
+                       "branch_protection_status":  "external-unverified",
+                       "private_vulnerability_reporting":  "policy-present-host-setting-unverified",
+                       "required_checks_status":  "workflow-present-host-setting-unverified"
+                   },
+    "onboarding":  {
+                       "primary_workflow":  "project-onboarding",
+                       "last_completed_at":  null,
+                       "completed_by":  null,
+                       "open_decisions":  [
+                                              "select license or proprietary status",
+                                              "replace template identity and ownership after clone",
+                                              "verify repository-host protections",
+                                              "register application commands when evidence exists",
+                                              "re-run stack/domain detection and scope Custom Skill bindings after application evidence appears"
+                                          ]
+                   }
+}

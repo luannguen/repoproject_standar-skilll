@@ -1,7 +1,11 @@
 [CmdletBinding()]
 param(
-    [string]$RepositoryRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\..\..'))
+    [string]$RepositoryRoot
 )
+
+if ([string]::IsNullOrWhiteSpace($RepositoryRoot)) {
+    $RepositoryRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '../../..'))
+}
 
 $ErrorActionPreference = 'Stop'
 $script:blockers = 0
@@ -16,7 +20,7 @@ function Add-Warning([string]$Message) {
     Write-Host "[WARN] $Message" -ForegroundColor Yellow
 }
 
-$instructionRoot = Join-Path $RepositoryRoot 'components\instruction'
+$instructionRoot = Join-Path $RepositoryRoot 'components/instruction'
 $required = @(
     'AGENTS.md',
     'components/instruction/AI-BOOTSTRAP.md',
@@ -25,6 +29,11 @@ $required = @(
     'components/instruction/SKILL-REGISTRY.json',
     'components/instruction/WORKFLOW-REGISTRY.json',
     'components/instruction/SYSTEM-ANTI-PATTERNS.md',
+    'components/instruction/TEMPLATE-MANIFEST.json',
+    'components/instruction/PROJECT-PROFILE.json',
+    'components/instruction/PROJECT-ONBOARDING.md',
+    'components/instruction/skills/project-bootstrap-governance/SKILL.md',
+    'components/instruction/workflows/project-onboarding/WORKFLOW.md',
     'components/instruction/skills/project-orchestrator/SKILL.md',
     'components/instruction/skills/project-memory/SKILL.md'
 )
@@ -124,7 +133,8 @@ $authorityTokens = @(
     'AGENTS.md',
     'APPROVAL-GATES.md',
     'selected workflow',
-    'selected capability-skill'
+    'selected Standard Skill',
+    'Activated reusable Custom Skill'
 )
 foreach ($token in $authorityTokens) {
     if ($constitution -notmatch [regex]::Escape($token)) {
@@ -133,7 +143,7 @@ foreach ($token in $authorityTokens) {
 }
 
 $linkPattern = '\[[^\]]+\]\(([^)]+)\)'
-Get-ChildItem -LiteralPath $instructionRoot -Recurse -File -Filter '*.md' | ForEach-Object {
+Get-ChildItem -LiteralPath $RepositoryRoot -Recurse -File -Filter '*.md' | Where-Object { -not $_.FullName.StartsWith((Join-Path $RepositoryRoot '.git') + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase) } | ForEach-Object {
     $file = $_
     $content = Get-Content -Raw -LiteralPath $file.FullName
     foreach ($match in [regex]::Matches($content, $linkPattern)) {
@@ -165,6 +175,7 @@ foreach ($match in @($todoMatches)) {
 }
 
 $routeCases = @(
+    @{ Signal='clone'; Workflow='project-onboarding'; Skill='project-bootstrap-governance' },
     @{ Signal='feature'; Workflow='feature-development'; Skill='requirement-analysis' },
     @{ Signal='bug'; Workflow='bug-fix'; Skill='testing-quality' },
     @{ Signal='migration'; Workflow='migration'; Skill='migration-compatibility' },

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Tailwind shadcn"
+  short_description: "Guide Tailwind and shadcn interface work"
+  default_prompt: "Use $tailwind-shadcn with the active project binding and verified repository evidence."
+policy:
+  allow_implicit_invocation: false

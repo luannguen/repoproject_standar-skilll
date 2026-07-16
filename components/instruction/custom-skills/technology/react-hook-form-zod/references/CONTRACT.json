@@ -1,0 +1,105 @@
+{
+    "id":  "react-hook-form-zod",
+    "name":  "React Hook Form Zod",
+    "type":  "technology",
+    "version":  "1.0.0",
+    "status":  "available",
+    "description":  "Version-aware React Hook Form Zod production guidance. Use only when project detection and an active binding prove this technology is in the task scope; trigger on editing React Hook Form controllers, registrations, resolvers, Zod schemas, field arrays, or submission behavior.",
+    "purpose":  "Keep form state, validation schemas, coercion, error rendering, and submission boundaries type-safe and accessible.",
+    "upstream_technology":  "React Hook Form and Zod",
+    "supported_versions":  [
+                               "Detected project versions supported by the selected upstream release line; no version is assumed by the base skill."
+                           ],
+    "detected_project_version":  null,
+    "activation_mode":  "auto",
+    "activation_conditions":  [
+                                  "Project stack manifest marks detection true.",
+                                  "Confidence is HIGH or MEDIUM; LOW requires confirmation.",
+                                  "Task intersects an applicable package, path, and task type in the active binding."
+                              ],
+    "deactivation_conditions":  [
+                                    "Technology evidence is removed or becomes contradictory.",
+                                    "Binding scope no longer intersects the task.",
+                                    "Detected release is unsupported or compatibility is unresolved."
+                                ],
+    "detection_rules":  [
+                            "See ../../../STACK-DETECTION-RULES.json#skill_id=react-hook-form-zod"
+                        ],
+    "confidence_requirement":  "HIGH or MEDIUM for normal routing; LOW requires explicit confirmation; NONE is inactive.",
+    "task_triggers":  [
+                          "editing React Hook Form controllers, registrations, resolvers, Zod schemas, field arrays, or submission behavior",
+                          "reviewing form validation and accessibility"
+                      ],
+    "affected_layers":  [
+                            "frontend",
+                            "validation",
+                            "api-boundary",
+                            "tests"
+                        ],
+    "standard_skill_dependencies":  [
+                                        "ui-ux-production",
+                                        "security-threat-modeling",
+                                        "testing-quality",
+                                        "api-integration"
+                                    ],
+    "compatible_skills":  [
+                              "react-typescript",
+                              "nextjs",
+                              "vite-react",
+                              "tailwind-shadcn"
+                          ],
+    "incompatible_skills":  [
+
+                            ],
+    "prerequisite_skills":  [
+                                "react-typescript"
+                            ],
+    "required_inputs":  [
+                            "Active custom-skill binding.",
+                            "Repository evidence and applicable scope.",
+                            "Detected installed/platform version for version-sensitive work.",
+                            "Task acceptance criteria and relevant Standard Skill context."
+                        ],
+    "expected_outputs":  [
+                             "Change or review aligned to the detected release and repository conventions.",
+                             "Validation evidence scoped to affected paths.",
+                             "Manifest, overlay, and memory updates only when durable facts changed."
+                         ],
+    "rules":  [
+                  "Treat the schema as a boundary, not proof of authorization.",
+                  "Define coercion and empty/null behavior explicitly.",
+                  "Associate errors, labels, focus, and submission states accessibly."
+              ],
+    "blockers":  [
+                     "No active binding or no task/scope intersection.",
+                     "Only comment, filename, or model-memory evidence exists.",
+                     "A requested rule conflicts with the Constitution or required Standard Skills.",
+                     "Source-of-truth schema or server contract is ambiguous."
+                 ],
+    "patterns":  [
+                     "Infer TypeScript input/output types from one intentional schema.",
+                     "Map server errors without losing client validation context."
+                 ],
+    "anti_patterns":  [
+                          "Assume the newest upstream release is installed.",
+                          "Apply the skill across unrelated monorepo packages.",
+                          "Copy upstream documentation or upgrade dependencies without task authority.",
+                          "Trust client validation as a security control.",
+                          "Duplicate divergent validation rules across form and API."
+                      ],
+    "validation":  [
+                       "Run schema tests, form interaction/accessibility tests, typecheck, and server-boundary tests."
+                   ],
+    "completion_criteria":  [
+                                "Relevant tests/lints/checks pass or an evidence-backed exception is recorded.",
+                                "Detection and activation manifests remain synchronized.",
+                                "No project fact or secret leaked into Layer A."
+                            ],
+    "official_source_policy":  "Use only official upstream documentation for version-sensitive claims; record checked date and distinguish verified, deprecated, migration, and unverified guidance in UPSTREAM.md.",
+    "memory_read_policy":  "Read project memory only for the affected module and decisions; never treat stale memory as stronger than repository evidence.",
+    "memory_write_policy":  "Write only durable verified decisions, constraints, failures, or patterns; never write secrets or speculative versions.",
+    "project_overlay_policy":  "Project-specific paths, versions, conventions, and narrowing rules belong in Layer B; overlays cannot weaken base, security, compatibility, or production rules.",
+    "update_policy":  "Re-verify official sources after detected major upgrades, deprecations, platform changes, or conflicting repository evidence; do not force dependency upgrades.",
+    "deprecation_policy":  "Mark deprecated before disabling, name the replacement or migration path, keep compatibility warnings, and deactivate bindings when evidence disappears.",
+    "scope_policy":  "Apply only to packages and paths declared in an active binding; repository-wide scope requires evidence that every included package uses the technology."
+}

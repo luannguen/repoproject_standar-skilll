@@ -1,0 +1,6 @@
+interface:
+  display_name: "GitHub CI"
+  short_description: "Guide secure GitHub repository automation"
+  default_prompt: "Use $github-ci with the active project binding and verified repository evidence."
+policy:
+  allow_implicit_invocation: false

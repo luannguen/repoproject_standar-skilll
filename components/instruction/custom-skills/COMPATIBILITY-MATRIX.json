@@ -1,0 +1,68 @@
+{
+    "schema_version":  "1.0.0",
+    "scope_rule":  "Compatibility is evaluated per applicable package/path, not repository-wide.",
+    "global_rules":  [
+                         "Custom skills never replace Standard Skills.",
+                         "A project overlay may narrow but never weaken a base or constitutional rule.",
+                         "Two build-stack skills may coexist only in disjoint package scopes.",
+                         "Domain skills require verified evidence and cannot be implied by technology selection."
+                     ],
+    "relations":  [
+                      {
+                          "skills":  [
+                                         "nextjs",
+                                         "vite-react"
+                                     ],
+                          "relation":  "incompatible_same_scope",
+                          "reason":  "Distinct application runtimes and build contracts."
+                      },
+                      {
+                          "skills":  [
+                                         "base44-platform",
+                                         "nextjs"
+                                     ],
+                          "relation":  "confirmation_same_scope",
+                          "reason":  "Base44 ownership boundaries must be verified."
+                      },
+                      {
+                          "skills":  [
+                                         "base44-platform",
+                                         "vite-react"
+                                     ],
+                          "relation":  "confirmation_same_scope",
+                          "reason":  "Base44 ownership boundaries must be verified."
+                      },
+                      {
+                          "skills":  [
+                                         "supabase-platform",
+                                         "postgres-supabase-db"
+                                     ],
+                          "relation":  "compatible",
+                          "reason":  "Platform and database guidance are complementary."
+                      },
+                      {
+                          "skills":  [
+                                         "react-typescript",
+                                         "nextjs"
+                                     ],
+                          "relation":  "compatible",
+                          "reason":  "Next.js may use React and TypeScript."
+                      },
+                      {
+                          "skills":  [
+                                         "react-typescript",
+                                         "vite-react"
+                                     ],
+                          "relation":  "compatible",
+                          "reason":  "Vite React may use React and TypeScript."
+                      },
+                      {
+                          "skills":  [
+                                         "ai-llm-integration",
+                                         "ai-agent-domain"
+                                     ],
+                          "relation":  "compatible_with_separate_evidence",
+                          "reason":  "Provider integration does not prove agentic domain behavior."
+                      }
+                  ]
+}

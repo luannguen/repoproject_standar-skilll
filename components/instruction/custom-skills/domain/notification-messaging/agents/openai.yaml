@@ -1,0 +1,6 @@
+interface:
+  display_name: "Notification Messaging"
+  short_description: "Guard notification delivery invariants"
+  default_prompt: "Use $notification-messaging only with a verified active project overlay and cited domain evidence."
+policy:
+  allow_implicit_invocation: false

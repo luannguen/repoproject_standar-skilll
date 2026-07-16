@@ -4,7 +4,7 @@ Machine-readable source: [SKILL-REGISTRY.json](SKILL-REGISTRY.json). The orchest
 
 | ID | Version | Status | Default risk | Path |
 |---|---:|---|---|---|
-| project-orchestrator | 1.0.0 | active | LOW | [SKILL.md](skills/project-orchestrator/SKILL.md) |
+| project-orchestrator | 1.1.0 | active | LOW | [SKILL.md](skills/project-orchestrator/SKILL.md) |
 | project-memory | 1.1.0 | active | LOW | [SKILL.md](skills/project-memory/SKILL.md) |
 | requirement-analysis | 1.0.0 | active | LOW | [SKILL.md](skills/requirement-analysis/SKILL.md) |
 | system-architecture | 1.0.0 | active | MEDIUM | [SKILL.md](skills/system-architecture/SKILL.md) |
@@ -24,6 +24,7 @@ Machine-readable source: [SKILL-REGISTRY.json](SKILL-REGISTRY.json). The orchest
 | analytics-telemetry | 1.0.0 | active | MEDIUM | [SKILL.md](skills/analytics-telemetry/SKILL.md) |
 | ai-agent-safety | 1.0.0 | active | HIGH | [SKILL.md](skills/ai-agent-safety/SKILL.md) |
 | domain-skill-framework | 1.0.0 | active | MEDIUM | [SKILL.md](skills/domain-skill-framework/SKILL.md) |
+| project-bootstrap-governance | 1.1.0 | active | MEDIUM | [SKILL.md](skills/project-bootstrap-governance/SKILL.md) |
 
 ## Registry rules
 

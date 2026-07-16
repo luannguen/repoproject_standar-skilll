@@ -1,0 +1,243 @@
+{
+    "$schema":  "https://json-schema.org/draft/2020-12/schema",
+    "$id":  "custom-skill-contract.schema.json",
+    "title":  "Reusable Custom Skill Contract",
+    "type":  "object",
+    "additionalProperties":  false,
+    "required":  [
+                     "id",
+                     "name",
+                     "type",
+                     "version",
+                     "status",
+                     "description",
+                     "purpose",
+                     "upstream_technology",
+                     "supported_versions",
+                     "detected_project_version",
+                     "activation_mode",
+                     "activation_conditions",
+                     "deactivation_conditions",
+                     "detection_rules",
+                     "confidence_requirement",
+                     "task_triggers",
+                     "affected_layers",
+                     "standard_skill_dependencies",
+                     "compatible_skills",
+                     "incompatible_skills",
+                     "prerequisite_skills",
+                     "required_inputs",
+                     "expected_outputs",
+                     "rules",
+                     "blockers",
+                     "patterns",
+                     "anti_patterns",
+                     "validation",
+                     "completion_criteria",
+                     "official_source_policy",
+                     "memory_read_policy",
+                     "memory_write_policy",
+                     "project_overlay_policy",
+                     "update_policy",
+                     "deprecation_policy",
+                     "scope_policy"
+                 ],
+    "properties":  {
+                       "id":  {
+                                  "type":  "string",
+                                  "pattern":  "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+                              },
+                       "name":  {
+                                    "minLength":  1,
+                                    "type":  "string"
+                                },
+                       "type":  {
+                                    "enum":  [
+                                                 "technology",
+                                                 "domain"
+                                             ]
+                                },
+                       "version":  {
+                                       "type":  "string",
+                                       "pattern":  "^\\d+\\.\\d+\\.\\d+$"
+                                   },
+                       "status":  {
+                                      "enum":  [
+                                                   "available",
+                                                   "active",
+                                                   "provisional",
+                                                   "deprecated",
+                                                   "disabled"
+                                               ]
+                                  },
+                       "description":  {
+                                           "minLength":  20,
+                                           "type":  "string"
+                                       },
+                       "purpose":  {
+                                       "minLength":  10,
+                                       "type":  "string"
+                                   },
+                       "upstream_technology":  {
+                                                   "type":  [
+                                                                "string",
+                                                                "null"
+                                                            ]
+                                               },
+                       "supported_versions":  {
+                                                  "minItems":  1,
+                                                  "items":  {
+                                                                "type":  "string"
+                                                            },
+                                                  "type":  "array"
+                                              },
+                       "detected_project_version":  {
+                                                        "type":  [
+                                                                     "string",
+                                                                     "null"
+                                                                 ]
+                                                    },
+                       "activation_mode":  {
+                                               "enum":  [
+                                                            "auto",
+                                                            "confirmation_required",
+                                                            "manual",
+                                                            "disabled"
+                                                        ]
+                                           },
+                       "activation_conditions":  {
+                                                     "items":  {
+                                                                   "type":  "string"
+                                                               },
+                                                     "type":  "array"
+                                                 },
+                       "deactivation_conditions":  {
+                                                       "items":  {
+                                                                     "type":  "string"
+                                                                 },
+                                                       "type":  "array"
+                                                   },
+                       "detection_rules":  {
+                                               "items":  {
+                                                             "type":  "string"
+                                                         },
+                                               "type":  "array"
+                                           },
+                       "confidence_requirement":  {
+                                                      "minLength":  5,
+                                                      "type":  "string"
+                                                  },
+                       "task_triggers":  {
+                                             "items":  {
+                                                           "type":  "string"
+                                                       },
+                                             "type":  "array"
+                                         },
+                       "affected_layers":  {
+                                               "items":  {
+                                                             "type":  "string"
+                                                         },
+                                               "type":  "array"
+                                           },
+                       "standard_skill_dependencies":  {
+                                                           "items":  {
+                                                                         "type":  "string"
+                                                                     },
+                                                           "type":  "array"
+                                                       },
+                       "compatible_skills":  {
+                                                 "items":  {
+                                                               "type":  "string"
+                                                           },
+                                                 "type":  "array"
+                                             },
+                       "incompatible_skills":  {
+                                                   "items":  {
+                                                                 "type":  "string"
+                                                             },
+                                                   "type":  "array"
+                                               },
+                       "prerequisite_skills":  {
+                                                   "items":  {
+                                                                 "type":  "string"
+                                                             },
+                                                   "type":  "array"
+                                               },
+                       "required_inputs":  {
+                                               "items":  {
+                                                             "type":  "string"
+                                                         },
+                                               "type":  "array"
+                                           },
+                       "expected_outputs":  {
+                                                "items":  {
+                                                              "type":  "string"
+                                                          },
+                                                "type":  "array"
+                                            },
+                       "rules":  {
+                                     "items":  {
+                                                   "type":  "string"
+                                               },
+                                     "type":  "array"
+                                 },
+                       "blockers":  {
+                                        "items":  {
+                                                      "type":  "string"
+                                                  },
+                                        "type":  "array"
+                                    },
+                       "patterns":  {
+                                        "items":  {
+                                                      "type":  "string"
+                                                  },
+                                        "type":  "array"
+                                    },
+                       "anti_patterns":  {
+                                             "items":  {
+                                                           "type":  "string"
+                                                       },
+                                             "type":  "array"
+                                         },
+                       "validation":  {
+                                          "items":  {
+                                                        "type":  "string"
+                                                    },
+                                          "type":  "array"
+                                      },
+                       "completion_criteria":  {
+                                                   "items":  {
+                                                                 "type":  "string"
+                                                             },
+                                                   "type":  "array"
+                                               },
+                       "official_source_policy":  {
+                                                      "minLength":  5,
+                                                      "type":  "string"
+                                                  },
+                       "memory_read_policy":  {
+                                                  "minLength":  5,
+                                                  "type":  "string"
+                                              },
+                       "memory_write_policy":  {
+                                                   "minLength":  5,
+                                                   "type":  "string"
+                                               },
+                       "project_overlay_policy":  {
+                                                      "minLength":  5,
+                                                      "type":  "string"
+                                                  },
+                       "update_policy":  {
+                                             "minLength":  5,
+                                             "type":  "string"
+                                         },
+                       "deprecation_policy":  {
+                                                  "minLength":  5,
+                                                  "type":  "string"
+                                              },
+                       "scope_policy":  {
+                                            "type":  "string",
+                                            "minLength":  10
+                                        }
+                   }
+}

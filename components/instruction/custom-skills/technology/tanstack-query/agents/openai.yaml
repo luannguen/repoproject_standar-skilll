@@ -1,0 +1,6 @@
+interface:
+  display_name: "TanStack Query"
+  short_description: "Guide server-state work with TanStack Query"
+  default_prompt: "Use $tanstack-query with the active project binding and verified repository evidence."
+policy:
+  allow_implicit_invocation: false

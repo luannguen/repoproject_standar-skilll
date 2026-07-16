@@ -18,8 +18,9 @@ Apply rules in this order:
 4. `AGENTS.md` and `AI-BOOTSTRAP.md`.
 5. `APPROVAL-GATES.md`.
 6. The selected workflow contract.
-7. The selected capability-skill contracts.
-8. Path-local instructions, current project evidence, and Project Memory.
+7. The selected Standard Skill contracts.
+8. Activated reusable Custom Skill contracts.
+9. Evidence-backed project Custom Skill overlays, path-local instructions, current project evidence, and Project Memory.
 
 When rules at the same level conflict, the narrower rule wins only inside its declared scope. A newer verified artifact wins over stale memory. Never use specificity to weaken safety, authorization, data integrity, compatibility, accessibility, or an approval gate. Stop and report an unresolved material conflict.
 
@@ -49,16 +50,17 @@ Use the highest applicable level. Uncertainty raises risk; it never lowers it.
 
 ## Required task lifecycle
 
-1. Read `SKILL-REGISTRY.json` and `WORKFLOW-REGISTRY.json`; do not preload every skill.
-2. Invoke Project Orchestrator to classify task, risk, scope, evidence needs, workflow, skills, and approval gates.
-3. Retrieve only relevant Project Memory and current source evidence.
-4. For MEDIUM, HIGH, or CRITICAL work, issue a Task Execution Brief before implementation.
-5. Satisfy pre-task and approval gates.
-6. Analyze and implement using the selected workflow and capability skills.
-7. Run proportional validation and perform adversarial self-review.
-8. Synchronize affected documentation and registries.
-9. Write only durable, evidenced memory; record a checkpoint for incomplete or handed-off work.
-10. Report outcome, validation evidence, residual risk, memory delta, and next safe step.
+1. Read `SKILL-REGISTRY.json` and `WORKFLOW-REGISTRY.json`; keep Standard Skills separate and do not preload every skill.
+2. Read the Custom Skill registry and project stack/domain/active manifests; treat any reusable skill without a matching active task/scope binding as inactive.
+3. Invoke Project Orchestrator to classify task, risk, scope, evidence needs, workflow, skills, and approval gates.
+4. Retrieve only relevant Project Memory and current source evidence.
+5. For MEDIUM, HIGH, or CRITICAL work, issue a Task Execution Brief before implementation.
+6. Satisfy pre-task and approval gates.
+7. Analyze and implement using the selected workflow, selected Standard Skills, and active task/scope-matched Custom Skills.
+8. Run proportional validation and perform adversarial self-review.
+9. Synchronize affected documentation, registries, detection manifests, bindings, and overlays.
+10. Write only durable, evidenced memory; record a checkpoint for incomplete or handed-off work.
+11. Report outcome, validation evidence, residual risk, memory delta, and next safe step.
 
 ## Pre-task gate
 
@@ -96,4 +98,4 @@ A skill or workflow may propose its own improvement only when repeated, verified
 
 ## Definition of project-system health
 
-The instruction system is healthy when all registered paths exist, all skill contracts are complete, routing is deterministic, dependencies are acyclic, workflows reference existing skills, approval gates are reachable, validation reports zero blockers, and durable memory matches current evidence.
+The instruction system is healthy when Standard and Custom registries remain separate, all registered paths and contracts exist, stack/domain detection matches current evidence, active bindings are task/scope-filtered and overlay-backed, dependencies are acyclic, workflows reference existing Standard Skills, approval gates are reachable, all validators report zero blockers, and durable memory matches current evidence.

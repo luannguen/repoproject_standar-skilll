@@ -1,0 +1,58 @@
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+id_rsa
+id_ed25519
+secrets.*
+!secrets.example.*
+
+# Dependencies and generated output
+node_modules/
+vendor/
+dist/
+build/
+out/
+coverage/
+.nyc_output/
+.next/
+.nuxt/
+.output/
+target/
+bin/
+obj/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Tooling, IDE, and OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+*.tmp
+*.temp
+*.log
+
+# Local reports and caches
+.cache/
+.tmp/
+temp/
+artifacts/
+test-results/
+playwright-report/

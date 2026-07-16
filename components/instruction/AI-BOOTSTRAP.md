@@ -5,18 +5,19 @@ This mandatory router coordinates Constitution, Orchestrator, Project Memory, wo
 ## Required order
 
 1. Read `PROJECT-CONSTITUTION.md`.
-2. Read routing metadata in `SKILL-REGISTRY.json` and `WORKFLOW-REGISTRY.json`.
-3. Invoke `skills/project-orchestrator/SKILL.md`: normalize the goal, classify task, assign the highest applicable risk, select one primary workflow, and select the minimum capability skills.
-4. For MEDIUM+, create the Task Execution Brief in `skills/project-orchestrator/references/TASK-EXECUTION-BRIEF.md`.
-5. Evaluate `APPROVAL-GATES.md`; stop before any unsatisfied gated action.
-6. Invoke `skills/project-memory/SKILL.md`; retrieve only relevant entries and verify material memory against current evidence.
-7. Read the selected `workflows/<id>/WORKFLOW.md`, then only selected skills and task-matched references.
-8. Pass Constitution, workflow, and skill pre-task gates.
-9. Analyze and execute within accepted scope; search for reuse before extension or creation.
-10. Run proportional specialist validation and adversarial review; never present an unavailable check as passed.
-11. Synchronize affected contracts, docs, registries, changelogs, runbooks, and release artifacts.
-12. Write only durable verified memory; checkpoint incomplete work, compact completed work, and run memory lint.
-13. Report outcome, evidence, validation, approvals, recovery, residual risk, documentation, and memory delta.
+2. Read Standard Skill and workflow routing metadata in `SKILL-REGISTRY.json` and `WORKFLOW-REGISTRY.json`, then inspect `TEMPLATE-MANIFEST.json` and `PROJECT-PROFILE.json`.
+3. If the profile is `template/uninstantiated` or clone onboarding is the dominant outcome, select `project-onboarding` and `project-bootstrap-governance`; otherwise invoke `skills/project-orchestrator/SKILL.md` to normalize the goal, classify task, assign the highest applicable risk, select one primary workflow, and select the minimum Standard Skills.
+4. Read `custom-skills/CUSTOM-SKILL-REGISTRY.json` and the project-generated `project-custom-skills/PROJECT-STACK-MANIFEST.json`, `PROJECT-DOMAIN-MANIFEST.json`, and `ACTIVE-CUSTOM-SKILLS.json`. Select only active/provisional bindings whose task type and package/path scope intersect the current task; load the reusable base, then its project overlay. Absence from the active manifest means inactive.
+5. For MEDIUM+, create the Task Execution Brief in `skills/project-orchestrator/references/TASK-EXECUTION-BRIEF.md`.
+6. Evaluate `APPROVAL-GATES.md`; stop before any unsatisfied gated action.
+7. Invoke `skills/project-memory/SKILL.md`; retrieve only relevant entries and verify material memory against current evidence.
+8. Read the selected `workflows/<id>/WORKFLOW.md`, then only selected Standard Skills, activated Custom Skills, and task-matched references.
+9. Pass Constitution, workflow, and skill pre-task gates.
+10. Analyze and execute within accepted scope; search for reuse before extension or creation.
+11. Run proportional specialist validation and adversarial review; never present an unavailable check as passed.
+12. Synchronize affected contracts, detection/activation manifests, overlays, docs, registries, changelogs, runbooks, and release artifacts.
+13. Write only durable verified memory; checkpoint incomplete work, compact completed work, and run memory lint.
+14. Report outcome, evidence, validation, approvals, recovery, residual risk, documentation, and memory delta.
 
 ## Implementation gate
 
@@ -30,9 +31,8 @@ Do not implement until:
 
 A small LOW task may use a compact brief, but still requires registry routing and a lightweight constraints/path-matched memory scan.
 
-If a required skill or project source does not exist, record the gap and continue only with a safe, non-fabricated approach. Never invent domain rules, permissions, schemas, architecture, or platform guarantees.
+If a required skill or project source does not exist, record the gap and continue only with a safe, non-fabricated approach. In template mode, application-specific validation is conditional rather than passed. Never invent domain rules, permissions, schemas, architecture, or platform guarantees.
 
-## UI/UX routing and gate
 ## Risk classification
 
 - LOW: narrow, local, reversible, with no sensitive, public, persisted, or production effect.
@@ -46,6 +46,7 @@ Unknown impact raises risk. Use the highest applicable level.
 
 | Dominant outcome | Primary workflow |
 |---|---|
+| Clone, instantiate, or standardize an uninstantiated repository | project-onboarding |
 | New or expanded behavior | `feature-development` |
 | Defect or regression | `bug-fix` |
 | Behavior-preserving structural improvement | `refactoring` |
@@ -62,6 +63,7 @@ If several match, select the highest-risk dominant outcome and compose other con
 
 ## Capability routing
 
+- Project initialization and repository governance: `project-bootstrap-governance`.
 - Requirements: `requirement-analysis`; architecture: `system-architecture`.
 - Interface/accessibility: `ui-ux-production`; backend/domain: `backend-production-engineering`.
 - API/event/provider: `api-integration`; persisted data/lifecycle: `data-lifecycle`.
@@ -70,12 +72,15 @@ If several match, select the highest-risk dominant outcome and compose other con
 - CI/CD/release: `devops-release`; observability/incident: `observability-incident`.
 - Performance/capacity: `performance-scalability`; docs/registry: `documentation-sync`.
 - Compatibility: `migration-compatibility`; analytics: `analytics-telemetry`; AI/agent: `ai-agent-safety`.
-- Domain discovery: `domain-skill-framework`; never create a concrete domain skill without application evidence.
+- Domain discovery: `domain-skill-framework`; never create a project domain overlay or verified invariant without authoritative application evidence.
+- Technology/domain specialization: select only bindings from `project-custom-skills/ACTIVE-CUSTOM-SKILLS.json`; a composite profile or reusable-library entry never activates a skill.
 
 ## Context efficiency
 
-Load registries first, then only the primary workflow, selected skills, relevant memory, affected sources, and direct specialist references. Do not read every skill or memory file.
+Load registries and project detection/activation manifests first, then only the primary workflow, selected Standard Skills, active task/scope-matched Custom Skills, relevant memory, affected sources, and direct specialist references. Do not read every skill, reusable custom module, or memory file.
 
+
+## UI/UX routing and gate
 
 A task is UI/UX-related when it creates, edits, refactors, reviews, or affects a page, layout, component, form, table/list, dashboard, navigation, responsive behavior, styling/theme/type, modal/dialog/drawer, accessibility, animation/interaction, loading/empty/error state, onboarding, search/filter/pagination, upload, authentication/profile, admin/public interface, mobile, PWA, or visual output.
 

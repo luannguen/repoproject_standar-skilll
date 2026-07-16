@@ -1,0 +1,279 @@
+{
+    "schema_version":  "1.0.0",
+    "library_version":  "1.0.0",
+    "standard_skill_registry":  "../SKILL-REGISTRY.json",
+    "default_status":  "available",
+    "activation_source":  "../project-custom-skills/ACTIVE-CUSTOM-SKILLS.json",
+    "skills":  [
+                   {
+                       "id":  "react-typescript",
+                       "type":  "technology",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "auto",
+                       "path":  "technology/react-typescript/SKILL.md",
+                       "contract":  "technology/react-typescript/references/CONTRACT.json",
+                       "upstream":  "technology/react-typescript/references/UPSTREAM.md"
+                   },
+                   {
+                       "id":  "nextjs",
+                       "type":  "technology",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "auto",
+                       "path":  "technology/nextjs/SKILL.md",
+                       "contract":  "technology/nextjs/references/CONTRACT.json",
+                       "upstream":  "technology/nextjs/references/UPSTREAM.md"
+                   },
+                   {
+                       "id":  "vite-react",
+                       "type":  "technology",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "auto",
+                       "path":  "technology/vite-react/SKILL.md",
+                       "contract":  "technology/vite-react/references/CONTRACT.json",
+                       "upstream":  "technology/vite-react/references/UPSTREAM.md"
+                   },
+                   {
+                       "id":  "supabase-platform",
+                       "type":  "technology",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "auto",
+                       "path":  "technology/supabase-platform/SKILL.md",
+                       "contract":  "technology/supabase-platform/references/CONTRACT.json",
+                       "upstream":  "technology/supabase-platform/references/UPSTREAM.md"
+                   },
+                   {
+                       "id":  "postgres-supabase-db",
+                       "type":  "technology",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "auto",
+                       "path":  "technology/postgres-supabase-db/SKILL.md",
+                       "contract":  "technology/postgres-supabase-db/references/CONTRACT.json",
+                       "upstream":  "technology/postgres-supabase-db/references/UPSTREAM.md"
+                   },
+                   {
+                       "id":  "vercel-platform",
+                       "type":  "technology",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "auto",
+                       "path":  "technology/vercel-platform/SKILL.md",
+                       "contract":  "technology/vercel-platform/references/CONTRACT.json",
+                       "upstream":  "technology/vercel-platform/references/UPSTREAM.md"
+                   },
+                   {
+                       "id":  "tanstack-query",
+                       "type":  "technology",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "auto",
+                       "path":  "technology/tanstack-query/SKILL.md",
+                       "contract":  "technology/tanstack-query/references/CONTRACT.json",
+                       "upstream":  "technology/tanstack-query/references/UPSTREAM.md"
+                   },
+                   {
+                       "id":  "react-hook-form-zod",
+                       "type":  "technology",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "auto",
+                       "path":  "technology/react-hook-form-zod/SKILL.md",
+                       "contract":  "technology/react-hook-form-zod/references/CONTRACT.json",
+                       "upstream":  "technology/react-hook-form-zod/references/UPSTREAM.md"
+                   },
+                   {
+                       "id":  "tailwind-shadcn",
+                       "type":  "technology",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "auto",
+                       "path":  "technology/tailwind-shadcn/SKILL.md",
+                       "contract":  "technology/tailwind-shadcn/references/CONTRACT.json",
+                       "upstream":  "technology/tailwind-shadcn/references/UPSTREAM.md"
+                   },
+                   {
+                       "id":  "pwa-webview",
+                       "type":  "technology",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "auto",
+                       "path":  "technology/pwa-webview/SKILL.md",
+                       "contract":  "technology/pwa-webview/references/CONTRACT.json",
+                       "upstream":  "technology/pwa-webview/references/UPSTREAM.md"
+                   },
+                   {
+                       "id":  "base44-platform",
+                       "type":  "technology",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "confirmation_required",
+                       "path":  "technology/base44-platform/SKILL.md",
+                       "contract":  "technology/base44-platform/references/CONTRACT.json",
+                       "upstream":  "technology/base44-platform/references/UPSTREAM.md"
+                   },
+                   {
+                       "id":  "github-ci",
+                       "type":  "technology",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "auto",
+                       "path":  "technology/github-ci/SKILL.md",
+                       "contract":  "technology/github-ci/references/CONTRACT.json",
+                       "upstream":  "technology/github-ci/references/UPSTREAM.md"
+                   },
+                   {
+                       "id":  "nodejs-runtime",
+                       "type":  "technology",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "auto",
+                       "path":  "technology/nodejs-runtime/SKILL.md",
+                       "contract":  "technology/nodejs-runtime/references/CONTRACT.json",
+                       "upstream":  "technology/nodejs-runtime/references/UPSTREAM.md"
+                   },
+                   {
+                       "id":  "ai-llm-integration",
+                       "type":  "technology",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "confirmation_required",
+                       "path":  "technology/ai-llm-integration/SKILL.md",
+                       "contract":  "technology/ai-llm-integration/references/CONTRACT.json",
+                       "upstream":  "technology/ai-llm-integration/references/UPSTREAM.md"
+                   },
+                   {
+                       "id":  "multi-tenant-saas",
+                       "type":  "domain",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "confirmation_required",
+                       "path":  "domain/multi-tenant-saas/SKILL.md",
+                       "contract":  "domain/multi-tenant-saas/references/CONTRACT.json",
+                       "upstream":  null
+                   },
+                   {
+                       "id":  "rbac-scoped-access",
+                       "type":  "domain",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "confirmation_required",
+                       "path":  "domain/rbac-scoped-access/SKILL.md",
+                       "contract":  "domain/rbac-scoped-access/references/CONTRACT.json",
+                       "upstream":  null
+                   },
+                   {
+                       "id":  "commerce-order-inventory",
+                       "type":  "domain",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "confirmation_required",
+                       "path":  "domain/commerce-order-inventory/SKILL.md",
+                       "contract":  "domain/commerce-order-inventory/references/CONTRACT.json",
+                       "upstream":  null
+                   },
+                   {
+                       "id":  "payment-reconciliation",
+                       "type":  "domain",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "confirmation_required",
+                       "path":  "domain/payment-reconciliation/SKILL.md",
+                       "contract":  "domain/payment-reconciliation/references/CONTRACT.json",
+                       "upstream":  null
+                   },
+                   {
+                       "id":  "referral-commission",
+                       "type":  "domain",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "confirmation_required",
+                       "path":  "domain/referral-commission/SKILL.md",
+                       "contract":  "domain/referral-commission/references/CONTRACT.json",
+                       "upstream":  null
+                   },
+                   {
+                       "id":  "gift-lifecycle",
+                       "type":  "domain",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "confirmation_required",
+                       "path":  "domain/gift-lifecycle/SKILL.md",
+                       "contract":  "domain/gift-lifecycle/references/CONTRACT.json",
+                       "upstream":  null
+                   },
+                   {
+                       "id":  "ecard-connection",
+                       "type":  "domain",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "confirmation_required",
+                       "path":  "domain/ecard-connection/SKILL.md",
+                       "contract":  "domain/ecard-connection/references/CONTRACT.json",
+                       "upstream":  null
+                   },
+                   {
+                       "id":  "subscription-billing",
+                       "type":  "domain",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "confirmation_required",
+                       "path":  "domain/subscription-billing/SKILL.md",
+                       "contract":  "domain/subscription-billing/references/CONTRACT.json",
+                       "upstream":  null
+                   },
+                   {
+                       "id":  "community-content",
+                       "type":  "domain",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "confirmation_required",
+                       "path":  "domain/community-content/SKILL.md",
+                       "contract":  "domain/community-content/references/CONTRACT.json",
+                       "upstream":  null
+                   },
+                   {
+                       "id":  "notification-messaging",
+                       "type":  "domain",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "confirmation_required",
+                       "path":  "domain/notification-messaging/SKILL.md",
+                       "contract":  "domain/notification-messaging/references/CONTRACT.json",
+                       "upstream":  null
+                   },
+                   {
+                       "id":  "digital-assets",
+                       "type":  "domain",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "confirmation_required",
+                       "path":  "domain/digital-assets/SKILL.md",
+                       "contract":  "domain/digital-assets/references/CONTRACT.json",
+                       "upstream":  null
+                   },
+                   {
+                       "id":  "analytics-events",
+                       "type":  "domain",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "confirmation_required",
+                       "path":  "domain/analytics-events/SKILL.md",
+                       "contract":  "domain/analytics-events/references/CONTRACT.json",
+                       "upstream":  null
+                   },
+                   {
+                       "id":  "ai-agent-domain",
+                       "type":  "domain",
+                       "version":  "1.0.0",
+                       "status":  "available",
+                       "activation_mode":  "confirmation_required",
+                       "path":  "domain/ai-agent-domain/SKILL.md",
+                       "contract":  "domain/ai-agent-domain/references/CONTRACT.json",
+                       "upstream":  null
+                   }
+               ]
+}

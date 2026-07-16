@@ -1,0 +1,6 @@
+interface:
+  display_name: "Subscription Billing"
+  short_description: "Guard subscription and billing invariants"
+  default_prompt: "Use $subscription-billing only with a verified active project overlay and cited domain evidence."
+policy:
+  allow_implicit_invocation: false

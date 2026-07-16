@@ -1,0 +1,109 @@
+{
+    "id":  "referral-commission",
+    "name":  "Referral Commission",
+    "type":  "domain",
+    "version":  "1.0.0",
+    "status":  "available",
+    "description":  "Evidence-gated Referral Commission domain guardrails. Use when authoritative project source, schema, tests, contracts, or specifications verify this domain and the active task touches referrals, attribution, affiliate relationships, commissions, eligibility, approval, reversal, or payout; never infer business invariants from names.",
+    "purpose":  "Protect verified attribution, eligibility, commission calculation, approval, reversal, and payout semantics.",
+    "upstream_technology":  null,
+    "supported_versions":  [
+                               "Not technology-versioned; project overlay schema/version is evidence-specific."
+                           ],
+    "detected_project_version":  null,
+    "activation_mode":  "confirmation_required",
+    "activation_conditions":  [
+                                  "Project domain manifest has at least MEDIUM confidence from independent authoritative artifacts.",
+                                  "At least one project invariant is verified with source citations in an overlay.",
+                                  "Task intersects the binding scope and domain concepts."
+                              ],
+    "deactivation_conditions":  [
+                                    "Authoritative evidence is removed, contradicted, or superseded.",
+                                    "No verified overlay rules remain.",
+                                    "Task does not intersect the bound domain scope."
+                                ],
+    "detection_rules":  [
+                            "See ../../../DOMAIN-DETECTION-RULES.json#skill_id=referral-commission"
+                        ],
+    "confidence_requirement":  "HIGH or MEDIUM plus at least one evidence-cited verified project rule; LOW requires confirmation and remains provisional; NONE is inactive.",
+    "task_triggers":  [
+                          "referrals, attribution, affiliate relationships, commissions, eligibility, approval, reversal, or payout",
+                          "commission formulas and lifecycle transitions"
+                      ],
+    "affected_layers":  [
+                            "domain",
+                            "database",
+                            "api",
+                            "jobs",
+                            "audit",
+                            "tests"
+                        ],
+    "standard_skill_dependencies":  [
+                                        "domain-skill-framework",
+                                        "requirement-analysis",
+                                        "project-memory",
+                                        "backend-production-engineering",
+                                        "data-lifecycle",
+                                        "analytics-telemetry"
+                                    ],
+    "compatible_skills":  [
+                              "payment-reconciliation",
+                              "commerce-order-inventory",
+                              "subscription-billing"
+                          ],
+    "incompatible_skills":  [
+
+                            ],
+    "prerequisite_skills":  [
+
+                            ],
+    "required_inputs":  [
+                            "Active domain binding and project overlay.",
+                            "Citations to source, schema/migration, tests, contract, or authoritative specification.",
+                            "Affected actor, scope, state, transition, and failure/recovery context."
+                        ],
+    "expected_outputs":  [
+                             "Implementation or review that preserves only verified invariants.",
+                             "Tests for affected authorized, unauthorized, valid, invalid, retry, and concurrency paths as applicable.",
+                             "Overlay/memory update when durable verified domain knowledge changes."
+                         ],
+    "rules":  [
+                  "Treat candidate concepts and lifecycles as questions until repository evidence verifies them.",
+                  "Preserve verified invariants across API, data, UI, jobs, events, and tests.",
+                  "Make authorization, idempotency, concurrency, audit, failure, and recovery behavior explicit where the verified model requires them.",
+                  "Version verified formulas and retain auditable inputs for recalculation."
+              ],
+    "blockers":  [
+                     "No active binding or no evidence-cited overlay.",
+                     "Evidence is inferential, ambiguous, or contradicted.",
+                     "Requested behavior would weaken a verified invariant, authorization rule, auditability, or recovery guarantee.",
+                     "Attribution precedence or formula version is unknown."
+                 ],
+    "patterns":  [
+                     "Immutable calculation snapshot and adjustment record.",
+                     "Idempotent payout linkage."
+                 ],
+    "anti_patterns":  [
+                          "Infer a domain model from nouns, UI labels, routes, comments, or technology.",
+                          "Promote a candidate state or transition to an invariant without citations.",
+                          "Put project-specific business rules in the reusable base.",
+                          "Recompute historical commission with the current formula silently."
+                      ],
+    "validation":  [
+                       "What event fixes attribution and calculation inputs?",
+                       "How do refunds/cancellations reverse or adjust commission?",
+                       "Can retries duplicate commission or payout?"
+                   ],
+    "completion_criteria":  [
+                                "Every applied domain rule maps to cited authoritative evidence.",
+                                "Affected lifecycle, authorization, idempotency, concurrency, audit, and recovery cases are validated as applicable.",
+                                "Project manifests, overlay, tests, and memory remain synchronized."
+                            ],
+    "official_source_policy":  "For domain facts, authoritative project source, schema, tests, contracts, and approved specifications outrank generic external material; label conflicts and unknowns, and never use model memory as proof.",
+    "memory_read_policy":  "Read only relevant domain/module decisions and verify them against current repository evidence before use.",
+    "memory_write_policy":  "Write durable verified invariants with evidence and scope; record unknowns separately; never store secrets, personal data, or speculation.",
+    "project_overlay_policy":  "All verified project actors, states, transitions, formulas, paths, identifiers, and exceptions belong in Layer B with citations; the reusable base contains only guardrails.",
+    "update_policy":  "Re-run detection and review overlay evidence after schema, contract, lifecycle, authorization, or major domain behavior changes.",
+    "deprecation_policy":  "Mark superseded invariants with replacement evidence and migration impact; deactivate the binding when no verified rules remain.",
+    "scope_policy":  "Apply only to domain concepts, packages, and paths covered by evidence-cited overlay rules; unverified concepts remain out of scope."
+}

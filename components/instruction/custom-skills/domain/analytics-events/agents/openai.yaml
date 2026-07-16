@@ -1,0 +1,6 @@
+interface:
+  display_name: "Analytics Events"
+  short_description: "Guard analytics event contracts"
+  default_prompt: "Use $analytics-events only with a verified active project overlay and cited domain evidence."
+policy:
+  allow_implicit_invocation: false

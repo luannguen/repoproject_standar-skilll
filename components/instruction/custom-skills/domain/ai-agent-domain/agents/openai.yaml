@@ -1,0 +1,6 @@
+interface:
+  display_name: "AI Agent Domain"
+  short_description: "Guard domain rules for agentic behavior"
+  default_prompt: "Use $ai-agent-domain only with a verified active project overlay and cited domain evidence."
+policy:
+  allow_implicit_invocation: false

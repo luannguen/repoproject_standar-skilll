@@ -1,0 +1,6 @@
+interface:
+  display_name: "RBAC Scoped Access"
+  short_description: "Guard evidence-backed scoped authorization"
+  default_prompt: "Use $rbac-scoped-access only with a verified active project overlay and cited domain evidence."
+policy:
+  allow_implicit_invocation: false
