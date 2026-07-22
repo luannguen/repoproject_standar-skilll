@@ -30,6 +30,15 @@ description: Act as the Adaptive Cognitive Runtime's Consolidation Engine. Analy
 - constraints: Must strictly follow VOPL structure.
 - blockers: Missing context, unstructured execution trace.
 - execution_workflow: Read trace -> Normalize -> Extract Invariants -> Emit VOPL file.
+- approval_requirements: AG-01 if generating new architectural patterns.
+- pre_task_checklist: confirm trace validity and success criteria met.
+- post_task_checklist: confirm VOPL syntax and parameterization.
+- validation_process: run VOPL linter if available.
+- completion_criteria: A valid VOPL file is saved to the habits directory.
+- exception_policy: Log compilation failure and fall back to standard semantic execution.
+- memory_read_policy: Read the most recent verified execution trace for the task.
+- memory_write_policy: Write the compiled habit to Procedural Memory space.
+- update_policy: Update this skill when the VOPL schema evolves.
 
 ## Execution Workflow
 

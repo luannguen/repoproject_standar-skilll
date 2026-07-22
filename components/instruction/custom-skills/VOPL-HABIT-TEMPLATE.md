@@ -12,7 +12,7 @@ Save new habits as `<habit-name>.vopl.md` or `.vopl` depending on the parsing su
 
 ```vopl
 skill <SkillName> {
-    
+
     // Activation Contract
     activates when {
         intent == <ExpectedIntent>

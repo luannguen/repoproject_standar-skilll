@@ -2,7 +2,7 @@
 
 ```vopl
 skill SetupNewRoute {
-    
+
     // Activation Contract
     activates when {
         intent == CreateRoute

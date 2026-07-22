@@ -5,7 +5,7 @@
 
 ## 1. Triết lý Cốt lõi (The Paradigm Shift)
 
-Hệ thống Agent không nên được thiết kế như một "bộ não LLM khổng lồ" phản hồi request một cách thụ động và phải suy nghĩ lại (deliberate) từ đầu cho mỗi tác vụ. 
+Hệ thống Agent không nên được thiết kế như một "bộ não LLM khổng lồ" phản hồi request một cách thụ động và phải suy nghĩ lại (deliberate) từ đầu cho mỗi tác vụ.
 
 Thay vào đó, nó phải là một **Hệ điều hành Nhận thức (Cognitive Runtime)** duy trì vòng lặp sống liên tục:
 `Observe → Align → Predict → Compare → Select/Plan → Act → Evaluate → Adjust`.
@@ -17,7 +17,7 @@ Trong đó, LLM **chỉ là một vùng suy luận (Deliberative Cortex)** chuy�
 Hệ thống được chia thành 6 tầng rõ rệt, mô phỏng quá trình "nén" từ suy nghĩ chậm thành phản xạ nhanh (như ACT-R / Soar):
 
 ### 2.1. Tầng phản xạ (Reflex Layer)
-- Code thuần, event-driven, deterministic. 
+- Code thuần, event-driven, deterministic.
 - Chi phí bằng 0 token.
 - Xử lý các lỗi đã biết (VD: missing env var -> chặn deploy).
 
