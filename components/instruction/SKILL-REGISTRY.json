@@ -1,1 +1,765 @@
-{"schema_version":"1.0.0","updated_at":"2026-07-16","authority":"PROJECT-CONSTITUTION.md","routing_owner":"project-orchestrator","skills":[{"id":"project-orchestrator","name":"Project Orchestrator","version":"1.1.0","description":"Classify tasks, risk, workflows, skills, and gates.","triggers":"every task","path":"skills/project-orchestrator/SKILL.md","status":"active","dependency_skills":["project-memory"],"related_skills":["project-memory","requirement-analysis"],"risk_usage":{"default":"LOW","escalate_to":"highest applicable"},"task_classes":["all"],"workflows":["feature-development","bug-fix","refactoring","migration","dependency-upgrade","release","incident-response","documentation","performance-optimization","security-review","ai-feature","project-onboarding"]},{"id":"project-memory","name":"Project Memory","version":"1.1.0","description":"Retrieve and persist verified durable project knowledge.","triggers":"before and after every task","path":"skills/project-memory/SKILL.md","status":"active","dependency_skills":[],"related_skills":["project-orchestrator","documentation-sync"],"risk_usage":{"default":"LOW","escalate_to":"highest applicable"},"task_classes":["all"],"workflows":["feature-development","bug-fix","refactoring","migration","dependency-upgrade","release","incident-response","documentation","performance-optimization","security-review","ai-feature","project-onboarding"]},{"id":"requirement-analysis","name":"Requirement Analysis","version":"1.0.0","description":"Create bounded testable requirements and traceability.","triggers":"ambiguous request, feature, change, bug","path":"skills/requirement-analysis/SKILL.md","status":"active","dependency_skills":["project-memory"],"related_skills":["system-architecture","testing-quality"],"risk_usage":{"default":"LOW","escalate_to":"highest applicable"},"task_classes":["analysis","feature","bug"],"workflows":["feature-development","bug-fix","ai-feature","project-onboarding"]},{"id":"system-architecture","name":"System Architecture","version":"1.0.0","description":"Design boundaries, contracts, trade-offs, and evolution.","triggers":"subsystem, cross-cutting change, architecture review","path":"skills/system-architecture/SKILL.md","status":"active","dependency_skills":["project-memory"],"related_skills":["backend-production-engineering","api-integration"],"risk_usage":{"default":"MEDIUM","escalate_to":"highest applicable"},"task_classes":["architecture","feature","refactor","migration"],"workflows":["feature-development","refactoring","migration","dependency-upgrade","performance-optimization","security-review","ai-feature","project-onboarding"]},{"id":"ui-ux-production","name":"UI/UX Production Engineering","version":"1.1.0","description":"Create accessible responsive production interfaces.","triggers":"UI, UX, page, component, interaction, accessibility","path":"skills/ui-ux-production/SKILL.md","status":"active","dependency_skills":["project-memory"],"related_skills":["backend-production-engineering","testing-quality"],"risk_usage":{"default":"MEDIUM","escalate_to":"highest applicable"},"task_classes":["frontend","full-stack","bug","refactor"],"workflows":["feature-development","bug-fix","refactoring","release","performance-optimization","security-review","ai-feature","project-onboarding"]},{"id":"backend-production-engineering","name":"Backend Production Engineering","version":"1.1.0","description":"Protect backend invariants, data, contracts, and operations.","triggers":"backend, API, data, auth, integration, migration, deployment","path":"skills/backend-production-engineering/SKILL.md","status":"active","dependency_skills":["project-memory"],"related_skills":["data-lifecycle","api-integration"],"risk_usage":{"default":"MEDIUM","escalate_to":"highest applicable"},"task_classes":["backend","full-stack","bug","migration","incident","release"],"workflows":["feature-development","bug-fix","refactoring","migration","release","incident-response","performance-optimization","security-review","ai-feature","project-onboarding"]},{"id":"api-integration","name":"API and Integration Engineering","version":"1.0.0","description":"Engineer secure compatible resilient integration contracts.","triggers":"endpoint, event, webhook, provider, synchronization","path":"skills/api-integration/SKILL.md","status":"active","dependency_skills":["project-memory"],"related_skills":["backend-production-engineering","security-threat-modeling"],"risk_usage":{"default":"MEDIUM","escalate_to":"highest applicable"},"task_classes":["backend","integration","migration"],"workflows":["feature-development","bug-fix","migration","incident-response","security-review","ai-feature","project-onboarding"]},{"id":"data-lifecycle","name":"Data Lifecycle Engineering","version":"1.0.0","description":"Protect data ownership, integrity, lifecycle, and recovery.","triggers":"schema, state, transaction, retention, deletion, migration","path":"skills/data-lifecycle/SKILL.md","status":"active","dependency_skills":["project-memory"],"related_skills":["migration-compatibility","security-threat-modeling"],"risk_usage":{"default":"HIGH","escalate_to":"highest applicable"},"task_classes":["data","backend","migration","security"],"workflows":["feature-development","bug-fix","migration","release","incident-response","performance-optimization","security-review","ai-feature","project-onboarding"]},{"id":"testing-quality","name":"Testing and Quality Engineering","version":"1.0.0","description":"Create risk-based test and quality evidence.","triggers":"behavior change, bug, refactor, migration, upgrade, release","path":"skills/testing-quality/SKILL.md","status":"active","dependency_skills":["project-memory"],"related_skills":["requirement-analysis","devops-release"],"risk_usage":{"default":"LOW","escalate_to":"highest applicable"},"task_classes":["testing","feature","bug","refactor","migration","release"],"workflows":["feature-development","bug-fix","refactoring","migration","dependency-upgrade","release","incident-response","performance-optimization","security-review","ai-feature","project-onboarding"]},{"id":"security-threat-modeling","name":"Security and Threat Modeling","version":"1.0.0","description":"Threat-model trust, identity, data, abuse, and recovery.","triggers":"auth, permission, sensitive data, security review","path":"skills/security-threat-modeling/SKILL.md","status":"active","dependency_skills":["project-memory"],"related_skills":["data-lifecycle","ai-agent-safety"],"risk_usage":{"default":"HIGH","escalate_to":"highest applicable"},"task_classes":["security","feature","migration","release","incident"],"workflows":["feature-development","bug-fix","migration","dependency-upgrade","release","incident-response","performance-optimization","security-review","ai-feature","project-onboarding"]},{"id":"code-review-refactoring","name":"Code Review and Refactoring","version":"1.0.0","description":"Find defects and improve structure while preserving behavior.","triggers":"review, refactor, debt, duplication, coupling","path":"skills/code-review-refactoring/SKILL.md","status":"active","dependency_skills":["project-memory"],"related_skills":["testing-quality","system-architecture"],"risk_usage":{"default":"MEDIUM","escalate_to":"highest applicable"},"task_classes":["review","refactor","bug"],"workflows":["bug-fix","refactoring","dependency-upgrade","release","incident-response","performance-optimization","security-review","project-onboarding"]},{"id":"dependency-evolution","name":"Dependency and Platform Evolution","version":"1.0.0","description":"Evolve dependencies with lifecycle and compatibility evidence.","triggers":"dependency, runtime, platform, advisory, deprecation, EOL","path":"skills/dependency-evolution/SKILL.md","status":"active","dependency_skills":["project-memory"],"related_skills":["migration-compatibility","devops-release"],"risk_usage":{"default":"HIGH","escalate_to":"highest applicable"},"task_classes":["dependency","migration","release"],"workflows":["dependency-upgrade","release","incident-response","security-review","project-onboarding"]},{"id":"devops-release","name":"DevOps and Release Engineering","version":"1.0.0","description":"Build and promote reproducible recoverable artifacts.","triggers":"CI/CD, build, environment, deploy, rollout, release","path":"skills/devops-release/SKILL.md","status":"active","dependency_skills":["project-memory"],"related_skills":["testing-quality","observability-incident"],"risk_usage":{"default":"HIGH","escalate_to":"highest applicable"},"task_classes":["devops","deployment","release","migration"],"workflows":["migration","dependency-upgrade","release","incident-response","project-onboarding"]},{"id":"observability-incident","name":"Observability and Incident Response","version":"1.0.0","description":"Make behavior diagnosable and incidents recoverable.","triggers":"metrics, logs, traces, alert, outage, incident","path":"skills/observability-incident/SKILL.md","status":"active","dependency_skills":["project-memory"],"related_skills":["devops-release","performance-scalability"],"risk_usage":{"default":"HIGH","escalate_to":"highest applicable"},"task_classes":["observability","incident","release","optimization"],"workflows":["feature-development","bug-fix","migration","release","incident-response","performance-optimization","security-review","ai-feature","project-onboarding"]},{"id":"performance-scalability","name":"Performance and Scalability Engineering","version":"1.0.0","description":"Measure and improve performance, capacity, and cost.","triggers":"latency, throughput, load, cache, query, bundle, capacity","path":"skills/performance-scalability/SKILL.md","status":"active","dependency_skills":["project-memory"],"related_skills":["observability-incident","testing-quality"],"risk_usage":{"default":"MEDIUM","escalate_to":"highest applicable"},"task_classes":["optimization","performance","capacity"],"workflows":["feature-development","bug-fix","release","incident-response","performance-optimization","project-onboarding"]},{"id":"documentation-sync","name":"Documentation Synchronization","version":"1.0.0","description":"Synchronize documentation and memory with verified reality.","triggers":"behavior, contract, setup, release, incident, instruction change","path":"skills/documentation-sync/SKILL.md","status":"active","dependency_skills":["project-memory"],"related_skills":["project-orchestrator"],"risk_usage":{"default":"LOW","escalate_to":"highest applicable"},"task_classes":["documentation","all"],"workflows":["feature-development","bug-fix","refactoring","migration","dependency-upgrade","release","incident-response","documentation","performance-optimization","security-review","ai-feature","project-onboarding"]},{"id":"migration-compatibility","name":"Migration and Compatibility Engineering","version":"1.0.0","description":"Run staged compatible transitions with recovery.","triggers":"schema, data, API, config, runtime, provider migration","path":"skills/migration-compatibility/SKILL.md","status":"active","dependency_skills":["project-memory"],"related_skills":["data-lifecycle","devops-release"],"risk_usage":{"default":"HIGH","escalate_to":"highest applicable"},"task_classes":["migration","dependency","release"],"workflows":["migration","dependency-upgrade","release","project-onboarding"]},{"id":"analytics-telemetry","name":"Analytics and Telemetry Engineering","version":"1.0.0","description":"Create governed decision-driven measurement contracts.","triggers":"analytics, funnel, experiment, KPI, telemetry schema","path":"skills/analytics-telemetry/SKILL.md","status":"active","dependency_skills":["project-memory"],"related_skills":["data-lifecycle","security-threat-modeling"],"risk_usage":{"default":"MEDIUM","escalate_to":"highest applicable"},"task_classes":["analytics","feature","optimization"],"workflows":["feature-development","release","performance-optimization","ai-feature","project-onboarding"]},{"id":"ai-agent-safety","name":"AI and Agent Safety Engineering","version":"1.0.0","description":"Bound AI authority, context, tools, evaluation, and cost.","triggers":"LLM, agent, tool calling, prompt, RAG, model change","path":"skills/ai-agent-safety/SKILL.md","status":"active","dependency_skills":["project-memory"],"related_skills":["security-threat-modeling","testing-quality"],"risk_usage":{"default":"HIGH","escalate_to":"highest applicable"},"task_classes":["ai","feature","security"],"workflows":["security-review","ai-feature","project-onboarding"]},{"id":"domain-skill-framework","name":"Domain Skill Framework","version":"1.0.0","description":"Create domain skills only from repeated application evidence.","triggers":"repeated stable project-specific domain knowledge","path":"skills/domain-skill-framework/SKILL.md","status":"active","dependency_skills":["project-memory"],"related_skills":["requirement-analysis","system-architecture"],"risk_usage":{"default":"MEDIUM","escalate_to":"highest applicable"},"task_classes":["domain-discovery","feature","ai"],"workflows":["feature-development","ai-feature","project-onboarding"]},{"id":"project-bootstrap-governance","name":"Project Bootstrap and Governance","version":"1.1.0","description":"Instantiate cloned repositories with evidence-backed identity, governance, and conditional controls.","triggers":"clone, initialize project, bootstrap repository, production standard, governance baseline","path":"skills/project-bootstrap-governance/SKILL.md","status":"active","dependency_skills":["project-memory"],"related_skills":["project-orchestrator","requirement-analysis","testing-quality","security-threat-modeling","devops-release","documentation-sync"],"risk_usage":{"default":"MEDIUM","escalate_to":"highest applicable"},"task_classes":["project-onboarding","governance","repository-standardization"],"workflows":["project-onboarding"]}]}
+{
+    "schema_version":  "1.0.0",
+    "updated_at":  "2026-07-16",
+    "authority":  "PROJECT-CONSTITUTION.md",
+    "routing_owner":  "project-orchestrator",
+    "skills":  [
+                   {
+                       "id":  "project-orchestrator",
+                       "name":  "Project Orchestrator",
+                       "version":  "1.1.0",
+                       "description":  "Classify tasks, risk, workflows, skills, and gates.",
+                       "triggers":  "every task",
+                       "path":  "skills/project-orchestrator/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "project-memory",
+                                              "requirement-analysis"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "LOW",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "all"
+                                        ],
+                       "workflows":  [
+                                         "feature-development",
+                                         "bug-fix",
+                                         "refactoring",
+                                         "migration",
+                                         "dependency-upgrade",
+                                         "release",
+                                         "incident-response",
+                                         "documentation",
+                                         "performance-optimization",
+                                         "security-review",
+                                         "ai-feature",
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "project-memory",
+                       "name":  "Project Memory",
+                       "version":  "1.1.0",
+                       "description":  "Retrieve and persist verified durable project knowledge.",
+                       "triggers":  "before and after every task",
+                       "path":  "skills/project-memory/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+
+                                             ],
+                       "related_skills":  [
+                                              "project-orchestrator",
+                                              "documentation-sync"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "LOW",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "all"
+                                        ],
+                       "workflows":  [
+                                         "feature-development",
+                                         "bug-fix",
+                                         "refactoring",
+                                         "migration",
+                                         "dependency-upgrade",
+                                         "release",
+                                         "incident-response",
+                                         "documentation",
+                                         "performance-optimization",
+                                         "security-review",
+                                         "ai-feature",
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "requirement-analysis",
+                       "name":  "Requirement Analysis",
+                       "version":  "1.0.0",
+                       "description":  "Create bounded testable requirements and traceability.",
+                       "triggers":  "ambiguous request, feature, change, bug",
+                       "path":  "skills/requirement-analysis/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "system-architecture",
+                                              "testing-quality"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "LOW",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "analysis",
+                                            "feature",
+                                            "bug"
+                                        ],
+                       "workflows":  [
+                                         "feature-development",
+                                         "bug-fix",
+                                         "ai-feature",
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "system-architecture",
+                       "name":  "System Architecture",
+                       "version":  "1.0.0",
+                       "description":  "Design boundaries, contracts, trade-offs, and evolution.",
+                       "triggers":  "subsystem, cross-cutting change, architecture review",
+                       "path":  "skills/system-architecture/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "backend-production-engineering",
+                                              "api-integration"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "MEDIUM",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "architecture",
+                                            "feature",
+                                            "refactor",
+                                            "migration"
+                                        ],
+                       "workflows":  [
+                                         "feature-development",
+                                         "refactoring",
+                                         "migration",
+                                         "dependency-upgrade",
+                                         "performance-optimization",
+                                         "security-review",
+                                         "ai-feature",
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "ui-ux-production",
+                       "name":  "UI/UX Production Engineering",
+                       "version":  "1.1.0",
+                       "description":  "Create accessible responsive production interfaces.",
+                       "triggers":  "UI, UX, page, component, interaction, accessibility",
+                       "path":  "skills/ui-ux-production/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "backend-production-engineering",
+                                              "testing-quality"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "MEDIUM",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "frontend",
+                                            "full-stack",
+                                            "bug",
+                                            "refactor"
+                                        ],
+                       "workflows":  [
+                                         "feature-development",
+                                         "bug-fix",
+                                         "refactoring",
+                                         "release",
+                                         "performance-optimization",
+                                         "security-review",
+                                         "ai-feature",
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "backend-production-engineering",
+                       "name":  "Backend Production Engineering",
+                       "version":  "1.1.0",
+                       "description":  "Protect backend invariants, data, contracts, and operations.",
+                       "triggers":  "backend, API, data, auth, integration, migration, deployment",
+                       "path":  "skills/backend-production-engineering/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "data-lifecycle",
+                                              "api-integration"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "MEDIUM",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "backend",
+                                            "full-stack",
+                                            "bug",
+                                            "migration",
+                                            "incident",
+                                            "release"
+                                        ],
+                       "workflows":  [
+                                         "feature-development",
+                                         "bug-fix",
+                                         "refactoring",
+                                         "migration",
+                                         "release",
+                                         "incident-response",
+                                         "performance-optimization",
+                                         "security-review",
+                                         "ai-feature",
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "api-integration",
+                       "name":  "API and Integration Engineering",
+                       "version":  "1.0.0",
+                       "description":  "Engineer secure compatible resilient integration contracts.",
+                       "triggers":  "endpoint, event, webhook, provider, synchronization",
+                       "path":  "skills/api-integration/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "backend-production-engineering",
+                                              "security-threat-modeling"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "MEDIUM",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "backend",
+                                            "integration",
+                                            "migration"
+                                        ],
+                       "workflows":  [
+                                         "feature-development",
+                                         "bug-fix",
+                                         "migration",
+                                         "incident-response",
+                                         "security-review",
+                                         "ai-feature",
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "data-lifecycle",
+                       "name":  "Data Lifecycle Engineering",
+                       "version":  "1.0.0",
+                       "description":  "Protect data ownership, integrity, lifecycle, and recovery.",
+                       "triggers":  "schema, state, transaction, retention, deletion, migration",
+                       "path":  "skills/data-lifecycle/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "migration-compatibility",
+                                              "security-threat-modeling"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "HIGH",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "data",
+                                            "backend",
+                                            "migration",
+                                            "security"
+                                        ],
+                       "workflows":  [
+                                         "feature-development",
+                                         "bug-fix",
+                                         "migration",
+                                         "release",
+                                         "incident-response",
+                                         "performance-optimization",
+                                         "security-review",
+                                         "ai-feature",
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "testing-quality",
+                       "name":  "Testing and Quality Engineering",
+                       "version":  "1.0.0",
+                       "description":  "Create risk-based test and quality evidence.",
+                       "triggers":  "behavior change, bug, refactor, migration, upgrade, release",
+                       "path":  "skills/testing-quality/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "requirement-analysis",
+                                              "devops-release"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "LOW",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "testing",
+                                            "feature",
+                                            "bug",
+                                            "refactor",
+                                            "migration",
+                                            "release"
+                                        ],
+                       "workflows":  [
+                                         "feature-development",
+                                         "bug-fix",
+                                         "refactoring",
+                                         "migration",
+                                         "dependency-upgrade",
+                                         "release",
+                                         "incident-response",
+                                         "performance-optimization",
+                                         "security-review",
+                                         "ai-feature",
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "security-threat-modeling",
+                       "name":  "Security and Threat Modeling",
+                       "version":  "1.0.0",
+                       "description":  "Threat-model trust, identity, data, abuse, and recovery.",
+                       "triggers":  "auth, permission, sensitive data, security review",
+                       "path":  "skills/security-threat-modeling/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "data-lifecycle",
+                                              "ai-agent-safety"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "HIGH",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "security",
+                                            "feature",
+                                            "migration",
+                                            "release",
+                                            "incident"
+                                        ],
+                       "workflows":  [
+                                         "feature-development",
+                                         "bug-fix",
+                                         "migration",
+                                         "dependency-upgrade",
+                                         "release",
+                                         "incident-response",
+                                         "performance-optimization",
+                                         "security-review",
+                                         "ai-feature",
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "code-review-refactoring",
+                       "name":  "Code Review and Refactoring",
+                       "version":  "1.0.0",
+                       "description":  "Find defects and improve structure while preserving behavior.",
+                       "triggers":  "review, refactor, debt, duplication, coupling",
+                       "path":  "skills/code-review-refactoring/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "testing-quality",
+                                              "system-architecture"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "MEDIUM",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "review",
+                                            "refactor",
+                                            "bug"
+                                        ],
+                       "workflows":  [
+                                         "bug-fix",
+                                         "refactoring",
+                                         "dependency-upgrade",
+                                         "release",
+                                         "incident-response",
+                                         "performance-optimization",
+                                         "security-review",
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "dependency-evolution",
+                       "name":  "Dependency and Platform Evolution",
+                       "version":  "1.0.0",
+                       "description":  "Evolve dependencies with lifecycle and compatibility evidence.",
+                       "triggers":  "dependency, runtime, platform, advisory, deprecation, EOL",
+                       "path":  "skills/dependency-evolution/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "migration-compatibility",
+                                              "devops-release"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "HIGH",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "dependency",
+                                            "migration",
+                                            "release"
+                                        ],
+                       "workflows":  [
+                                         "dependency-upgrade",
+                                         "release",
+                                         "incident-response",
+                                         "security-review",
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "devops-release",
+                       "name":  "DevOps and Release Engineering",
+                       "version":  "1.0.0",
+                       "description":  "Build and promote reproducible recoverable artifacts.",
+                       "triggers":  "CI/CD, build, environment, deploy, rollout, release",
+                       "path":  "skills/devops-release/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "testing-quality",
+                                              "observability-incident"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "HIGH",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "devops",
+                                            "deployment",
+                                            "release",
+                                            "migration"
+                                        ],
+                       "workflows":  [
+                                         "migration",
+                                         "dependency-upgrade",
+                                         "release",
+                                         "incident-response",
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "observability-incident",
+                       "name":  "Observability and Incident Response",
+                       "version":  "1.0.0",
+                       "description":  "Make behavior diagnosable and incidents recoverable.",
+                       "triggers":  "metrics, logs, traces, alert, outage, incident",
+                       "path":  "skills/observability-incident/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "devops-release",
+                                              "performance-scalability"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "HIGH",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "observability",
+                                            "incident",
+                                            "release",
+                                            "optimization"
+                                        ],
+                       "workflows":  [
+                                         "feature-development",
+                                         "bug-fix",
+                                         "migration",
+                                         "release",
+                                         "incident-response",
+                                         "performance-optimization",
+                                         "security-review",
+                                         "ai-feature",
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "performance-scalability",
+                       "name":  "Performance and Scalability Engineering",
+                       "version":  "1.0.0",
+                       "description":  "Measure and improve performance, capacity, and cost.",
+                       "triggers":  "latency, throughput, load, cache, query, bundle, capacity",
+                       "path":  "skills/performance-scalability/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "observability-incident",
+                                              "testing-quality"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "MEDIUM",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "optimization",
+                                            "performance",
+                                            "capacity"
+                                        ],
+                       "workflows":  [
+                                         "feature-development",
+                                         "bug-fix",
+                                         "release",
+                                         "incident-response",
+                                         "performance-optimization",
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "documentation-sync",
+                       "name":  "Documentation Synchronization",
+                       "version":  "1.0.0",
+                       "description":  "Synchronize documentation and memory with verified reality.",
+                       "triggers":  "behavior, contract, setup, release, incident, instruction change",
+                       "path":  "skills/documentation-sync/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "project-orchestrator"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "LOW",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "documentation",
+                                            "all"
+                                        ],
+                       "workflows":  [
+                                         "feature-development",
+                                         "bug-fix",
+                                         "refactoring",
+                                         "migration",
+                                         "dependency-upgrade",
+                                         "release",
+                                         "incident-response",
+                                         "documentation",
+                                         "performance-optimization",
+                                         "security-review",
+                                         "ai-feature",
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "migration-compatibility",
+                       "name":  "Migration and Compatibility Engineering",
+                       "version":  "1.0.0",
+                       "description":  "Run staged compatible transitions with recovery.",
+                       "triggers":  "schema, data, API, config, runtime, provider migration",
+                       "path":  "skills/migration-compatibility/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "data-lifecycle",
+                                              "devops-release"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "HIGH",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "migration",
+                                            "dependency",
+                                            "release"
+                                        ],
+                       "workflows":  [
+                                         "migration",
+                                         "dependency-upgrade",
+                                         "release",
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "analytics-telemetry",
+                       "name":  "Analytics and Telemetry Engineering",
+                       "version":  "1.0.0",
+                       "description":  "Create governed decision-driven measurement contracts.",
+                       "triggers":  "analytics, funnel, experiment, KPI, telemetry schema",
+                       "path":  "skills/analytics-telemetry/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "data-lifecycle",
+                                              "security-threat-modeling"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "MEDIUM",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "analytics",
+                                            "feature",
+                                            "optimization"
+                                        ],
+                       "workflows":  [
+                                         "feature-development",
+                                         "release",
+                                         "performance-optimization",
+                                         "ai-feature",
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "ai-agent-safety",
+                       "name":  "AI and Agent Safety Engineering",
+                       "version":  "1.0.0",
+                       "description":  "Bound AI authority, context, tools, evaluation, and cost.",
+                       "triggers":  "LLM, agent, tool calling, prompt, RAG, model change",
+                       "path":  "skills/ai-agent-safety/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "security-threat-modeling",
+                                              "testing-quality"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "HIGH",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "ai",
+                                            "feature",
+                                            "security"
+                                        ],
+                       "workflows":  [
+                                         "security-review",
+                                         "ai-feature",
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "domain-skill-framework",
+                       "name":  "Domain Skill Framework",
+                       "version":  "1.0.0",
+                       "description":  "Create domain skills only from repeated application evidence.",
+                       "triggers":  "repeated stable project-specific domain knowledge",
+                       "path":  "skills/domain-skill-framework/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "requirement-analysis",
+                                              "system-architecture"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "MEDIUM",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "domain-discovery",
+                                            "feature",
+                                            "ai"
+                                        ],
+                       "workflows":  [
+                                         "feature-development",
+                                         "ai-feature",
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "project-bootstrap-governance",
+                       "name":  "Project Bootstrap and Governance",
+                       "version":  "1.1.0",
+                       "description":  "Instantiate cloned repositories with evidence-backed identity, governance, and conditional controls.",
+                       "triggers":  "clone, initialize project, bootstrap repository, production standard, governance baseline",
+                       "path":  "skills/project-bootstrap-governance/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "project-orchestrator",
+                                              "requirement-analysis",
+                                              "testing-quality",
+                                              "security-threat-modeling",
+                                              "devops-release",
+                                              "documentation-sync"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "MEDIUM",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "project-onboarding",
+                                            "governance",
+                                            "repository-standardization"
+                                        ],
+                       "workflows":  [
+                                         "project-onboarding"
+                                     ]
+                   },
+                   {
+                       "id":  "habit-compiler",
+                       "name":  "Habit Compiler",
+                       "version":  "1.0.0",
+                       "description":  "Analyzes execution traces to generate executable Procedural Memory (VOPL Habits).",
+                       "triggers":  "post-task success count threshold reached",
+                       "path":  "skills/habit-compiler/SKILL.md",
+                       "status":  "active",
+                       "dependency_skills":  [
+                                                 "project-memory"
+                                             ],
+                       "related_skills":  [
+                                              "project-orchestrator"
+                                          ],
+                       "risk_usage":  {
+                                          "default":  "LOW",
+                                          "escalate_to":  "highest applicable"
+                                      },
+                       "task_classes":  [
+                                            "ai",
+                                            "optimization"
+                                        ],
+                       "workflows":  [
+                                         "ai-feature",
+                                         "performance-optimization"
+                                     ]
+                   }
+               ]
+}
