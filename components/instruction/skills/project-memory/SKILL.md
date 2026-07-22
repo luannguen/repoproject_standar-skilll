@@ -13,7 +13,7 @@ Use this skill as the mandatory memory router. Keep memory selective, evidenced,
 - version: 1.1.0
 - description: retrieve, verify, reconcile, write, compact, lint, checkpoint, and archive durable project knowledge without treating chat history or memory as authoritative implementation evidence.
 - purpose: preserve trustworthy cross-task continuity while minimizing context and preventing stale or speculative knowledge from steering work.
-- scope: indexed facts, constraints, decisions, patterns, incidents, failed approaches, debt, questions, module/domain memory, task checkpoints, task summaries, conflict resolution, and garbage collection.
+- scope: explicit separation of Semantic Memory (indexed facts, constraints, decisions, incidents, architecture graphs) and Procedural Memory (compiled VOPL habits, execution traces, reflex parameters).
 - triggers: every project task before specialist work and after material analysis or change; any request to retrieve, reconcile, update, validate, compact, resume, or audit Project Memory.
 - exclusions: does not replace current code, configuration, runtime evidence, user intent, specialist analysis, or store secrets, raw transcripts, private chain-of-thought, speculation, and temporary logs.
 - required_inputs:
@@ -58,7 +58,7 @@ Use this skill as the mandatory memory router. Keep memory selective, evidenced,
 - completion_criteria: relevant context is concise and verified; durable deltas are correctly indexed and lifecycle-managed; no secret, dangling reference, duplicate active fact, or lint blocker remains.
 - exception_policy: record rule, reason, scope, source, risk, compensating control, approval, expiry, and remediation; never allow memory to override a higher-authority current source.
 - memory_read_policy: use index metadata, then summaries, then detail, then source verification only as relevance and risk require; do not read the whole store.
-- memory_write_policy: store concise, reusable, sourced facts, decisions, patterns, incidents, debt, questions, outcomes, and checkpoints only after materiality and validation gates.
+- memory_write_policy: explicitly classify writes as Semantic (facts/decisions) or Procedural (compiled VOPL habits). Only compile a Procedural Habit when an execution trace demonstrates high success rate and stability.
 - update_policy: version policy changes, update CHANGELOG, validate templates and index contracts, and require approval before weakening source authority, secret protection, verification, conflict, or deletion rules.
 
 
