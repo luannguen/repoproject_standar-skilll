@@ -4,6 +4,7 @@ This mandatory router coordinates Constitution, Orchestrator, Project Memory, wo
 
 ## Required order
 
+0. Initialize the **Active Inference Loop** (Observe -> Align -> Predict -> Compare -> Select/Plan -> Act -> Evaluate -> Adjust) and maintain it throughout all following steps.
 1. Read `PROJECT-CONSTITUTION.md`.
 2. Read Standard Skill and workflow routing metadata in `SKILL-REGISTRY.json` and `WORKFLOW-REGISTRY.json`, then inspect `TEMPLATE-MANIFEST.json` and `PROJECT-PROFILE.json`.
 3. If the profile is `template/uninstantiated` or clone onboarding is the dominant outcome, select `project-onboarding` and `project-bootstrap-governance`; otherwise invoke `skills/project-orchestrator/SKILL.md` to normalize the goal, classify task, assign the highest applicable risk, select one primary workflow, and select the minimum Standard Skills.
@@ -23,6 +24,7 @@ This mandatory router coordinates Constitution, Orchestrator, Project Memory, wo
 
 Do not implement until:
 
+- the Active Inference Loop has completed its "Select/Plan" phase and explicitly approved the action;
 - goal, acceptance, scope, exclusions, evidence, and material unknowns are explicit;
 - task class, risk, workflow, skills, memory context, and approval status are known;
 - affected invariants, users, contracts, data, trust boundaries, operations, compatibility, and recovery are analyzed;

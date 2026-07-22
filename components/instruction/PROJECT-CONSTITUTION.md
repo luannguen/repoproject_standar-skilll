@@ -8,6 +8,18 @@ Effective: 2026-07-16
 
 This constitution is the highest project-local authority for engineering work. It governs how AI agents analyze evidence, select instructions, change the repository, validate outcomes, request approval, and preserve project memory. It cannot override platform, system, developer, legal, or safety requirements.
 
+## Active Inference Protocol (Quy trình Nhận thức Chủ động)
+
+To guarantee safe and deliberate execution, the Agent MUST continuously operate via this 8-step cognitive loop for every task or sub-task. Bypassing this loop is a constitutional violation.
+1. **Quan sát môi trường (Observe)**: Gather all evidence from the environment.
+2. **Cập nhật trạng thái và niềm tin (Align)**: Reconcile observations with current goals and instructions.
+3. **Dự đoán điều sắp xảy ra (Predict)**: Anticipate the outcome of potential actions.
+4. **So sánh dự đoán với thực tế (Compare)**: Check if the prediction aligns with reality and constraints.
+5. **Chọn phản xạ, kỹ năng hoặc suy luận (Select/Plan)**: Determine the best tool, workflow, or skill.
+6. **Hành động (Act)**: Execute the chosen plan carefully.
+7. **Đánh giá hậu quả (Evaluate)**: Validate the results of the action.
+8. **Điều chỉnh kiến thức và hành vi (Adjust)**: Update project memory and adapt future behavior.
+
 ## Authority order
 
 Apply rules in this order:

@@ -71,11 +71,13 @@ description: Classify every engineering request, assign risk, select the smalles
 
 1. Parse the request into goal, deliverables, acceptance criteria, scope, exclusions, constraints, and unknowns.
 2. Inspect the registries and current evidence; classify task type and combine all risk dimensions using the highest result.
-3. Select one primary workflow and the minimum Standard Skills whose triggers cover every material surface; then read project custom-skill manifests and select only active/provisional bindings intersecting the task type and package/path scope. Reject redundant or inactive skills explicitly for MEDIUM+ work.
-4. Retrieve relevant Project Memory, reconcile it with current evidence, and update unknowns or blockers.
-5. Create a Task Execution Brief for MEDIUM+ work and evaluate approval gates before affected actions.
-6. Coordinate the selected workflow, enforcing each specialist pre-task and completion gate without replacing specialist judgment.
-7. Run post-task validation, documentation synchronization, registry checks when applicable, and durable memory/checkpoint routing.
+3. **ACR Router - Step 1 (Reflexes)**: Evaluate if the task matches any zero-token deterministic reflex rules. If yes, execute reflex.
+4. **ACR Router - Step 2 (Procedural Memory)**: Search for compiled VOPL skills/habits that match the current intent and environment preconditions. If confidence is high, execute the compiled procedure.
+5. **ACR Router - Step 3 (Deliberative Cortex)**: If no reflex or procedural habit applies (or prediction error occurs), invoke standard workflow and LLM novelty reasoning. Select one primary workflow and the minimum Standard Skills whose triggers cover every material surface.
+6. Retrieve relevant Project Memory, reconcile it with current evidence, and update unknowns or blockers.
+7. Create a Task Execution Brief for MEDIUM+ work and evaluate approval gates before affected actions.
+8. Coordinate the selected workflow, enforcing each specialist pre-task and completion gate without replacing specialist judgment.
+9. Run post-task validation, documentation synchronization, registry checks when applicable, and durable memory/checkpoint routing.
 
 ## Domain gates
 
