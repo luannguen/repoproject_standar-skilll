@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-07-23",
+  "authority": "PROJECT-CONSTITUTION.md",
+  "default_deny": true,
+  "habits_directory": "procedural-memory/habits",
+  "policy": {
+    "allowed_statuses": ["draft", "verified", "quarantined", "retired"],
+    "selectable_statuses": ["verified"],
+    "minimum_promotion_successes": 3,
+    "minimum_independent_verifications": 2,
+    "allowed_risk_ceilings": ["LOW", "MEDIUM"],
+    "critical_habit_selection_forbidden": true,
+    "stale_behavior": "fail-closed-and-return-to-selected-workflow"
+  },
+  "habits": []
+}

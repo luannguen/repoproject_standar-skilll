@@ -13,7 +13,7 @@ This result does not certify a cloned application as production-ready. Productio
 
 - project onboarding workflow and bootstrap-governance skill;
 - template manifest and machine-readable project profile;
-- unified repository, Standard Skill, workflow, Custom Skill, stack/domain detection, routing-fixture, route/link, and memory validation;
+- unified repository, Standard Skill, workflow, governed habit, Custom Skill, stack/domain detection, routing-fixture, route/link, and memory validation;
 - 24 Standard routing cases covering all 12 workflows and all four risk levels;
 - 27 reusable Custom Skills, 12 Custom routing cases, scoped project bindings, official-source ledgers, and evidence-gated overlays;
 - Windows/Linux CI definition with read-only contents permission;

@@ -14,7 +14,7 @@ This mandatory router coordinates Constitution, Orchestrator, Project Memory, wo
 7. Invoke `skills/project-memory/SKILL.md`; retrieve only relevant entries and verify material memory against current evidence.
 8. Read the selected `workflows/<id>/WORKFLOW.md`, then only selected Standard Skills, activated Custom Skills, and task-matched references.
 9. Pass Constitution, workflow, and skill pre-task gates.
-10. Analyze and execute within accepted scope; search for reuse before extension or creation.
+10. Analyze and execute within accepted scope; search for reuse before extension or creation. Only now may ACR consider a deterministic reflex or a registered, `verified`, current, project-bound, path-scoped VOPL habit as an optimization inside the already selected workflow, risk ceiling, skills, and satisfied approvals. Any mismatch fails closed to the selected workflow.
 11. Run proportional specialist validation and adversarial review; never present an unavailable check as passed.
 12. Synchronize affected contracts, detection/activation manifests, overlays, docs, registries, changelogs, runbooks, and release artifacts.
 13. Write only durable verified memory; checkpoint incomplete work, compact completed work, and run memory lint.
@@ -30,6 +30,7 @@ Do not implement until:
 - affected invariants, users, contracts, data, trust boundaries, operations, compatibility, and recovery are analyzed;
 - reuse search, implementation sequence, validation, documentation, and memory plans are complete;
 - all approvals required for the next action are satisfied.
+- any selected reflex or habit is registered, verified, current, bounded, non-authorizing, and covered by deterministic validation and rollback; optimization is skipped when this cannot be proven.
 
 A small LOW task may use a compact brief, but still requires registry routing and a lightweight constraints/path-matched memory scan.
 

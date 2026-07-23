@@ -1,13 +1,13 @@
 {
     "schema_version":  "1.0.0",
-    "generated_at":  "2026-07-16T00:00:00+07:00",
+    "generated_at":  "2026-07-23T00:00:00+07:00",
     "policy":  "Bindings are manifest-driven and task/scope filtered. Absence means inactive.",
     "bindings":  [
                      {
                          "skill_id":  "github-ci",
                          "base_skill_path":  "../custom-skills/technology/github-ci/SKILL.md",
                          "overlay_path":  "technology/github-ci/OVERLAY.md",
-                         "detected_version":  "platform-managed; actions/checkout@v6 declared",
+                         "detected_version":  "platform-managed; actions/checkout@v7 declared",
                          "activation_status":  "active",
                          "activation_reason":  "Git metadata and an executable GitHub Actions workflow provide independent authoritative evidence at HIGH confidence.",
                          "evidence":  [
@@ -41,7 +41,7 @@
                                               "instruction-system",
                                               "template-governance"
                                           ],
-                         "last_verified_at":  "2026-07-16T00:00:00+07:00"
+                         "last_verified_at":  "2026-07-23T00:00:00+07:00"
                      }
                  ]
 }

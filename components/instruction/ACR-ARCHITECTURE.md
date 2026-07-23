@@ -1,57 +1,97 @@
 # Adaptive Cognitive Runtime (ACR) Architecture
 
-**Status**: Vision & Target Architecture
-**Version**: 1.0.0
+**Status**: Implemented governance and validation contract; runtime executor not implemented
+**Version**: 1.1.0
+**Last updated**: 2026-07-23
 
-## 1. Triết lý Cốt lõi (The Paradigm Shift)
+## Purpose
 
-Hệ thống Agent không nên được thiết kế như một "bộ não LLM khổng lồ" phản hồi request một cách thụ động và phải suy nghĩ lại (deliberate) từ đầu cho mỗi tác vụ.
+ACR reduces repeated planning cost without transferring authority to a reflex, model, or compiled habit. The governing loop is:
 
-Thay vào đó, nó phải là một **Hệ điều hành Nhận thức (Cognitive Runtime)** duy trì vòng lặp sống liên tục:
-`Observe → Align → Predict → Compare → Select/Plan → Act → Evaluate → Adjust`.
+`Observe -> Align -> Predict -> Compare -> Select/Plan -> Act -> Evaluate -> Adjust`
 
-Trong đó, LLM **chỉ là một vùng suy luận (Deliberative Cortex)** chuyên xử lý sự mới lạ (novelty), không phải là CPU chạy mọi tác vụ.
+The loop improves evidence use and feedback. It does not replace the Constitution, user authority, workflow routing, Project Memory, specialist gates, approvals, or validation.
 
-## 2. Các Tầng Nhận Thức (Cognitive Layers)
+## Non-negotiable ordering
 
-Hệ thống được chia thành 6 tầng rõ rệt, mô phỏng quá trình "nén" từ suy nghĩ chậm thành phản xạ nhanh (như ACT-R / Soar):
+Every task follows this control flow:
 
-### 2.1. Tầng phản xạ (Reflex Layer)
-- Code thuần, event-driven, deterministic.
-- Chi phí bằng 0 token.
-- Xử lý các lỗi đã biết (VD: missing env var -> chặn deploy).
+1. Normalize goal, acceptance, scope, exclusions, and unknowns.
+2. Inspect current evidence; classify task and highest risk.
+3. Select exactly one primary workflow, minimum Standard Skills, and only task/path-matched active Custom Skill bindings.
+4. Retrieve and verify relevant Project Memory.
+5. Produce a Task Execution Brief for MEDIUM+ work and satisfy approval gates.
+6. Consider a deterministic reflex or registered VOPL habit only as an execution optimization inside the authorized plan.
+7. Execute with bounded steps, retries, time, paths, actions, validation, and rollback.
+8. On mismatch or prediction error, stop the optimized path and return to the already selected workflow.
+9. Validate, synchronize documentation, and write only durable sanitized memory.
 
-### 2.2. Tầng trí nhớ thủ tục (Procedural Memory)
-- Lưu trữ các **Kỹ năng (Skills)** có thể thực thi trực tiếp thay vì semantic vector.
-- Mỗi Skill có một **Activation Contract** nghiêm ngặt (Intent, Environment, Preconditions).
-- Chỉ kích hoạt khi độ tự tin (Confidence) cao và không vi phạm Invariants.
+Reflexes and habits are never authority sources. They cannot choose their own workflow, risk, tools, permissions, or approval result.
 
-### 2.3. Tầng thói quen (Habit Compiler)
-- Động cơ biến đổi (Consolidation Engine): So sánh các execution trace thành công -> Tìm điểm bất biến (invariants) -> Tách tham số -> Đóng gói thành Skill mới.
-- Quá trình: `LLM Reasoning -> Trace Normalization -> Invariant Extraction -> Verification -> Compiled Procedure`.
+## Cognitive layers
 
-### 2.4. Tầng mô hình thế giới (World Model)
-- Cung cấp khả năng dự đoán (Predictive Power).
-- Là tập hợp các graph (Repository, Dependency, Runtime State, historical transitions).
-- LLM chỉ can thiệp khi có **Prediction Error** (Kết quả thực tế sai lệch so với mô hình dự đoán).
+### Governance plane
 
-### 2.5. Tầng suy nghĩ (Deliberative Cortex - LLM)
-- Chỉ được gọi khi: Tình huống mới, Không có skill, Skill xung đột, Prediction Error vượt ngưỡng, Rủi ro cao.
-- Trọng tâm: Xử lý Novelty.
+Constitution, Bootstrap, Project Orchestrator, workflow contracts, Standard Skills, active Custom Skill bindings, approval gates, and Project Memory establish authority and context before optimization.
 
-### 2.6. Tầng siêu nhận thức (Metacognition)
-- Quan sát chính Agent: Giám sát Success Rate của Skills, đánh giá khi nào cần compile skill mới, khi nào cần quarantine skill cũ (bị out-of-date do thay đổi môi trường).
+### Deterministic reflex layer
 
-## 3. Vai trò của VOPL (Cognitive Intermediate Representation)
+A reflex is code-defined and testable. It may reject an unsafe or invalid action, or perform a bounded reversible action already authorized by governance. Every reflex needs a named contract, current evidence, deterministic validation, and rollback.
 
-VOPL (Vocabulary/Policy Language) đóng vai trò là ngôn ngữ trung gian. Thay vì LLM sinh code trực tiếp, LLM sẽ sinh ra VOPL policy.
-Một đơn vị VOPL xác định:
-- Khi nào kỹ năng kích hoạt (`activates when`).
-- Điều kiện cần thiết (`requires`).
-- Dự đoán kết quả (`predicts`).
-- Bất biến cần bảo toàn (`preserves`).
-- Xử lý khi dự đoán sai (`on prediction_error`).
-- Điều kiện đóng gói thành thói quen (`consolidate after`).
+### Procedural memory
 
-## 4. Công thức cốt lõi của ACR
-`Novelty → Reasoning → Experience → Abstraction → Verification → Procedure → Habit → Prediction error → Adaptation`
+VOPL habits are declarative procedures stored separately from Standard Skills, reusable Custom Skills, and Project Memory. `procedural-memory/HABIT-REGISTRY.json` is the routing source. File presence is not activation.
+
+Lifecycle states are:
+
+- `draft`: candidate only; never selectable.
+- `verified`: independently reviewed, sufficiently evidenced, current, bound, scoped, and selectable after governance.
+- `quarantined`: disabled because of mismatch, staleness, failure, incident, or invalidation.
+- `retired`: intentionally inactive historical procedure.
+
+### Habit Compiler
+
+Habit Compiler accepts sanitized task outcome summaries, verified diffs, validation results, approval records, and rollback outcomes. It never reads or reconstructs chain-of-thought, raw transcripts, secrets, or private production data. Compilation creates `draft` only.
+
+Promotion requires at least three comparable successes, two independent verification records, deterministic lint, current project binding, named ownership, review expiry, rollback, and registry synchronization.
+
+### Deliberative cortex
+
+The LLM handles novelty, conflicts, incomplete evidence, prediction errors, and cases with no valid optimization. Its output is untrusted until deterministic policy, schema, authorization, and validation checks pass.
+
+### Metacognition and observability
+
+Track selection attempts, accepted/rejected reason codes, lifecycle transitions, prediction errors, validation failures, timeouts, retries, rollback outcomes, and fallback to the standard workflow. Telemetry must contain identifiers and outcomes, not prompts, raw content, secrets, or private reasoning.
+
+## VOPL authority and execution contract
+
+A selectable habit must declare intent, project binding, applicable paths, required workflow and skills, risk ceiling, approval gates, allowed and forbidden actions, provenance, evidence counts, limits, owner, review date, and rollback. VOPL execution steps invoke registered skills through bounded action identifiers; they do not embed shell commands or generated source code.
+
+CRITICAL work is never habit-selected. Production, security, identity, data, external, financial, destructive, and irreversible actions keep their normal approval gates even when a habit matches.
+
+## Failure and recovery
+
+Fail closed when registration, binding, scope, evidence, status, freshness, risk ceiling, approvals, limits, or validation cannot be proven. Stop the optimized path, preserve current state, apply declared rollback where safe, record a sanitized outcome, and continue through the selected standard workflow. Repeated prediction error or any material safety failure quarantines the habit pending review.
+
+## Template boundary
+
+This repository is `template/uninstantiated`. It therefore ships an empty governed habit registry and parser fixtures only. The React-router example is test data under `tests/vopl/`; it is not project evidence and cannot activate. Application-specific habits remain draft until a cloned project is instantiated with authoritative stack, architecture, path, validation, and ownership evidence.
+
+## Current implementation status
+
+Implemented now:
+
+- governance-first Orchestrator and Bootstrap contracts;
+- VOPL metadata/body contract and lifecycle policy;
+- empty default-deny habit registry;
+- valid and adversarial fixtures;
+- cross-platform deterministic habit lint integrated with unified validation.
+
+Not implemented or claimed:
+
+- an autonomous runtime executor;
+- model/provider selection or cost/latency benchmarks;
+- production telemetry backend;
+- application-specific habits or application production readiness.
+
+A future executor is a separate HIGH-risk implementation that must enforce the same contracts outside the model and add versioned quality, safety, latency, cost, fallback, kill-switch, and incident evaluations.

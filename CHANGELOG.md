@@ -7,6 +7,22 @@ All notable changes to this template are documented here. The format follows Kee
 ### Conditional after clone
 
 - Add application-specific build, test, security, dependency, deployment, recovery, and observability controls when the real stack and risk are verified.
+## [1.3.0] - 2026-07-23
+
+### Added
+
+- Governance-first Adaptive Cognitive Runtime contract with a default-deny procedural-memory registry.
+- Versioned VOPL habit metadata, lifecycle, bounded execution, failure, rollback, provenance, and approval contracts.
+- Deterministic `habit-lint.ps1` with valid and adversarial fixtures, composed into unified cross-platform validation.
+
+### Changed
+
+- Reflexes and habits can optimize execution only after workflow, skill, memory, risk, Task Brief, and approval routing succeeds.
+- Habit Compiler consumes sanitized outcome evidence, creates draft candidates only, and requires three comparable successes plus two independent verifications for promotion.
+- Project Memory stores sanitized durable outcomes only; compiled habits and activation state live in a separate governed registry.
+- The application-specific route example is test-only and no longer appears in an active habit directory.
+- GitHub CI binding metadata now matches the pinned `actions/checkout@v7` workflow.
+
 
 ## [1.2.0] - 2026-07-16
 

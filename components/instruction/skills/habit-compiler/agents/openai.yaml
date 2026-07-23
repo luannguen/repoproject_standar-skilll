@@ -1,5 +1,3 @@
 interface:
   display_name: Habit Compiler
-  short_description: Analyzes execution traces to generate executable Procedural Memory.
-model: gpt-4o
-temperature: 0.1
+  short_description: Compiles sanitized evidence into governed draft VOPL habits.

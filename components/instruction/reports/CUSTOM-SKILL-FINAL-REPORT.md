@@ -1,12 +1,12 @@
 # Custom Skill Final Report
 
-Date: 2026-07-16
-Template version: 1.2.0
+Date: 2026-07-23
+Template version: 1.3.0
 
 ## Inventory and activation
 
 - Technologies detected: 1 of 14 (`github-ci`, HIGH confidence).
-- Versions detected: GitHub is platform-managed; `actions/checkout@v6` is declared. No application package/runtime/provider version is present.
+- Versions detected: GitHub is platform-managed; `actions/checkout@v7` is declared. No application package/runtime/provider version is present.
 - Domains detected: 0 of 13; verified project domain rules: 0.
 - Reusable skills created: 27 (14 technology, 13 domain), each with a 36-field contract.
 - Project skills active: 1 (`github-ci`).
@@ -22,10 +22,10 @@ Constitution, AGENTS, AI-BOOTSTRAP, Project Orchestrator, Project Bootstrap/Onbo
 ## Validation
 
 - Skill Creator quick validation: 27/27 pass.
-- Unified validators: 10/10 pass with zero blockers and zero warnings.
+- Unified validators: 11/11 pass with zero blockers and zero warnings, including governed habit lint.
 - Standard routing: 24 cases across 12 workflows and four risk levels.
 - Custom routing: 12 cases, including negative inactive/profile/name-only cases.
-- JSON parsing: 44 instruction JSON files pass.
+- JSON parsing: 45 instruction JSON files pass.
 - Secret, duplicate ID, path, manifest synchronization, scope, overlay, and Standard dependency checks pass.
 
 ## Blockers and unverified information

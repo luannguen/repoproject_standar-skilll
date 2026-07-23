@@ -1,7 +1,7 @@
 {
     "schema_version":  "1.0.0",
-    "template_version":  "1.2.0",
-    "updated_at":  "2026-07-16",
+    "template_version":  "1.3.0",
+    "updated_at":  "2026-07-23",
     "purpose":  "Cross-stack project template with evidence-gated AI workflows and reusable repository governance.",
     "production_readiness_claim":  "template-layer-only",
     "active_capabilities":  [
@@ -16,7 +16,9 @@
                                 "GitHub Actions dependency updates",
                                 "two-layer reusable custom skill library",
                                 "evidence-based stack and domain detection",
-                                "manifest-driven scoped custom skill activation"
+                                "manifest-driven scoped custom skill activation",
+                                "governed VOPL procedural-memory lifecycle",
+                                "deterministic valid and adversarial habit validation"
                             ],
     "conditional_capabilities":  [
                                      {

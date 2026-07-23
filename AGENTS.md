@@ -13,5 +13,6 @@ These repository instructions apply to every task.
 8. Keep Standard Skills separate from reusable Custom Skills. Do not preload the full library, activate a reusable skill without a project binding, hard-code active skills, or invent missing stack/version/domain evidence.
 9. After work, synchronize affected documentation, detection/activation manifests, overlays, registries, and durable memory; create an exact checkpoint if incomplete and run applicable system validation.
 10. Never store secrets, credentials, private production data, personal data, raw logs, speculation, or private chain-of-thought in Project Memory.
+11. Treat ACR reflexes and registered VOPL habits only as bounded execution optimizations after workflow, skills, memory, risk, Task Brief, and approval gates are established. Never let an optimization classify or authorize itself; fail closed to the selected workflow on any mismatch.
 
 When repository rules conflict, apply the Constitution authority order. Stop and report any unresolved material conflict.

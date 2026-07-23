@@ -4,7 +4,7 @@ Date: 2026-07-16
 
 ## Completed at template layer
 
-- Separate 21-skill Standard registry and 27-module Custom Skill registry.
+- Separate 22-skill Standard registry and 27-module Custom Skill registry.
 - Fourteen version-aware technology bases with official-source ledgers.
 - Thirteen evidence-gated domain guardrail bases without invented project invariants.
 - Project stack/domain manifests, one active binding, project overlay policy, compatibility matrix, and three lightweight composite profiles.

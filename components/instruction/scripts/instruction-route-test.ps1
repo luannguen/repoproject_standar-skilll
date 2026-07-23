@@ -35,7 +35,12 @@ $required = @(
     'components/instruction/skills/project-bootstrap-governance/SKILL.md',
     'components/instruction/workflows/project-onboarding/WORKFLOW.md',
     'components/instruction/skills/project-orchestrator/SKILL.md',
-    'components/instruction/skills/project-memory/SKILL.md'
+    'components/instruction/skills/project-memory/SKILL.md',
+    'components/instruction/ACR-ARCHITECTURE.md',
+    'components/instruction/procedural-memory/VOPL-HABIT-TEMPLATE.md',
+    'components/instruction/procedural-memory/HABIT-REGISTRY.json',
+    'components/instruction/skills/habit-compiler/SKILL.md',
+    'components/instruction/scripts/habit-lint.ps1'
 )
 foreach ($relative in $required) {
     if (-not (Test-Path -LiteralPath (Join-Path $RepositoryRoot $relative) -PathType Leaf)) {
@@ -58,6 +63,12 @@ foreach ($token in @('PROJECT-CONSTITUTION.md','AI-BOOTSTRAP.md','SKILL-REGISTRY
         Add-Blocker "Routing does not reference '$token'."
     }
 }
+foreach ($token in @('bounded execution optimizations','Never let an optimization classify or authorize itself','fail closed to the selected workflow')) {
+    if ($agents -notmatch [regex]::Escape($token)) {
+        Add-Blocker "AGENTS.md is missing ACR authority guard '$token'."
+    }
+}
+
 foreach ($token in @('ui-ux-production','backend-production-engineering','domain-skill-framework','do not read every skill')) {
     if ($bootstrap -notmatch [regex]::Escape($token)) {
         Add-Blocker "Bootstrap does not preserve required route '$token'."
@@ -91,6 +102,30 @@ foreach ($token in $orderTokens) {
         Add-Blocker "Bootstrap order is invalid at '$token'."
     } else {
         $last = $position
+    }
+}
+
+$orchestrator = Get-Content -Raw -LiteralPath (Join-Path $instructionRoot 'skills/project-orchestrator/SKILL.md')
+$optimizationOrderTokens = @(
+    'Select one primary workflow',
+    'Retrieve relevant Project Memory',
+    'Create a Task Execution Brief',
+    'ACR optimization gate'
+)
+$last = -1
+foreach ($token in $optimizationOrderTokens) {
+    $position = $orchestrator.IndexOf($token, [StringComparison]::Ordinal)
+    if ($position -lt 0) {
+        Add-Blocker "Project Orchestrator is missing governance-first token '$token'."
+    } elseif ($position -le $last) {
+        Add-Blocker "Project Orchestrator may evaluate ACR optimization before governance at '$token'."
+    } else {
+        $last = $position
+    }
+}
+foreach ($token in @('execution optimizations, not authority sources','cannot bypass task classification','do not execute an unregistered')) {
+    if ($orchestrator -notmatch [regex]::Escape($token)) {
+        Add-Blocker "Project Orchestrator is missing habit authority guard '$token'."
     }
 }
 

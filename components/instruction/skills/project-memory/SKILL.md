@@ -10,10 +10,10 @@ Use this skill as the mandatory memory router. Keep memory selective, evidenced,
 
 - id: project-memory
 - name: Project Memory
-- version: 1.1.0
+- version: 1.2.0
 - description: retrieve, verify, reconcile, write, compact, lint, checkpoint, and archive durable project knowledge without treating chat history or memory as authoritative implementation evidence.
 - purpose: preserve trustworthy cross-task continuity while minimizing context and preventing stale or speculative knowledge from steering work.
-- scope: explicit separation of Semantic Memory (indexed facts, constraints, decisions, incidents, architecture graphs) and Procedural Memory (compiled VOPL habits, execution traces, reflex parameters).
+- scope: indexed facts, constraints, decisions, patterns, incidents, failed approaches, debt, questions, module/domain memory, sanitized task outcomes, checkpoints, summaries, conflict resolution, garbage collection, and routing references to separately governed Procedural Memory.
 - triggers: every project task before specialist work and after material analysis or change; any request to retrieve, reconcile, update, validate, compact, resume, or audit Project Memory.
 - exclusions: does not replace current code, configuration, runtime evidence, user intent, specialist analysis, or store secrets, raw transcripts, private chain-of-thought, speculation, and temporary logs.
 - required_inputs:
@@ -41,7 +41,7 @@ Use this skill as the mandatory memory router. Keep memory selective, evidenced,
   - task-selected capability skills
   - documentation-sync
   - project-orchestrator
-- constraints: retrieve progressively; keep memory subordinate to authoritative current evidence; update index and detail atomically; retain provenance, status, confidence, and lifecycle.
+- constraints: retrieve progressively; keep memory subordinate to authoritative current evidence; update index and detail atomically; retain provenance, status, confidence, and lifecycle; keep Project Memory separate from the VOPL habit registry and never store raw execution traces.
 - blockers: malformed index; duplicate active ID; missing indexed target; secret or sensitive data; unresolved conflict on a material fact; required source verification unavailable for a high-risk claim.
 - approval_requirements: ordinary verified memory updates inside scope need no extra approval; weakening memory policy, deleting durable history, changing global contracts, or recording sensitive material requires the matching approval.
 - execution_workflow: follow the Pre-task and Post-task workflows plus the referenced memory policies.
@@ -58,7 +58,7 @@ Use this skill as the mandatory memory router. Keep memory selective, evidenced,
 - completion_criteria: relevant context is concise and verified; durable deltas are correctly indexed and lifecycle-managed; no secret, dangling reference, duplicate active fact, or lint blocker remains.
 - exception_policy: record rule, reason, scope, source, risk, compensating control, approval, expiry, and remediation; never allow memory to override a higher-authority current source.
 - memory_read_policy: use index metadata, then summaries, then detail, then source verification only as relevance and risk require; do not read the whole store.
-- memory_write_policy: explicitly classify writes as Semantic (facts/decisions) or Procedural (compiled VOPL habits). Only compile a Procedural Habit when an execution trace demonstrates high success rate and stability.
+- memory_write_policy: store concise, reusable, sourced facts, decisions, patterns, incidents, debt, questions, sanitized outcomes, and checkpoints only after materiality and validation gates; Habit Compiler may reference these outcomes but owns VOPL candidates and lifecycle in the separate procedural-memory registry.
 - update_policy: version policy changes, update CHANGELOG, validate templates and index contracts, and require approval before weakening source authority, secret protection, verification, conflict, or deletion rules.
 
 
@@ -79,6 +79,10 @@ For a trivial task, perform the same flow as a lightweight scan: project constra
 Separate implementation reality, intended contract, historical behavior, and future proposal. Memory is a navigation and synthesis layer, never the highest authority. Apply the source-specific precedence in [MEMORY-POLICY.md](references/MEMORY-POLICY.md).
 
 Never store secrets, private production data, credentials, or chain-of-thought. Store concise decisions, evidence, outcomes, risks, unknowns, and next steps.
+## Procedural Memory boundary
+
+Project Memory may store sanitized outcome summaries and durable decisions that support later compilation. It does not store compiled habits, reflex parameters, raw execution traces, model reasoning, or activation state. `../../procedural-memory/HABIT-REGISTRY.json` and Habit Compiler own those contracts under the governance-first ACR route.
+
 
 ## Progressive retrieval
 

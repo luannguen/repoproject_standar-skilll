@@ -4,14 +4,14 @@
 - Applicable package: repository root
 - Applicable paths: `.github/**`, `components/instruction/**`, `scripts/**`
 - Detected platform version: platform-managed; action releases are explicit in workflow files
-- Last verified: 2026-07-16
+- Last verified: 2026-07-23
 
 ## Evidence-backed project facts
 
 - `.github/workflows/quality-gates.yml` runs on `push` and `pull_request`.
 - The workflow declares `permissions: contents: read`.
 - The reusable-layer job runs on `ubuntu-latest` and `windows-latest`, with `fail-fast: false`.
-- The workflow uses `actions/checkout@v6`, invokes PowerShell Core, and calls `./components/instruction/scripts/validate.ps1`.
+- The workflow uses `actions/checkout@v7`, invokes PowerShell Core, and calls `./components/instruction/scripts/validate.ps1`.
 - `components/instruction/scripts/validate.ps1` is the single CI/local composition entry point and must remain synchronized with required validators.
 
 ## Narrowing rules

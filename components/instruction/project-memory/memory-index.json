@@ -1,6 +1,6 @@
 {
     "schema_version":  "1.0.0",
-    "generated_at":  "2026-07-16",
+    "generated_at":  "2026-07-23",
     "repository_root":  ".",
     "entries":  [
                     {
@@ -8,7 +8,7 @@
                         "title":  "Initial repository baseline",
                         "memory_type":  "project_fact",
                         "scope":  "level-0:project",
-                        "summary":  "Repository contains a validated 21-Standard-Skill/12-workflow system, 27 reusable Custom Skills, scoped activation, onboarding, governance, and validation; no application source exists.",
+                        "summary":  "Repository contains a validated 22-Standard-Skill/12-workflow system, governed VOPL procedural memory, 27 reusable Custom Skills, scoped activation, onboarding, governance, and validation; no application source exists.",
                         "status":  "verified",
                         "confidence":  "high",
                         "tags":  [
@@ -51,7 +51,7 @@
                                          "Recursive inventory before initialization returned COUNT=0; file discovery returned no paths; git status reported no repository.",
                                          "The UI/UX audit verified the installed skill/routing and continued absence of application UI sources.",
                                          "The backend audit verified the installed backend skill/routing and continued absence of application/Base44 sources.",
-                                         "Git repository and reusable governance artifacts now exist; unified local validation covers 21 skills, 12 workflows, 24 routing fixtures, 35 anti-patterns, repository hygiene, links, and memory.",
+                                         "Git repository and reusable governance artifacts now exist; unified local validation covers 22 skills, 12 workflows, governed VOPL habits, 24 routing fixtures, 35 anti-patterns, repository hygiene, links, and memory.",
                                          "Custom validation covers 27 reusable modules, 14 technology detections, 13 domain detections, 12 custom route cases, and one HIGH-confidence GitHub CI binding."
                                      ],
                         "decision_or_fact":  "implementation_fact",
@@ -63,10 +63,10 @@
                                       "This baseline becomes stale when a clone is not instantiated or application evidence is added without updating the profile."
                                   ],
                         "valid_from":  "2026-07-16",
-                        "last_verified_at":  "2026-07-16",
+                        "last_verified_at":  "2026-07-23",
                         "review_after":  "2026-10-16",
                         "created_at":  "2026-07-16",
-                        "updated_at":  "2026-07-16",
+                        "updated_at":  "2026-07-23",
                         "created_by_task":  "TASK-20260716-project-memory-bootstrap",
                         "supersedes":  [
 
@@ -80,7 +80,9 @@
                                                  "MEM-TEMPLATE-STANDARD-0001",
                                                  "TASK-20260716-template-production-standard",
                                                  "MEM-CUSTOM-SKILL-SYSTEM-0001",
-                                                 "TASK-20260716-reusable-custom-skill-system"
+                                                 "TASK-20260716-reusable-custom-skill-system",
+                                                 "DEC-0002",
+                                                 "TASK-20260723-acr-procedural-memory-hardening"
                                              ],
                         "detail_path":  "components/instruction/project-memory/PROJECT-SNAPSHOT.md"
                     },
@@ -994,7 +996,7 @@
                         "title":  "Project Engineering Skill System is active",
                         "memory_type":  "project_fact",
                         "scope":  "level-0:project:instruction-system",
-                        "summary":  "Validated Constitution, Orchestrator, 21-Standard-Skill registry, 12-workflow registry, separate 27-module Custom Skill library, approval gates, routing fixtures, and executable lint are active.",
+                        "summary":  "Validated Constitution, governance-first Orchestrator, 22-Standard-Skill registry, 12-workflow registry, governed VOPL procedural memory, separate 27-module Custom Skill library, approval gates, routing fixtures, and executable lint are active.",
                         "status":  "verified",
                         "confidence":  "high",
                         "affected_modules":  [
@@ -1011,10 +1013,10 @@
                                                  "project-engineering-agent"
                                              ],
                         "valid_from":  "2026-07-16",
-                        "last_verified_at":  "2026-07-16",
+                        "last_verified_at":  "2026-07-23",
                         "review_after":  "2026-10-16",
                         "created_at":  "2026-07-16",
-                        "updated_at":  "2026-07-16",
+                        "updated_at":  "2026-07-23",
                         "created_by_task":  "TASK-20260716-project-engineering-skill-system",
                         "supersedes":  [
 
@@ -1052,7 +1054,7 @@
                                                   "components/instruction/reports/CUSTOM-SKILL-SYSTEM-READINESS.md"
                                               ],
                         "evidence":  [
-                                         "Skill lint passed for 21 skills with zero blockers and warnings.",
+                                         "Skill lint passed for 22 skills and habit lint passed its default-deny registry plus valid/adversarial fixtures with zero blockers and warnings.",
                                          "Workflow lint passed for 12 workflows with zero blockers and warnings.",
                                          "Route/link validation passed with 35 anti-patterns; 24 static routing fixtures cover all workflows and four risk levels.",
                                          "Custom lint validates 27 reusable modules; detector synchronization and 12 custom route fixtures pass."
@@ -1076,7 +1078,9 @@
                                                  "MEM-TEMPLATE-STANDARD-0001",
                                                  "TASK-20260716-template-production-standard",
                                                  "MEM-CUSTOM-SKILL-SYSTEM-0001",
-                                                 "TASK-20260716-reusable-custom-skill-system"
+                                                 "TASK-20260716-reusable-custom-skill-system",
+                                                 "DEC-0002",
+                                                 "TASK-20260723-acr-procedural-memory-hardening"
                                              ],
                         "detail_path":  "components/instruction/project-memory/modules/instruction-system/MEM-SKILL-SYSTEM-0001.md"
                     },
@@ -1493,6 +1497,171 @@
                                                  "MEM-TEMPLATE-STANDARD-0001"
                                              ],
                         "detail_path":  "components/instruction/project-memory/tasks/completed/TASK-20260716-reusable-custom-skill-system.md"
+                    },
+                    {
+                        "memory_id":  "DEC-0002",
+                        "title":  "Governance precedes ACR execution optimization",
+                        "memory_type":  "architecture_decision",
+                        "scope":  "level-0:project:instruction-system",
+                        "summary":  "Reflexes and VOPL habits may optimize only an already classified, authorized, bounded, and validated workflow.",
+                        "status":  "verified",
+                        "confidence":  "high",
+                        "tags":  [
+                                     "architecture",
+                                     "acr",
+                                     "vopl",
+                                     "procedural-memory",
+                                     "safety",
+                                     "governance"
+                                 ],
+                        "trigger_terms":  [
+                                              "ACR",
+                                              "VOPL",
+                                              "habit",
+                                              "reflex",
+                                              "procedural-memory",
+                                              "habit-compiler",
+                                              "optimization"
+                                          ],
+                        "affected_modules":  [
+                                                 "instruction-system",
+                                                 "procedural-memory"
+                                             ],
+                        "affected_paths":  [
+                                               "components/instruction/AI-BOOTSTRAP.md",
+                                               "components/instruction/skills/project-orchestrator",
+                                               "components/instruction/skills/habit-compiler",
+                                               "components/instruction/procedural-memory",
+                                               "components/instruction/scripts"
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+                                                 "adaptive-cognitive-runtime",
+                                                 "habit-compiler"
+                                             ],
+                        "source_references":  [
+                                                  "components/instruction/PROJECT-CONSTITUTION.md",
+                                                  "components/instruction/APPROVAL-GATES.md",
+                                                  "components/instruction/ACR-ARCHITECTURE.md",
+                                                  "components/instruction/procedural-memory/HABIT-REGISTRY.json",
+                                                  "components/instruction/scripts/habit-lint.ps1"
+                                              ],
+                        "evidence":  [
+                                         "Orchestrator route validation proves governance tokens precede the ACR optimization gate.",
+                                         "Habit lint rejects unsafe and under-evidenced fixtures.",
+                                         "Unified validation composes habit lint on the reusable layer."
+                                     ],
+                        "decision_or_fact":  "decision",
+                        "rationale":  "Optimization must reduce repeated planning cost without becoming an alternate authority path or persisting private reasoning.",
+                        "consequences":  [
+                                             "Compilation creates draft only.",
+                                             "Verified promotion requires three comparable successes and two independent verifications.",
+                                             "Template mode has no selectable application habit.",
+                                             "Mismatch and prediction error fail closed to the selected workflow."
+                                         ],
+                        "risks":  [
+                                      "A future runtime executor could violate the contract unless it enforces authorization and validation outside the model."
+                                  ],
+                        "valid_from":  "2026-07-23",
+                        "last_verified_at":  "2026-07-23",
+                        "review_after":  "2026-10-23",
+                        "created_at":  "2026-07-23",
+                        "updated_at":  "2026-07-23",
+                        "created_by_task":  "TASK-20260723-acr-procedural-memory-hardening",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "related_memories":  [
+                                                 "MEM-SKILL-SYSTEM-0001",
+                                                 "MEM-PROJECT-0001",
+                                                 "MEM-CONSTRAINT-0001",
+                                                 "TASK-20260723-acr-procedural-memory-hardening"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/decisions/DEC-0002-governance-before-acr-optimization.md"
+                    },
+                    {
+                        "memory_id":  "TASK-20260723-acr-procedural-memory-hardening",
+                        "title":  "Harden ACR and governed procedural memory",
+                        "memory_type":  "task_summary",
+                        "scope":  "level-4:task:acr-procedural-memory-hardening",
+                        "summary":  "Reordered ACR behind governance, introduced a default-deny VOPL lifecycle and deterministic adversarial validation, and synchronized template metadata and memory.",
+                        "status":  "verified",
+                        "confidence":  "high",
+                        "tags":  [
+                                     "task-summary",
+                                     "acr",
+                                     "vopl",
+                                     "procedural-memory",
+                                     "validation",
+                                     "governance"
+                                 ],
+                        "trigger_terms":  [
+                                              "acr-hardening",
+                                              "VOPL",
+                                              "habit-compiler",
+                                              "procedural-memory",
+                                              "continue"
+                                          ],
+                        "affected_modules":  [
+                                                 "instruction-system",
+                                                 "procedural-memory",
+                                                 "project-memory",
+                                                 "repository-governance"
+                                             ],
+                        "affected_paths":  [
+                                               "components/instruction",
+                                               "VERSION",
+                                               "CHANGELOG.md"
+                                           ],
+                        "related_entities":  [
+
+                                             ],
+                        "related_features":  [
+                                                 "adaptive-cognitive-runtime",
+                                                 "habit-compiler"
+                                             ],
+                        "source_references":  [
+                                                  "components/instruction/ACR-ARCHITECTURE.md",
+                                                  "components/instruction/procedural-memory/HABIT-REGISTRY.json",
+                                                  "components/instruction/scripts/habit-lint.ps1",
+                                                  "components/instruction/reports/VALIDATION-REPORT.md"
+                                              ],
+                        "evidence":  [
+                                         "Governance-first route guards pass.",
+                                         "Valid VOPL fixture passes.",
+                                         "Unsafe fixture proves required rejection reasons.",
+                                         "Unified reusable-layer validation passes after synchronization."
+                                     ],
+                        "decision_or_fact":  "task_outcome",
+                        "rationale":  "Preserve the reusable architecture boundary, lifecycle, and validation evidence without relying on chat history.",
+                        "consequences":  [
+                                             "Future clones start with no selectable habits.",
+                                             "Application-specific procedures require instantiated evidence.",
+                                             "Future executors must enforce the documented contract outside the model."
+                                         ],
+                        "risks":  [
+                                      "No autonomous executor, runtime benchmark, hosted CI result, or application-specific evaluation is claimed."
+                                  ],
+                        "valid_from":  "2026-07-23",
+                        "last_verified_at":  "2026-07-23",
+                        "review_after":  "2026-10-23",
+                        "created_at":  "2026-07-23",
+                        "updated_at":  "2026-07-23",
+                        "created_by_task":  "TASK-20260723-acr-procedural-memory-hardening",
+                        "supersedes":  [
+
+                                       ],
+                        "superseded_by":  null,
+                        "related_memories":  [
+                                                 "DEC-0002",
+                                                 "MEM-SKILL-SYSTEM-0001",
+                                                 "MEM-PROJECT-0001",
+                                                 "MEM-CONSTRAINT-0001"
+                                             ],
+                        "detail_path":  "components/instruction/project-memory/tasks/completed/TASK-20260723-acr-procedural-memory-hardening.md"
                     }
                 ]
 }

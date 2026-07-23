@@ -28,14 +28,15 @@ Windows PowerShell 5.1 and PowerShell 7+ are supported. CI runs the reusable qua
 ## What is included
 
 - a constitutional authority and approval-gate model;
-- deterministic workflow and 21-skill Standard registry;
+- deterministic workflow and 22-skill Standard registry;
+- governance-first ACR with a default-deny VOPL procedural-memory registry and adversarial habit validation;
 - a separate two-layer library of 14 technology and 13 domain Custom Skills with manifest-driven scoped activation;
 - Project Memory with structured linting;
 - repository, Standard Skill, workflow, Custom Skill, stack/domain detection, routing-fixture, link, and secret-hygiene checks;
 - contributor, security, release, ownership, issue, pull-request, and dependency-update baselines;
 - explicit conditional controls for application-specific production readiness.
 
-See [Custom Skill architecture](components/instruction/custom-skills/README.md), [Custom Skill readiness](components/instruction/reports/CUSTOM-SKILL-SYSTEM-READINESS.md), [Repository governance](docs/REPOSITORY-GOVERNANCE.md), [Security baseline](docs/SECURITY-BASELINE.md), and [Release policy](docs/RELEASE-POLICY.md).
+See [ACR architecture](components/instruction/ACR-ARCHITECTURE.md), [Procedural Memory](components/instruction/procedural-memory/README.md), [Custom Skill architecture](components/instruction/custom-skills/README.md), [Custom Skill readiness](components/instruction/reports/CUSTOM-SKILL-SYSTEM-READINESS.md), [Repository governance](docs/REPOSITORY-GOVERNANCE.md), [Security baseline](docs/SECURITY-BASELINE.md), and [Release policy](docs/RELEASE-POLICY.md).
 
 ## Evidence boundary
 

@@ -13,6 +13,7 @@ $checks = @(
     @{ Name = 'skill-lint'; Path = (Join-Path $PSScriptRoot 'skill-lint.ps1'); Args = @('-InstructionRoot',$instructionRoot) },
     @{ Name = 'workflow-lint'; Path = (Join-Path $PSScriptRoot 'workflow-lint.ps1'); Args = @('-InstructionRoot',$instructionRoot) },
     @{ Name = 'custom-skill-lint'; Path = (Join-Path $PSScriptRoot 'custom-skill-lint.ps1'); Args = @('-InstructionRoot',$instructionRoot) },
+    @{ Name = 'habit-lint'; Path = (Join-Path $PSScriptRoot 'habit-lint.ps1'); Args = @('-InstructionRoot',$instructionRoot) },
     @{ Name = 'stack-detection'; Path = (Join-Path $PSScriptRoot 'stack-detection.ps1'); Args = @('-RepositoryRoot',$repositoryRoot) },
     @{ Name = 'domain-detection'; Path = (Join-Path $PSScriptRoot 'domain-detection.ps1'); Args = @('-RepositoryRoot',$repositoryRoot) },
     @{ Name = 'routing-fixture-test'; Path = (Join-Path $PSScriptRoot 'routing-fixture-test.ps1'); Args = @('-InstructionRoot',$instructionRoot) },

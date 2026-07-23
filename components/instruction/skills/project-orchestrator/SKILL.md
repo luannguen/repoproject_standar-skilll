@@ -9,7 +9,7 @@ description: Classify every engineering request, assign risk, select the smalles
 
 - id: project-orchestrator
 - name: Project Orchestrator
-- version: 1.1.0
+- version: 1.2.0
 - description: Classify every engineering request, assign risk, select the smallest valid workflow and capability-skill set, enforce approvals, and coordinate pre-task, validation, documentation, and memory gates. Use before any repository analysis or change.
 - purpose: make task routing deterministic, risk-aware, context-efficient, and auditable.
 - scope: all engineering analysis, architecture, implementation, review, debugging, migration, release, incident, security, performance, documentation, and AI-feature tasks.
@@ -71,17 +71,19 @@ description: Classify every engineering request, assign risk, select the smalles
 
 1. Parse the request into goal, deliverables, acceptance criteria, scope, exclusions, constraints, and unknowns.
 2. Inspect the registries and current evidence; classify task type and combine all risk dimensions using the highest result.
-3. **ACR Router - Step 1 (Reflexes)**: Evaluate if the task matches any zero-token deterministic reflex rules. If yes, execute reflex.
-4. **ACR Router - Step 2 (Procedural Memory)**: Search for compiled VOPL skills/habits that match the current intent and environment preconditions. If confidence is high, execute the compiled procedure.
-5. **ACR Router - Step 3 (Deliberative Cortex)**: If no reflex or procedural habit applies (or prediction error occurs), invoke standard workflow and LLM novelty reasoning. Select one primary workflow and the minimum Standard Skills whose triggers cover every material surface.
-6. Retrieve relevant Project Memory, reconcile it with current evidence, and update unknowns or blockers.
-7. Create a Task Execution Brief for MEDIUM+ work and evaluate approval gates before affected actions.
-8. Coordinate the selected workflow, enforcing each specialist pre-task and completion gate without replacing specialist judgment.
-9. Run post-task validation, documentation synchronization, registry checks when applicable, and durable memory/checkpoint routing.
+3. Select one primary workflow and the minimum Standard Skills whose triggers cover every material surface; then read project custom-skill manifests and select only active/provisional bindings intersecting the task type and package/path scope. Reject redundant or inactive skills explicitly for MEDIUM+ work.
+4. Retrieve relevant Project Memory, reconcile it with current evidence, and update unknowns or blockers.
+5. Create a Task Execution Brief for MEDIUM+ work and evaluate approval gates before affected actions.
+6. **ACR optimization gate**: only after steps 1-5 pass, evaluate deterministic reflexes and registered VOPL habits as execution optimizations inside the already selected workflow, skills, scope, risk ceiling, and satisfied approvals. An optimization may never classify or authorize its own action.
+7. Use a reflex only when its deterministic contract, current evidence, validation, and rollback are available. Use a VOPL habit only when it is `verified`, registered, unexpired, project-bound, path-scoped, within its risk ceiling, and all declared gates are satisfied; otherwise continue with deliberative workflow execution.
+8. Coordinate the selected workflow, enforcing each specialist pre-task and completion gate without replacing specialist judgment. On any precondition mismatch, prediction error, stale evidence, or validation failure, stop the optimized path, preserve state, and return to the selected workflow.
+9. Run post-task validation, documentation synchronization, registry checks when applicable, and durable memory/checkpoint routing. Feed only sanitized outcome evidence to habit evaluation; never persist chain-of-thought or raw transcripts.
 
 ## Domain gates
 
 - BLOCKER: do not implement before task class, risk, workflow, skills, evidence needs, and approval gates are known.
+- BLOCKER: reflexes and habits are execution optimizations, not authority sources; they cannot bypass task classification, Project Memory retrieval, Task Execution Briefs, specialist gates, human approvals, or validation.
+- BLOCKER: do not execute an unregistered, `draft`, `quarantined`, `retired`, stale, out-of-scope, or insufficiently evidenced habit.
 - BLOCKER: do not claim LOW risk when data, security, public contracts, infrastructure, external effects, or irreversibility are unknown.
 - MUST: choose one primary workflow; Standard and activated Custom Skills may be composed, but duplicate responsibilities must have one named owner.
 - BLOCKER: never route a reusable Custom Skill that lacks an active project binding, qualifying detection confidence, scope intersection, or required evidence-backed overlay.

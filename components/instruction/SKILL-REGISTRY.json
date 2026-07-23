@@ -1,13 +1,13 @@
 {
     "schema_version":  "1.0.0",
-    "updated_at":  "2026-07-16",
+    "updated_at":  "2026-07-23",
     "authority":  "PROJECT-CONSTITUTION.md",
     "routing_owner":  "project-orchestrator",
     "skills":  [
                    {
                        "id":  "project-orchestrator",
                        "name":  "Project Orchestrator",
-                       "version":  "1.1.0",
+                       "version":  "1.2.0",
                        "description":  "Classify tasks, risk, workflows, skills, and gates.",
                        "triggers":  "every task",
                        "path":  "skills/project-orchestrator/SKILL.md",
@@ -44,7 +44,7 @@
                    {
                        "id":  "project-memory",
                        "name":  "Project Memory",
-                       "version":  "1.1.0",
+                       "version":  "1.2.0",
                        "description":  "Retrieve and persist verified durable project knowledge.",
                        "triggers":  "before and after every task",
                        "path":  "skills/project-memory/SKILL.md",
@@ -737,24 +737,27 @@
                    {
                        "id":  "habit-compiler",
                        "name":  "Habit Compiler",
-                       "version":  "1.0.0",
-                       "description":  "Analyzes execution traces to generate executable Procedural Memory (VOPL Habits).",
-                       "triggers":  "post-task success count threshold reached",
+                       "version":  "1.1.0",
+                       "description":  "Compiles sanitized verified outcomes into governed draft VOPL habits without granting execution authority.",
+                       "triggers":  "three comparable verified successes, manual draft request, or habit re-verification",
                        "path":  "skills/habit-compiler/SKILL.md",
                        "status":  "active",
                        "dependency_skills":  [
                                                  "project-memory"
                                              ],
                        "related_skills":  [
-                                              "project-orchestrator"
+                                              "project-orchestrator",
+                                              "ai-agent-safety",
+                                              "testing-quality"
                                           ],
                        "risk_usage":  {
-                                          "default":  "LOW",
+                                          "default":  "MEDIUM",
                                           "escalate_to":  "highest applicable"
                                       },
                        "task_classes":  [
                                             "ai",
-                                            "optimization"
+                                            "procedural-memory",
+                                            "validation"
                                         ],
                        "workflows":  [
                                          "ai-feature",

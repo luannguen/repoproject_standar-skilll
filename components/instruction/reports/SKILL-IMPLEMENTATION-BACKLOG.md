@@ -9,7 +9,7 @@ Date: 2026-07-16
 - P0: 12 primary workflows including Project Onboarding.
 - P0: template manifest, machine-readable project profile, onboarding helper, and evidence-state model.
 - P0: repository governance, contribution, security, release, ownership, pull-request, issue, and dependency-update baselines.
-- P0: unified validation covering repository hygiene, 21 skills, 12 workflows, 24 routing fixtures, routes/links, 35 anti-patterns, and 17 memory entries.
+- P0: unified validation covering repository hygiene, governed habit lint, 22 skills, 12 workflows, 24 routing fixtures, routes/links, 35 anti-patterns, and 21 memory entries.
 - P0: Windows/Linux GitHub Actions quality-gate definition.
 - P0: audit, readiness, DoD, validation, and Project Memory write-back.
 

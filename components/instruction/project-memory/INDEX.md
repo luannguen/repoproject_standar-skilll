@@ -14,7 +14,7 @@ Read this file first, then filter memory-index.json. Open detail files only when
 
 | ID | Type | Scope | Status | Summary | Detail |
 | --- | --- | --- | --- | --- | --- |
-| MEM-PROJECT-0001 | project_fact | level-0:project | verified | A validated 21-Standard-Skill/12-workflow plus 27-Custom-Skill template baseline exists; application source does not. | PROJECT-SNAPSHOT.md |
+| MEM-PROJECT-0001 | project_fact | level-0:project | verified | A validated 22-Standard-Skill/12-workflow plus governed VOPL procedural memory and 27-Custom-Skill template baseline exists; application source does not. | PROJECT-SNAPSHOT.md |
 | MEM-CONSTRAINT-0001 | technical_constraint | level-0:project | verified | Every task uses selective, evidence-backed memory with no secrets or private reasoning. | CONSTRAINTS.md |
 | MEM-GAP-0001 | documentation_gap | level-0:project | supported | Both specialist skills are routed; application/business/Base44/schema/test/deployment sources remain unavailable. | audits/MEMORY-GAP-REPORT.md |
 | MEM-QUESTION-0001 | open_question | level-0:project | provisional | Product, domain, stack, Base44 capabilities, contracts, and deployment remain unknown. | OPEN-QUESTIONS.md |
@@ -27,6 +27,8 @@ Read this file first, then filter memory-index.json. Open detail files only when
 | MEM-TEMPLATE-STANDARD-0001 | project_fact | level-0:project:template-governance | verified | Evidence-gated onboarding, repository governance, and cross-platform reusable validation are active. | modules/instruction-system/MEM-TEMPLATE-STANDARD-0001.md |
 | TASK-20260716-project-engineering-skill-system | task_summary | level-4:task | verified | Full Project Engineering Skill System created, integrated, reported, and validated. | tasks/completed/TASK-20260716-project-engineering-skill-system.md |
 | TASK-20260716-template-production-standard | task_summary | level-4:task | verified | Reusable onboarding, governance, security/release, routing-fixture, and CI baseline added and validated. | tasks/completed/TASK-20260716-template-production-standard.md |
+| DEC-0002 | architecture_decision | level-0:project:instruction-system | verified | Governance routing precedes any reflex or VOPL execution optimization; habit selection is default-deny and fail-closed. | decisions/DEC-0002-governance-before-acr-optimization.md |
+| TASK-20260723-acr-procedural-memory-hardening | task_summary | level-4:task:acr-procedural-memory-hardening | verified | ACR routing, VOPL lifecycle, adversarial validation, metadata, and durable memory were hardened and synchronized. | tasks/completed/TASK-20260723-acr-procedural-memory-hardening.md |
 | TASK-20260716-reusable-custom-skill-system | task_summary | level-4:task:reusable-custom-skill-system | verified | Two-layer Custom Skills, detection, activation, overlays, routing, validation, and reports added without app assumptions. | tasks/completed/TASK-20260716-reusable-custom-skill-system.md |
 | PAT-0001 | design_pattern | level-0:project | supported | Retrieve index -> summary -> detail -> source verification. | patterns/PAT-0001-progressive-retrieval.md |
 | TASK-20260716-project-memory-bootstrap | task_summary | level-4:task | verified | Project Memory OS bootstrap phase created and validated. | tasks/completed/TASK-20260716-project-memory-bootstrap.md |
